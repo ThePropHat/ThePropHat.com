@@ -1,39 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WELCOME TO MY WEBSITE - THEPROPHAT</title>
+<style>
+  body {
+    background-image: url('world-of-warcraft-dance-warcraft-night-elf-female.gif'); /* classic twinkling stars */
+    background-color: #000;
+    color: #ff00ff;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    animation: colorShift 5s infinite alternate;
+  }
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="index.css">
-  <title>THEPROPHAT.COM</title>
-<h1> WELCOME TO MY EPIC NEW WEBSITE WWW.THEPROPHAT.COM SHARE WITH YOUR FRIENDS ENJOY</h1>
+  @keyframes colorShift {
+    0% { color: #ff00ff; }
+    25% { color: #00ffff; }
+    50% { color: #ffff00; }
+    75% { color: #ff6600; }
+    100% { color: #00ff00; }
+  }
 
+  .container {
+    max-width: 900px;
+    margin: 20px auto;
+    border: 10px groove #ff00ff;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  table {
+    width: 100%;
+    border: 5px double; #ff00ff;
+    background-color: transparent;
+  }
+
+  td {
+    padding: 10px;
+    border: 3px inset #ffff00;
+    background-color: transparent;
+  }
+
+  h1, h2, h3 {
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
+  }
+
+  a {
+    color: #00ffff;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+  }
+
+  @keyframes blink-animation {
+    to {
+      visibility: hidden;
+    }
+  }
+
+  marquee {
+    color: #ff6600;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .video-section {
+    margin-top: 30px;
+    border: 5px dashed #ff00ff;
+    padding: 15px;
+  }
+
+  .under-construction {
+    margin-top: 20px;
+  }
+
+  .visitor-counter {
+    margin-top: 10px;
+    font-size: small;
+    color: #ffff00;
+  }
+
+</style>
 </head>
 <body>
-<body class="center bg2 max">
-<div id="main">
-<h1 class="tab blink">Welcome to my website!</h1>
-<div id="home">
-<h4><a href="#home">Home</a> <span class="line">|</span>
-<a href="#about">About Me</a> <span class="line">|</span>
-<a href="#working">Projects I am Working On</a> <span class="line">|</span>
-<a href="#made">Stuff I Made</a></h4>
-</div>
-<img class="intro" id="about" src="litebar.gif">
-<br>
-<img class="intro" id="about" src="https://web.archive.org/web/20090805044608im_/http://geocities.com/TimesSquare/Fortress/6045/npbem/fire.gif">
-<h2>WELCOME TO THEPROPHAT.COM!!!!!</h2>
-<h2 id="working">ENJOY THE SEXY LADIES</h2>
-<p></p>
-<h2> <div id="board">YOU WILL NOT REGRET COMING TO MY WEBSITE</div> </h2>
-</div>
-<footer id="footer">
-<img src="https://i.imgur.com/i6hvJjx.gif">
-<p>now go to my<a href="http://youtube.com/c/theprophatlp"> youtube channel</a> <br> i double dog dare you </p>
-<span><img src="https://i.imgur.com/QkBkUkC.gif"></span>
-</footer>
 
+<audio autoplay loop hidden>
+  <source src="https://files.khinsider.com/midifiles/miscellaneous/pokemon-center.mid" type="audio/midi">
+</audio>
+
+<div class="container">
+  <marquee behavior="alternate" scrollamount="10">WELCOME TO MY WEBSITE!!!</marquee>
+
+  <table>
+    <tr>
+      <td colspan="2">
+        <h1 class="blink">WELCOME TO MY WEBSITE</h1>
+        <h2>THEPROPHAT</h2>
+        <h3>WWW.THEPROPHAT.COM</h3>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>THIS IS THE WEBSITE OF <strong>THEPROPHAT</strong>. .</p>
+        <p>YOU WILL NOT REGRET COMING TO THIS WEBSITE</p>
+      </td>
+      <td>
+        <img src="flameurn.gif" alt="Flames" width="100%">
+        <p style="font-size: small;">set this site as your homepage!!!!</p>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <h2><a href="#youtube">CHECK OUT MY YOUTUBE CHANNEL</a></h2>
+        <p><a href="https://www.youtube.com/c/theprophatlp" target="_blank">SUBSCRIBE OR LEAVE BOZO!</a></p>
+      </td>
+    </tr>
+  </table>
+
+  <div class="video-section" id="youtube">
+    <h2>FEATURED VIDEO</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/97qZ5pMDsJw?si=hszILG4wsZS8ItOm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <p><a href="https://www.youtube.com/c/theprophatlp" target="_blank">Visit THEPROPHAT on YouTube!</a></p>
+  </div>
+
+  <div class="under-construction">
+    <img src="construction.gif" alt="Under Construction">
+  </div>
+
+  <div class="visitor-counter">
+    Visitor #0000420 since 1999
+  </div>
+
+</div>
 
 </body>
 </html>
