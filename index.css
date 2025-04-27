@@ -1,142 +1,98 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
+html, body{
+  -webkit-font-smoothing:antialiased;
   font-family: "Comic Sans MS", sans-serif;
-  min-height:100%;
-   position:relative;
-
-   padding-bottom:600px;
-   background-image: url(world-of-warcraft-dance-warcraft-night-elf-female.gif) 
+  line-height:1.4;
+  margin:0 auto;
+  max-width:860px;
+  height: 100%;
 }
-.active {
-  background-color: #04AA6D;
-}
-
-iframe {
-  margin-right: 0px;
-}
-
-#icons{float:left;
-    width: 260px; 
-    height: 64px;
-    margin:30px;
-   }
-   #iconsr{float:right;
-    width: 260px; 
-    height: 64px;
-    margin:30px;
-   }
-
-h1{
+.center{
   text-align: center;
-  color: #6CBD45;
-  margin-right: 0px;
+}
+.intro{
+  font-size:4em;
+}
+.max { 
+    display: block;
+    width: 860px;
+    word-wrap: break-word;
+}
+.bg1{
+  background-image: url("world-of-warcraft-dance-warcraft-night-elf-female.gif");
+}
+.bg2{
+  background-image: url("world-of-warcraft-dance-warcraft-night-elf-female.gif");
+}
+a{
+  color: #000000;
+}
+#wm-ipp #wm-ipp-inside {
+  margin: 0 6px;
+  border:5px solid #000;
+  border-top:none;
+  background-color:rgba(255,255,255,0.9);
+  -moz-box-shadow:1px 1px 4px #333;
+  -webkit-box-shadow:1px 1px 4px #333;
+  box-shadow:1px 1px 4px #333;
+  border-radius:0 0 8px 8px;
+}
+.container {
+    width: 1000px;
+    height: 100%;
+    border: 2px solid black;
+    box-sizing: border-box;
+}
+h1, h2, h3, p, a {
+  color: yellow;
+}
+span.line{
+  color: red;
+}
+.cursor{
+    cursor: url(https://i.imgur.com/RUE567I.gif), auto;
 }
 
-h2{
-    color:  pink;
-    text-align: center;
+/* @group Blink */
+.blink {
+  -webkit-animation: blink .75s linear infinite;
+  -moz-animation: blink .75s linear infinite;
+  -ms-animation: blink .75s linear infinite;
+  -o-animation: blink .75s linear infinite;
+   animation: blink .75s linear infinite;
 }
+@-webkit-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@-moz-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@-ms-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@-o-keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 1; }
+  50.01% { opacity: 0; }
+  100% { opacity: 0; }
+}
+/* @end */
 
-h3 {
-    color: #ff0;
-}
-h3 {
-    font-size: 28px;
-}
-
-}
-h6 {
-    margin-top: 0px; 
-    margin-bottom: 0px;
-}
-
-/* Style the header */
-header {
-  
-  padding: 5px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-p {
-  color: #1B1D1A;
-}
-
-ul {
-  display: inline;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
-  position: sticky;
-  top: 0;
-  width: 100%;
-}
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: pink;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #111;
-}
-
-/* Style the footer */
-footer {
-  background-color: #6CBD45;
-  padding: 3px;
-  text-align: center;
-  color: white;
-  margin-bottom: auto;
-  position:absolute;
-   bottom:0;
-   width:100%;
-   height:60px;   /* Height of the footer */
-}
-
-#shadowBox {
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0);
-  /* Black w/opacity/see-through */
-  border: 0px solid;
-}
-
-.rainbow {
-  text-align: center;
-  font-size: 32px;
-  font-family: "Comic Sans MS";
-  letter-spacing: 5px;
-  animation: colorRotate 6s linear 0s infinite;
-}
-
-@keyframes colorRotate {
-  from {
-    color: #6666ff;
-  }
-  10% {
-    color: #0099ff;
-  }
-  50% {
-    color: #00ff00;
-  }
-  75% {
-    color: #ff3399;
-  }
-  100% {
-    color: #6666ff;
-  }
+/*for footer*/
+#main{
+  min-height: 90vh;
 }
