@@ -17,6 +17,8 @@ html, body{
     width: 860px;
     word-wrap: break-word;
 }
+.bg1 { background-image: url() }
+.cursor { cursor: url('image-path.png'),auto; }
 .bg1{
   background-image: url("world-of-warcraft-dance-warcraft-night-elf-female.gif");
 }
@@ -49,7 +51,7 @@ span.line{
   color: red;
 }
 .cursor{
-    cursor: url(ani-fire.png), auto;
+    cursor: url('ani-fire.png'),auto;
 }
 
 /* @group Blink */
