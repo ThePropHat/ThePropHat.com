@@ -1,6 +1,6 @@
   body {
     background-image: url('wizfrog.gif') ;
-    background-size: 25%;
+    background-size: 100%;
     background-color: #000;
     color: #ff00ff;
     font-family: 'VCR_OSD', cursive, sans-serif;
@@ -9,6 +9,7 @@
     text-align: center;
     
   }
+
 
   @keyframes colorShift {
     0% { color: #ff00ff; }
@@ -52,12 +53,12 @@
 
   .links {
     font-size: 30px;
-    font-family: 'Tagesschrift';
+    font-family: 'VCR_OSD';
   padding-bottom: 15px;
   }
 
   .marquee {
-    font-family: 'Tagesschrift';
+    font-family: 'VCR_OSD';
     color: #FAE443;
   }
 
@@ -108,12 +109,6 @@
   0 0 1em blue,
   0 0 0.2em blue;
   }
-
-.tagesschrift-regular {
-  font-family: "Tagesschrift", system-ui;
-  font-weight: 400;
-  font-style: normal;
-}
 
     .malware-popup {
             position: fixed;
