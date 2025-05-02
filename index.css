@@ -1,6 +1,6 @@
   body {
+    background-image: url("wizfrog.gif");
     background-size: 33%;
-    background-color: #2e2a38;
     color: #ff00ff;
     font-family: 'VCR_OSD', cursive, sans-serif;
     margin: 0;
@@ -60,7 +60,47 @@
     bottom: 150px;
 
   }
+.main-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
 
+.left-column {
+  width: 35%;
+}
+
+.right-column {
+  width: 60%;
+  padding: 10px;
+  background-color: #2e2a38;
+  border: 5px solid #b89146;
+}
+
+.mood-box, .contact-box, .blog-box, .blurbs-box, .friend-space {
+  background-color: #1d1b23;
+  border: 3px solid #b89146;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.contact-box ul {
+  list-style-type: square;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.contact-box li, .blurbs-box p, .mood-box p, .friend-space p {
+  color: #FFF8AB;
+}
+
+.blurbs-box h4 {
+  margin-top: 15px;
+  color: #DBCD25;
+  animation: colorShift 4s infinite alternate;
+}
   .guestbook {
     background-color: transparent;  
     width: 100%;
