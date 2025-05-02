@@ -94,14 +94,9 @@
     margin-bottom: 20px;
   }
 
-  .video-section {
-    margin-top: 30px;
-    padding: 15px;
-    background-color: #564486;
-  }
-
   .under-construction {
     margin-top: 20px;
+
   }
 
   .visitor-counter {
@@ -119,3 +114,42 @@
   font-weight: 400;
   font-style: normal;
 }
+
+    .malware-popup {
+            position: fixed;
+            background-color: #f44336; /* Red background */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            font-family: 'Arial', sans-serif;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border: 5px solid darkred;
+            z-index: 1000;
+            display: none;
+        }
+
+        .malware-popup h1 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .malware-popup p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .malware-popup button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .malware-popup button:hover {
+            background-color: #555;
+        }

@@ -13,6 +13,7 @@
 <body>
   <div class="header">
   <h1>THE PROPHECY ARCHIVE </h1>
+   <img src="crysballbar.gif" alt="Flames" width="100%">
 <table class="prophecy">
   <tr>
     <td>
@@ -49,50 +50,53 @@
 </tr>
   </table>
 <script>
-  function openCursedPopup() {
-    const popup = window.open("", "", "width=640,height=480,left=" + Math.floor(Math.random()*500) + ",top=" + Math.floor(Math.random()*500));
-    if (popup) {
-      popup.document.write(`
-        <style>
-          body {
-            background-color: black;
-            color: lime;
-            font-family: "Comic Sans MS", cursive, sans-serif;
-            text-align: center;
-            padding: 20px;
-            animation: blink 1s infinite alternate;
-          }
-          @keyframes blink {
-            from { color: red; background: black; }
-            to { color: lime; background: darkred; }
-          }
-        </style>
-        <h1>🔥 SYSTEM ERROR 🔥</h1>
-        <p>YOU HAVE BEEN INFECTED</p>
-        <p><a href="https://www.youtube.com/c/theprophatlp" target="_blank">CLICK HERE TO FIX</a></p>
-      `);
-      popup.document.title = "!!! WARNING !!!";
-    }
-  }
+        // Function to generate a random floating fake malware popup
+        function createFloatingMalwarePopup() {
+            const popup = document.createElement('div');
+            popup.classList.add('malware-popup');
+            popup.innerHTML = `
+                <h1>WARNING!</h1>
+                <p>Your computer has been infected with MEMZ!</p>
+                <p>Subscribe to THEPROPHAT on YouTube to fix!</p>
+                <button onclick="closePopup(this)">Close</button>
+            `;
+            document.body.appendChild(popup);
 
-  function schedulePopup() {
-    const delay = Math.random() * (30000 - 5000) + 5000; // Between 5s and 30s
-    setTimeout(() => {
-      openCursedPopup();
-      schedulePopup(); // loop for more chaos
-    }, delay);
-  }
+            // Set random position within the window bounds
+            const maxX = window.innerWidth - 250; // 250px is the popup's width
+            const maxY = window.innerHeight - 100; // 100px is the height of the popup
+            let xPos = Math.floor(Math.random() * maxX);
+            let yPos = Math.floor(Math.random() * maxY);
 
-  // Start the madness after the page loads
-  window.onload = () => {
-    schedulePopup();
-  };
-</script>
+            popup.style.left = `${xPos}px`;
+            popup.style.top = `${yPos}px`;
+
+            // Display the popup
+            popup.style.display = 'block';
+
+            // Make it float around by changing position randomly
+            setInterval(() => {
+                xPos = Math.floor(Math.random() * maxX);
+                yPos = Math.floor(Math.random() * maxY);
+                popup.style.left = `${xPos}px`;
+                popup.style.top = `${yPos}px`;
+            }, 2000); // Moves every 2 seconds
+        }
+
+        // Function to close the popup
+        function closePopup(popupButton) {
+            const popup = popupButton.closest('.malware-popup');
+            popup.remove();
+        }
+
+        // Generate fake malware popups at random intervals
+        setInterval(createFloatingMalwarePopup, 5000); // Popup every 5 seconds
+    </script>
 <div class="visitor-counter">
     <a href="index"><strong>|||</strong> Home | </a>
     <a href="guestbook">Guestbook | </a>
     <a href="https://tylerhensondesigns.com/">Portfolio | </a>
-    <a href="prophecy">Prophecy <strong>|||</strong></a>
+    <a href="prophecy.html">Prophecy <strong>|||</strong></a>
   </div>
 
 </body>
