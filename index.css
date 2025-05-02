@@ -1,15 +1,12 @@
   body {
-    background-image: url('wizfrog.gif') ;
-    background-size: 100%;
-    background-color: #000;
+    background-size: 33%;
+    background-color: #2e2a38;
     color: #ff00ff;
     font-family: 'VCR_OSD', cursive, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    
   }
-
 
   @keyframes colorShift {
     0% { color: #ff00ff; }
@@ -24,11 +21,44 @@
     margin: 20px auto;
 
   }
+  .header2 {
+    max-width: auto;
+    margin: 20px auto;
+
+  }
 
   .main-table{
     background-color: #b89146 ;
     width: 100%;
     border: 10px ;
+  }
+
+
+   .profile-user {
+    font-size: 22px;
+    text-align: center;
+    position: absolute;
+    left: 100px;
+    top: 30%;
+  }
+
+  .user-box{
+    background-color: #1d1b23;
+    border: 7px solid #b89146;
+    left: 100px;
+    top: 50%;
+    width: 300px;
+    height: 400px;
+    padding: 10px;
+  }
+
+  .profile-content {
+    font-size: 15px;
+    text-align: left;
+    position: absolute;
+    left: 100px;
+    bottom: 150px;
+
   }
 
   .guestbook {
@@ -92,7 +122,7 @@
     color: #DBCD25;
     font-size: 22px;
     font-weight: bold;
-    margin-bottom: 20px;
+
   }
 
   .under-construction {
