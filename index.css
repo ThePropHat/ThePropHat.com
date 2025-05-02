@@ -34,7 +34,12 @@
     background-color: transparent;  
     width: 100%;
     border: 5px ;
+    text-align: left;
 
+  }
+
+  .gbtime {
+    font-size: 5px;
   }
 
   .prophecy {
@@ -53,7 +58,7 @@
 
   .marquee {
     font-family: 'Tagesschrift';
-    color: #FAE443;
+    color: ##FAE443;
   }
 
 
