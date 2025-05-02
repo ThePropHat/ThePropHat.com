@@ -5,21 +5,26 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WWW.THEPROPHAT.COM</title>
 <link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Tagesschrift&display=swap" rel="stylesheet">
+
 </head>
 <body>
+  <div class="header">
   <h1>THE PROPHECY ARCHIVE </h1>
-<table>
+<table class="prophecy">
   <tr>
     <td>
   <div id="prophecy-box">
-    <div id="prophecy-text">Click the button to unveil your fate.</div>
+    <div class="marquee" id="prophecy-text">Click the button to unveil your fate.</div>
     <button onclick="revealProphecy()">REVEAL THE NEXT PROPHECY</button>
   </div>
 </td>
   <tr>
 <tr>
   <td>
-  <marquee behavior="alternate">The Archive remembers even what you forget...</marquee>
+  <marquee class="marquee" behavior="alternate">The Archive remembers even what you forget...</marquee>
 
   <script>
     const prophecies = [
@@ -43,18 +48,13 @@
 </td>
 </tr>
   </table>
-</body>
-</div>
- 
 
-  <div class="visitor-counter">
-    <a href="index.html">Home | </a>
+<div class="visitor-counter">
+    <a href="index.html"><strong>|||</strong> Home | </a>
     <a href="guestbook.html">Guestbook | </a>
     <a href="https://tylerhensondesigns.com/">Portfolio | </a>
+    <a href="prophecy.html">Prophecy <strong>|||</strong></a>
   </div>
 
-</div>
-
 </body>
-</html>
 </html>

@@ -18,22 +18,47 @@
     100% { color: #00ff00; }
   }
 
-  .container {
+  .header {
     max-width: 900px;
     margin: 20px auto;
-  
-    padding: 20px;
+
   }
 
-  table {
+  .main-table{
+    background-color: #b89146 ;
+    width: 100%;
+    border: 10px ;
+  }
+
+  .guestbook {
+    background-color: transparent;  
     width: 100%;
     border: 5px ;
-    background-color: transparent;
+
   }
 
-  td {
-    background-color:  #564486;
+  .prophecy {
+    background-color: #515a8f;
+    width: 100%;
+    border: 10px ;
+    font-size: 50px;
   }
+
+  .links {
+    font-size: 30px;
+    font-family: 'cursive;';
+    text-shadow:
+  1px 1px 2px red,
+  0 0 1em blue,
+  0 0 0.2em blue;
+  padding-bottom: 17px;
+  }
+
+  .marquee {
+    font-family: 'Tagesschrift';
+    color: #b89146;
+  }
+
 
   h1, h2, h3 {
     text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
@@ -47,7 +72,7 @@
   a {
     color: #DBCD25;
     font-weight: bold;
-    text-decoration: underline;
+    text-decoration: ;
   }
 
   .blink {
@@ -70,7 +95,7 @@
   .video-section {
     margin-top: 30px;
     padding: 15px;
-    background-color: palevioletred;
+    background-color: #564486;
   }
 
   .under-construction {
@@ -81,4 +106,14 @@
     margin-top: 10px;
     font-size: small;
     color: #ffff00;
+    text-shadow:
+  1px 1px 2px red,
+  0 0 1em blue,
+  0 0 0.2em blue;
   }
+
+.tagesschrift-regular {
+  font-family: "Tagesschrift", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
