@@ -28,14 +28,14 @@
 
   <script>
     const prophecies = [
-      "When the frog sings, the code shall break.",
-      "Your IP address is already written in the stars.",
-      "Beware the pop-up.",
+      "You will visit my YouTube channel.",
+      "Whatever you wished for, we will grant.",
+      "If you see the pop-up, don't click it.",
       "You are not the user we were expecting.",
-      "At 3:33 AM, press F12 and scream.",
-      "ThePROPHAT has logged on.",
+      "At 3:33 AM, press F12 and scream. Send it to me.",
+      "THEPROPHAT has logged on.",
       "When the guestbook fills, so too will the void.",
-      "Do not trust the cookie. It watches.",
+      "Do not trust the frog. It watches.",
       "I saw what you did last summer.",
       "Cache empty. Try again."
     ];
@@ -48,7 +48,46 @@
 </td>
 </tr>
   </table>
+<script>
+  function openCursedPopup() {
+    const popup = window.open("", "", "width=640,height=480,left=" + Math.floor(Math.random()*500) + ",top=" + Math.floor(Math.random()*500));
+    if (popup) {
+      popup.document.write(`
+        <style>
+          body {
+            background-color: black;
+            color: lime;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            padding: 20px;
+            animation: blink 1s infinite alternate;
+          }
+          @keyframes blink {
+            from { color: red; background: black; }
+            to { color: lime; background: darkred; }
+          }
+        </style>
+        <h1>🔥 SYSTEM ERROR 🔥</h1>
+        <p>YOU HAVE BEEN INFECTED</p>
+        <p><a href="https://www.youtube.com/c/theprophatlp" target="_blank">CLICK HERE TO FIX</a></p>
+      `);
+      popup.document.title = "!!! WARNING !!!";
+    }
+  }
 
+  function schedulePopup() {
+    const delay = Math.random() * (30000 - 5000) + 5000; // Between 5s and 30s
+    setTimeout(() => {
+      openCursedPopup();
+      schedulePopup(); // loop for more chaos
+    }, delay);
+  }
+
+  // Start the madness after the page loads
+  window.onload = () => {
+    schedulePopup();
+  };
+</script>
 <div class="visitor-counter">
     <a href="index.html"><strong>|||</strong> Home | </a>
     <a href="guestbook.html">Guestbook | </a>
