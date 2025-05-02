@@ -4,107 +4,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WWW.THEPROPHAT.COM</title>
-<style>
-  body {
-    background-image: url('world-of-warcraft-dance-warcraft-night-elf-female.gif'); /* classic twinkling stars */
-    background-color: #000;
-    color: #ff00ff;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    animation: colorShift 5s infinite alternate;
-  }
-
-  @keyframes colorShift {
-    0% { color: #ff00ff; }
-    25% { color: #00ffff; }
-    50% { color: #ffff00; }
-    75% { color: #ff6600; }
-    100% { color: #00ff00; }
-  }
-
-  .container {
-    max-width: 900px;
-    margin: 20px auto;
-  
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.2);
-  }
-
-  table {
-    width: 100%;
-    border: 5px double;
-    background-color: transparent;
-  }
-
-  td {
-    padding: 10px;
-    background-color: transparent;
-  }
-
-  h1, h2, h3 {
-    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
-  }
-
-  a {
-    color: #00ffff;
-    font-weight: bold;
-    text-decoration: underline;
-  }
-
-  .blink {
-    animation: blink-animation 1s steps(5, start) infinite;
-  }
-
-  @keyframes blink-animation {
-    to {
-      visibility: hidden;
-    }
-  }
-
-  marquee {
-    color: #ff6600;
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-
-  .video-section {
-    margin-top: 30px;
-    border: 5px dashed #ff00ff;
-    padding: 15px;
-  }
-
-  .under-construction {
-    margin-top: 20px;
-  }
-
-  .visitor-counter {
-    margin-top: 10px;
-    font-size: small;
-    color: #ffff00;
-  }
-
-</style>
+<link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <h1>📖 Sign THEPROPHAT's Guestbook</h1>
-  <form action="guestbook.php" method="post">
+    
+ <h1>Sign THEPROPHAT's Guestbook</h1>
+  <form action="https://formspree.io/f/xldbjeqa" method="post">
     <input type="text" name="name" placeholder="tell me who you are"><br><br>
     <textarea name="message" placeholder="tell me something cool" rows="4" cols="50"></textarea><br><br>
     <input type="submit" value="SIGN IT">
   </form>
-
-  <hr>
-  <h2>👀 Previously Summoned Entries</h2>
-
+<!-- guestbook.html -->
+<h2>Guestbook Entries</h2>
+<table border="3">
+  <tr>
+    <td><strong>Kiwi:</strong> meow?</td>
+  </tr>
+  <tr>
+    <td><strong>Kiwi:</strong> meow</td>
+  </tr>
+</table>
+ </div>
  
-  <?php
-    $entries = file("entries.txt");
-    foreach (array_reverse($entries) as $entry) {
-      echo "<div class='entry'>$entry</div>";
-    }
-  ?>
+
+  <div class="visitor-counter">
+    <a href="index.html">Home | </a>
+    <a href="guestbook.html">Guestbook | </a>
+    <a href="https://tylerhensondesigns.com/">Portfolio | </a>
+    <a href="prophecy.html">Prophecy | </a>
+  </div>
+
+</div>
+
 </body>
 </html>

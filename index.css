@@ -1,12 +1,13 @@
-body {
-    background-image: url('world-of-warcraft-dance-warcraft-night-elf-female.gif'); /* classic twinkling stars */
+  body {
+    background-image: url('wizfrog.gif') ;
+    background-size: 25%;
     background-color: #000;
     color: #ff00ff;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
     padding: 0;
     text-align: center;
-    animation: colorShift 5s infinite alternate;
+    
   }
 
   @keyframes colorShift {
@@ -20,28 +21,31 @@ body {
   .container {
     max-width: 900px;
     margin: 20px auto;
-    border: 10px groove #ff00ff;
+  
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
   }
 
   table {
     width: 100%;
-    border: 5px dotted #ff00ff;
-    background-color: rgba(0,0,0,0.8);
+    border: 5px ;
+    background-color: transparent;
   }
 
   td {
-    padding: 10px;
-    border: 3px inset #ffff00;
+    background-color:  #564486;
   }
 
   h1, h2, h3 {
     text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
+    animation: colorShift 5s infinite alternate;
+  }
+
+  p {
+    color: #FFF8AB;
   }
 
   a {
-    color: #00ffff;
+    color: #DBCD25;
     font-weight: bold;
     text-decoration: underline;
   }
@@ -57,7 +61,7 @@ body {
   }
 
   marquee {
-    color: #ff6600;
+    color: #DBCD25;
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 20px;
@@ -65,8 +69,8 @@ body {
 
   .video-section {
     margin-top: 30px;
-    border: 5px dashed #ff00ff;
     padding: 15px;
+    background-color: palevioletred;
   }
 
   .under-construction {
