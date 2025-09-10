@@ -1,228 +1,73 @@
-  body {
-    color: #2d0001;
-    font-family: 'VCR_OSD', cursive, sans-serif;
-    margin: 0;
+body {
+ font-family: "Tilt Warp", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-color: #6A4C93
+}
+
+.header{
+    display: flex;
+    align-items:baseline;
+    justify-content: space-around;
+}
+
+.tph{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.guestbook{
+  margin-top: 0px;
+}
+
+.video{
+   position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 1.883%;
+    height: 0; 
+  
+}
+
+.video iframe {
+    position: absolute;
+    top: 4%;
+    left: 50%;
+    width: 60%;
+    height: 60%;
+    transform: translateX(-50%);
+}
+
+
+
+h1{
+  color: whitesmoke;
+  font-size: 500%;
+  margin: 0px;
+ 
+}
+
+.links{
+    display: flex;
+    gap: 50px;
+}
+
+ul{
     padding: 0;
-    text-align: center;
-  }
-
-  @keyframes colorShift {
-    0% { color: #ff00ff; }
-    25% { color: #00ffff; }
-    50% { color: #ffff00; }
-    75% { color: #ff6600; }
-    100% { color: #00ff00; }
-  }
-
-  .header {
-    max-width: 900px;
-    margin: 20px auto;
-
-  }
-  .header2 {
-    max-width: auto;
-    margin: 20px auto;
-
-  }
-
-  .main-table{
-    background-color: #b89146 ;
-    width: 100%;
-    border: 10px ;
-  }
-
-
-   .profile-user {
-    font-size: 22px;
-    text-align: center;
-    position: absolute;
-    left: 100px;
-    top: 30%;
-
-  }
-
-  .user-box{
-    background-color: #1d1b23;
-    border: 4px solid #b89146;
-    top: 50%;
-
-    width: 250px;
-    height: 400px;
-    padding: 10px;
-    margin: 20px auto;
-  }
-
-  .profile-content {
-    font-size: 15px;
-    text-align: left;
-    position: absolute;
-    left: 100px;
-    bottom: 150px;
-    margin: 20px auto;
-
-  }
-.main-container {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 40px auto;
-  padding: 20px;
-  margin: 20px auto;
-
+    margin: 0;
+    list-style: none;
 }
 
-.left-column {
-  width: 35%;
-  margin: 10px auto;
-
+a{
+  color: white;
+  text-decoration: none;
 }
 
-.right-column {
-  width: 60%;
-  padding: 10px;
-  margin: 20px auto;
-
+a:hover{
+  color: #FFB74D;
 }
 
-.mood-box, .contact-box, .blog-box, .blurbs-box, .friend-space {
-  background-color: #1d1b23;
-  border: 3px solid #b89146;
-  margin-top: 20px;
-  padding: 10px;
-
+a:active{
+  color: #2D3A4D;
 }
 
-.contact-box ul {
-  list-style-type: square;
-  padding-left: 20px;
-  text-align: left;
-}
-
-.contact-box li, .blurbs-box p, .mood-box p, .friend-space p {
-  color: #FFF8AB;
-}
-
-.blurbs-box h4 {
-  margin-top: 15px;
-  color: #DBCD25;
-  animation: colorShift 4s infinite alternate;
-}
-  .guestbook {
-    background-color: transparent;  
-    width: 100%;
-    border: 5px ;
-    text-align: left;
-
-  }
-
-  .gbtime {
-    font-size: 5px;
-  }
-
-  .prophecy {
-    background-color: #515a8f;
-    width: 100%;
-    border: 10px ;
-    font-size: 50px;
-
-  }
-
-  .links {
-    font-size: 30px;
-    font-family: 'VCR_OSD';
-  padding-bottom: 15px;
-  }
-
-  .marquee {
-    font-family: 'VCR_OSD';
-    color: #FAE443;
-  }
-
-
-  h1, h2, h3 {
-    text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
-    animation: colorShift 5s infinite alternate;
-  }
-
-  p {
-    color: #FFF8AB;
-  }
-
-  a {
-    color: #DBCD25;
-    font-weight: bold;
-    text-decoration: ;
-  }
-
-  .blink {
-    animation: blink-animation 1s steps(5, start) infinite;
-  }
-
-  @keyframes blink-animation {
-    to {
-      visibility: hidden;
-    }
-  }
-
-  marquee {
-    color: #DBCD25;
-    font-size: 22px;
-    font-weight: bold;
-
-  }
-
-  .under-construction {
-    margin-top: 20px;
-
-  }
-
-  .visitor-counter {
-    margin-top: 10px;
-    font-size: small;
-    color: #ffff00;
-    text-shadow:
-  1px 1px 2px red,
-  0 0 1em blue,
-  0 0 0.2em blue;
-  }
-
-    .malware-popup {
-            position: fixed;
-            background-color: #f44336; /* Red background */
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            font-family: 'Arial', sans-serif;
-            width: 250px;
-            text-align: center;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border: 5px solid darkred;
-            z-index: 1000;
-            display: none;
-        }
-
-        .malware-popup h1 {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-
-        .malware-popup p {
-            font-size: 14px;
-            margin-bottom: 10px;
-        }
-
-        .malware-popup button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 8px 15px;
-            font-size: 14px;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        .malware-popup button:hover {
-            background-color: #555;
-        }
-
-        @font-face { font-family: VCR_OSD; src: url('VCR_OSD_MONO_1.001.ttf'); }
