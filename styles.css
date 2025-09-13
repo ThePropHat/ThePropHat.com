@@ -104,6 +104,11 @@ flex-shrink: 0;
   margin-bottom: 50px
 }
 
+.widget-center{
+  padding: 10px;
+flex-shrink: 0;
+}
+
 .widget{
   border-color: firebrick;
   border-style: solid;
