@@ -34,6 +34,7 @@ body, html {
 
 .tph img{
    width: 200px;
+   
 }
 
 .video {
@@ -96,6 +97,7 @@ flex-shrink: 0;
   border-style: solid;
   border-width: 0.5px;
   inline-size: 200px;
+  height: 200px;
   padding: 10px;
   padding-top: 0px;
   overflow-y: scroll;
