@@ -38,18 +38,18 @@ body, html {
 }
 
 .video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
   position: relative;
-  padding-bottom: 56.25%; /* 16:9 aspect ratio */
-  padding-top: 1.883%;
-  height: 0;
 }
 
+
 .video iframe {
-  position: absolute;
-  left: 50%;
-  width:100%;
+  width: 100%;
   height: 100%;
-  transform: translateX(-50%);
+  border: none;
 }
 
 .card-outer {
@@ -70,7 +70,7 @@ body, html {
   border-radius: 20px;
   padding: 20px;
   position: relative;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   
 }
@@ -82,9 +82,12 @@ flex-shrink: 0;
 }
 
 .centre{
-padding: 10px;
-flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
+
 
 .right{
   margin: 30px;
@@ -107,6 +110,16 @@ flex-shrink: 0;
 .widget-center{
   padding: 10px;
 flex-shrink: 0;
+max-width: 500px;
+text-align: center;
+background-color: black;
+}
+
+.widget-center-clean{
+  padding: 10px;
+flex-shrink: 0;
+max-width: 500px;
+text-align: center;
 }
 
 .widget{
@@ -158,7 +171,7 @@ a:active {
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-  h1 {
+  h1 {.centre {
     font-size: 250%;
     text-align: center;
   }
@@ -180,3 +193,31 @@ a:active {
     height: 90%;
   }
 }
+
+@media (max-width: 768px) {
+  .card-inner, .card-outer {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin:30px
+  }
+
+  .left, .centre, .right {
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .widget-scroll, .widget {
+    inline-size: 100%;
+    height: auto;
+  }
+
+  .links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tph img {
+    width: 150px;
+  }
