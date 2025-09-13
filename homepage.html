@@ -88,12 +88,34 @@
 <div class="centre">
 
     <div class="widget-center-clean">
-          <h2>welcome to theprophat</h2>
+          <h2 id="random-heading">they call me www.theprophat.com</h2>
   <p>this is where i practice making weird stuff and logging it all</p>
+  <p>dont mind the scaffolding, im still unpacking around here</p> <br>
   <p>currently building: <a href="/pages/hobbies.html">hobbies notebook</a></p>
   <p>currently listening to: Maniac Meat - Tobacco</p>
         
     </div>
+
+
+<script>
+  // Array of possible h2 texts
+  const headings = [
+    "they call me www.theprophat.com",
+    "i dwell at www.theprophat.com",
+    "you've reached www.theprophat.com",
+    "you came to www.theprophat.com to subscribe to my youtube channel *mind controls you*",
+    "www.theprophat.com proudly supports the fantastic four",
+    "welcome to www.theprophat.com",
+    "www.theprophat.com",
+    ""
+  ];
+
+  // Pick a random heading
+  const randomIndex = Math.floor(Math.random() * headings.length);
+
+  // Replace the h2 text
+  document.getElementById("random-heading").innerText = headings[randomIndex];
+</script>
 
    <div class="widget-center-clean">
   <img src="images/construction.gif" draggable="false" alt="UNDER CONSTRUCTION"> 
