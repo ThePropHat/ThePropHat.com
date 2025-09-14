@@ -39,5 +39,22 @@
  <p>currently reading (book): TITUS GROAN by MERVYN PEAKE, DARTH MAUL: SHADOW HUNTER by MICHEAL REAVES</p>
  <p>currently reading (comic) IMPERIAL by JONATHAN HICKMAN</p>
 
+<h1>microblog</h1>
+<ul id="microblog-archive"></ul>
+
+<script>
+fetch("/json/microblog-2025.json")
+  .then(res => res.json())
+  .then(entries => {
+    const ul = document.getElementById("microblog-archive");
+    entries.forEach(i => {
+      const li = document.createElement("li");
+      li.textContent = `${i.date} | ${i.entry}`;
+      ul.appendChild(li);
+      ul.appendChild(document.createElement("br"));
+    });
+  });
+</script>
+
 </body>
 </html>
