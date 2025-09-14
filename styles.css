@@ -113,7 +113,13 @@ align-items:flex-end;
   padding: 10px;
   padding-top: 0px;
   overflow-y: scroll;
-  margin-bottom: 50px
+  margin-bottom: 50px;
+  color:#FFB74D
+}
+
+.widget-scroll a{
+  color: rgb(172, 172, 228);
+
 }
 
 .widget-center{
