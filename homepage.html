@@ -89,6 +89,7 @@
 <div class="widget-scroll">
 <p><strong>TREASURE CHEST</strong></p><br>
 <a href="https://tinydiorama.com/games/personality-test/"><img src="/images/cat-share.png" width="100%"></a>
+<img src="/images/likecomputer.jpg" ></a>
 </div>
 
     <div class="widget-scroll">
@@ -218,6 +219,7 @@ allowfullscreen>
       <a href="https://fearoffun.neocities.org/" target="_blank"><img src="/images/fearoffun-2.gif" draggable="false" class = "grow"></a>
       <a href="https://rippledstone.com/" target="_blank"><img src="/images/rippledstone.gif" draggable="false" class = "grow"></a>
       <a href="https://inthemeantimewecry.neocities.org/" target="_blank"><img src="/images/inthemeantime.gif" draggable="false" class = "grow"></a>
+      <a href="https://cervidaze.me/" target="_blank"><img src="/images/cervidaze_v2_dark.png" style="width:88px; height:31px;" draggable="false" class = "grow"></a>
 
 
 
@@ -241,19 +243,6 @@ fetch("/json/microblog-2025.json")
     const ul = document.getElementById("microblog");
     if (entries.length > 0) {
       const latest = entries[0]; // first entry = most recent
-      const li = document.createElement("li");
-      li.innerHTML = `<strong>${latest.date}</strong> | ${latest.entry}`;
-      ul.appendChild(li);
-    }
-  });
-
-// Fetch and show the most recent changelog entry
-fetch("changelog.json")
-  .then(res => res.json())
-  .then(entries => {
-    const ul = document.getElementById("changelog");
-    if (entries.length > 0) {
-      const latest = entries[0];
       const li = document.createElement("li");
       li.innerHTML = `<strong>${latest.date}</strong> | ${latest.entry}`;
       ul.appendChild(li);
