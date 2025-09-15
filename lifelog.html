@@ -24,13 +24,13 @@
           <h1 id="entry-date">[date]</h1>
           <p id="entry-text">[lifelog text]</p>
 
-          <h2>Habits</h2>
+          <h1>habits</h1>
           <ul id="habits"></ul>
 
-          <h2>Currently</h2>
-          <p id="entry-watched">watching: ...</p>
-          <p id="entry-listened">listening: ...</p>
-          <p id="entry-played">playing: ...</p>
+          <h1>currently</h1>
+          <p id="entry-watched">watched: ...</p>
+          <p id="entry-listened">listened to: ...</p>
+          <p id="entry-played">played: ...</p>
 
 
           <h1>microblog entries from that day</h1>
@@ -83,9 +83,9 @@
             });
           }
 
-          entryWatched.textContent = `watching: ${entry.watched || ''}`;
-          entryListened.textContent = `listening: ${entry.listened || ''}`;
-          entryPlayed.textContent = `playing: ${entry.played || ''}`;
+          entryWatched.textContent = `watched: ${entry.watched || ''}`;
+          entryListened.textContent = `listened to: ${entry.listened || ''}`;
+          entryPlayed.textContent = `played: ${entry.played || ''}`;
 
 
           // Microblog posts

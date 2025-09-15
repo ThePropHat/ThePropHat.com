@@ -57,9 +57,16 @@ text-decoration: none;
 }
 
 .right {
+ overflow-y: scroll;
   flex: 1;
   max-width: 500px;
   margin-left: 20px;
+}
+
+.left{
+ overflow-y: scroll;
+flex: 1;
+  max-width: 200px;
 }
 
 
