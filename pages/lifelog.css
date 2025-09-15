@@ -1,0 +1,112 @@
+body, html {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  padding: 0;
+  background: black;
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  font-weight: 300;
+  font-style: italic;
+}
+
+
+.dates{
+border-style:solid;
+border-width:10px;
+}
+
+.lifelog{
+
+}
+
+/* --- Background --- */
+.background {
+  background: url('/images/made-by-me/lifelog-background.png') no-repeat center center;
+  background-size: cover;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;  
+  align-items: center;    
+  justify-content: flex-start; 
+  padding-top: 10vh;
+  box-sizing: border-box;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+align-items:baseline;
+  width: 790px;      
+  max-width: 90%;    
+  margin-bottom: 0%; 
+  height: 10%;
+  box-sizing: border-box;
+  margin-bottom: -20px; /* pulls it up over card slightly */
+
+}
+
+.header a{
+color:white;
+text-decoration: none;
+}
+
+
+.card {
+  display: flex;
+  flex-direction: row; 
+  width: 800px;
+  max-width: 90%;
+  background-color: #000;
+  padding: 20px;
+  align-items: flex-start;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 0%;
+  }
+
+.right{
+       inline-size: 100%;
+    height: auto;
+}
+
+.left{
+   inline-size: 100%;
+    height: auto;
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  h1.centre {
+    font-size: 250%;
+    text-align: center;
+  }
+
+  .card-inner,
+  .card-outer {
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    margin: 30px;
+  }
+}

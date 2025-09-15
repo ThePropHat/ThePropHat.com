@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lifelog</title>
+  <link rel="stylesheet" href="/pages/lifelog.css">
+</head>
+<body>
+  <div class="background">
+    <header class="header">
+      <h1>LIFELOG</h1>
+      <a href="/index.html">go back</a>
+    </header>
+
+    <main class="card">
+      <section class="left">
+        <h1>Entries</h1>
+        <ul id="date-list"></ul>
+      </section>
+
+      <section class="right">
+        <article id="entry">
+          <h1 id="entry-date">[date]</h1>
+          <p id="entry-text">[lifelog text]</p>
+
+          <h2>Habits</h2>
+          <ul id="habits"></ul>
+
+          <h2>Currently</h2>
+          <p id="entry-watched">watching: ...</p>
+          <p id="entry-listened">listening: ...</p>
+          <p id="entry-played">playing: ...</p>
+
+
+          <h1>microblog entries from that day</h1>
+          <ul id="entry-microblog"></ul>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    async function loadEntries() {
+      try {
+        const [lifelogRes, microblogRes] = await Promise.all([
+          fetch('json/lifelog.json'),
+          fetch('json/microblog-2025.json')
+        ]);
+
+        const lifelogData = await lifelogRes.json();
+        const microblogData = await microblogRes.json();
+
+        // Merge microblog posts for each entry
+        const merged = lifelogData.map(entry => {
+          const microPosts = microblogData
+            .filter(m => m.date === entry.date)
+            .map(m => m.entry);
+
+          return { ...entry, microblog: microPosts };
+        });
+
+        const dateList = document.getElementById('date-list');
+        const entryDate = document.getElementById('entry-date');
+        const entryText = document.getElementById('entry-text');
+        const entryHabits = document.getElementById('habits');
+        const entryWatched = document.getElementById('entry-watched');
+        const entryListened = document.getElementById('entry-listened');
+        const entryPlayed = document.getElementById('entry-played');
+        const entryMicroblog = document.getElementById('entry-microblog');
+
+        function displayEntry(entry) {
+          entryDate.textContent = entry.date;
+          entryText.textContent = entry.text || '';
+
+          // Habits
+          entryHabits.innerHTML = '';
+          if (entry.habits && entry.habits.length) {
+            entry.habits.forEach(habit => {
+              const li = document.createElement('li');
+              li.textContent = habit;
+              entryHabits.appendChild(li);
+            });
+          }
+
+          entryWatched.textContent = `watching: ${entry.watched || ''}`;
+          entryListened.textContent = `listening: ${entry.listened || ''}`;
+          entryPlayed.textContent = `playing: ${entry.played || ''}`;
+
+
+          // Microblog posts
+          entryMicroblog.innerHTML = '';
+          if (entry.microblog && entry.microblog.length) {
+            entry.microblog.forEach(post => {
+              const li = document.createElement('li');
+              li.textContent = post;
+              entryMicroblog.appendChild(li);
+            });
+          }
+        }
+
+        // Build clickable date list
+        merged.forEach(entry => {
+          const btn = document.createElement('button');
+          btn.textContent = entry.date;
+          btn.onclick = () => displayEntry(entry);
+          dateList.appendChild(btn);
+        });
+
+        // Display the latest entry by default
+        if (merged.length > 0) {
+          displayEntry(merged[0]);
+        }
+
+      } catch (err) {
+        console.error('Error loading entries:', err);
+      }
+    }
+
+    loadEntries();
+  </script>
+</body>
+</html>

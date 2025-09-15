@@ -1,0 +1,19 @@
+[
+  {
+    "date": "15-09-25",
+    "text": "Should have gone for a long walk, but spent another day coding here.",
+    "habits": ["Coding", "Journaling"],
+    "watched": ["South Park", "The Wire"],
+    "listened": "NO NOW - Clarence Clarity",
+    "played": "South Park: Stick of Truth"
+
+  },
+  {
+    "date": "14-09-25",
+    "text": "Day off, spent the entire time working on this website. ",
+    "habits": ["Coding", "Reading"],
+    "watched": "South Park",
+    "listened": "NO NOW - Clarence Clarity",
+    "played": "Left 4 Dead 2"
+  }
+]
