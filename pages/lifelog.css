@@ -56,6 +56,12 @@ color:white;
 text-decoration: none;
 }
 
+.right {
+  flex: 1;
+  max-width: 500px;
+  margin-left: 20px;
+}
+
 
 .card {
   display: flex;
@@ -65,7 +71,7 @@ text-decoration: none;
   background-color: #000;
   padding: 20px;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
   box-sizing: border-box;
 }
 
@@ -77,15 +83,6 @@ text-decoration: none;
     margin-bottom: 0%;
   }
 
-.right{
-       inline-size: 100%;
-    height: auto;
-}
-
-.left{
-   inline-size: 100%;
-    height: auto;
-}
 
 .grow {
   transition: all 0.2s ease-in-out;
