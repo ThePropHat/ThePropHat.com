@@ -11,7 +11,7 @@ body, html {
 }
 
 .background {
-  background: url('images/made-by-me/homebackground.png') no-repeat center center fixed;
+  background: url('images/made-by-me/homebackground.png') no-repeat center center;
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -55,18 +55,7 @@ body, html {
   border: none;
 }
 
-.card-outer {
-  display: flex;
-  width: 1100px;
-  border-radius: 20px;
-  padding: 20px;
-  position: relative;
-  align-items: center;
-  justify-content: space-between;
-  
-}
-
-.card-inner {
+.card {
   display: flex;
   width: 1100px;
   background-color: #fffef3;
@@ -76,6 +65,20 @@ body, html {
   align-items: flex-start;
   justify-content: space-between;
   
+}
+
+.card::after{
+  content: '';
+  position:absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(red, rgba(247, 0, 255, 0.753), rgb(21, 69, 141), rgb(43, 148, 69), red);
+  top: 50%;
+  left: 50%;
+  translate: -49.4% -49.4%;
+  z-index:-1;
+  padding: 3px;
+  border-radius: 20px;
 }
 
 .left{
@@ -125,6 +128,8 @@ align-items:flex-end;
 .shelf-right{
 height: 40px;
 }
+
+
 
 .widget-center{
   padding: 10px;
