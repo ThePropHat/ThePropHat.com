@@ -207,10 +207,6 @@ a:active {
     text-align: center;
   }
 
-.entry-date{
-font-weight: 500px;
-}
-
   .header {
     flex-direction: column;
     align-items: center;
@@ -237,7 +233,6 @@ font-weight: 500px;
     margin:30px
   }
 }
-
 
 
   .left, .centre, .right {
