@@ -1,9 +1,18 @@
 [
   {
+    "date": "16-09-25",
+    "text": "i feel SO stuck at work rn i want to quit so bad but i need $$$ for living. i want to plan a big vacation sometime soon,  but some major upcoming expenses makes that very hard. i miss my friends and i want to go somewhere cool with them. i REALLY need to redo the lifelog entries but i dread having to look at the javascript again LMAO",
+    "habits": ["coding", "journaling", "woke up early"],
+    "watched":"nothing",
+    "listened": "nothing",
+    "played": "nothing"
+
+  },
+  {
     "date": "15-09-25",
     "text": "Should have gone for a long walk, but spent another day coding here. Playing the end of Stick of Truth with Megan though and really enjoying coming back to it!",
-    "habits": ["coding", "journaling"],
-    "watched": ["South Park", "The Wire"],
+    "habits": ["coding", "journaling", "woke up early"],
+    "watched": ["South Park"],
     "listened": "NO NOW - Clarence Clarity",
     "played": "South Park: Stick of Truth"
 
