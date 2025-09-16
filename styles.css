@@ -60,17 +60,18 @@ body, html {
 .card {
   display: flex;
   flex-direction: row;     /* desktop default */
-  max-width: 1100px;       /* cap it so it doesn’t stretch too far */
-  width: 100%;             /* allow it to shrink fluidly */
+  max-width: 1100px;      
+  width: 100%;            
   background-color: #000;
   padding: 20px;
-  position: relative;
+  position: relative;      /* keep relative for children positioning */
   align-items: flex-start;
   justify-content: space-between;
-  margin: 0 auto;          /* center horizontally */
-  top: 10%;
-  box-sizing: border-box;  /* prevents padding from breaking width */
+  margin: 20px auto;       /* center it and add some top margin */
+  box-sizing: border-box;  
+  flex-wrap: wrap;          /* allow columns to wrap on smaller screens */
 }
+
 
 
 .left{
