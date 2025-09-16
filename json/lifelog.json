@@ -2,28 +2,37 @@
   {
     "date": "16-09-25",
     "text": "i feel SO stuck at work rn i want to quit so bad but i need $$$ for living. i want to plan a big vacation sometime soon,  but some major upcoming expenses makes that very hard. i miss my friends and i want to go somewhere cool with them. i REALLY need to redo the lifelog entries but i dread having to look at the javascript again LMAO",
-    "habits": ["coding", "journaling", "woke up early"],
-    "watched":"nothing",
-    "listened": "nothing",
-    "played": "nothing"
+    "time": "",
+    "habits": ["coding (4 day streak!)", "journaling (3 day streak!)", "woke up early (2 day streak!)"],
+    "watched":false,
+    "listened": "Telicatessen - Rob Sonic",
+    "played": "Red Dead Redemption 2",
+    "images": [
+      {
+        "src": "images/lifelog-photos/16-09-25.jpg",
+        "caption": "My morning view at work"
+      }
 
+    ]
   },
   {
     "date": "15-09-25",
-    "text": "Should have gone for a long walk, but spent another day coding here. Playing the end of Stick of Truth with Megan though and really enjoying coming back to it!",
-    "habits": ["coding", "journaling", "woke up early"],
+    "text": "should have gone for a long walk, but spent another day coding here. playing the end of Stick of Truth with Megan though and really enjoying coming back to it!",
+    "habits": ["coding (3 day streak!)", "journaling (2 day streak!)", "woke up early"],
     "watched": ["South Park"],
     "listened": "NO NOW - Clarence Clarity",
-    "played": "South Park: Stick of Truth"
+    "played": "South Park: Stick of Truth",
+    "images": false
 
   },
   {
     "date": "14-09-25",
-    "text": "Day off, spent the entire time working on this website. ",
-    "habits": ["coding", "reading"],
+    "text": "day off, spent the entire time working on this website. played left 4 dead with my friend Nessa! we want to try playing with more people, we had a TON of fun playing infected versus mode",
+    "habits": ["coding (2 day streak!)", "reading (2 day streak!)"],
     "watched": "South Park",
     "listened": "NO NOW - Clarence Clarity",
-    "played": "Left 4 Dead 2"
+    "played": "Left 4 Dead 2",
+    "images": false
   },
  {
     "date": "13-09-25",
@@ -31,6 +40,7 @@
     "habits": ["coding", "reading", "walk: 45 min"],
     "watched": "South Park",
     "listened": "NO NOW - Clarence Clarity",
-    "played": "Deadlock"
+    "played": "Deadlock",
+    "images": false
   }
 ]

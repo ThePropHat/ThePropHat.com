@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Lifelog</title>
-  <link rel="stylesheet" href="/pages/lifelog.css">
+  <link rel="stylesheet" href="/pages/lifelog.css" />
 </head>
 <body>
   <div class="background">
     <header class="header">
       <h1>LIFELOG</h1>
-      <a href="/homepage.html">go back</a>
+      <a href="/homepage.html" class="grow">go back</a>
     </header>
 
     <main class="card">
@@ -21,20 +21,26 @@
 
       <section class="right">
         <article id="entry">
-          <h1 id="entry-date">[date]</h1>
-          <p id="entry-text">[lifelog text]</p>
+          <u><h1 id="entry-date"></h1></u>
 
-          <h1>habits</h1>
+          <div class="entry">
+            <strong><p id="entry-time"></p></strong>
+            <p id="entry-text"></p>
+          </div>
+
+          <u><h1>your daily habits</h1></u>
           <ul id="habits"></ul>
 
-          <h1>currently</h1>
-          <p id="entry-watched">watched: ...</p>
-          <p id="entry-listened">listened to: ...</p>
-          <p id="entry-played">played: ...</p>
+          <u><h1>what did you do today?</h1></u>
+          <p id="entry-watched"></p>
+          <p id="entry-listened"></p>
+          <p id="entry-played"></p>
 
-
-          <h1>microblog entries from that day</h1>
+          <u><h1>here are your microblog entries from today</h1></u>
           <ul id="entry-microblog"></ul>
+
+          <u><h1>images from today</h1></u>
+          <div id="photo-gallery" class="photo-gallery"></div>
         </article>
       </section>
     </main>
@@ -43,75 +49,119 @@
   <script>
     async function loadEntries() {
       try {
+        // Load lifelog and microblog data
         const [lifelogRes, microblogRes] = await Promise.all([
           fetch('json/lifelog.json'),
-          fetch('json/microblog-2025.json')
+          fetch('json/microblog-2025.json'),
         ]);
 
         const lifelogData = await lifelogRes.json();
         const microblogData = await microblogRes.json();
 
-        // Merge microblog posts for each entry
-        const merged = lifelogData.map(entry => {
+        // Merge microblog posts into lifelog entries by date
+        const merged = lifelogData.map((entry) => {
           const microPosts = microblogData
-            .filter(m => m.date === entry.date)
-            .map(m => m.entry);
+            .filter((m) => m.date === entry.date)
+            .map((m) => m.entry);
 
           return { ...entry, microblog: microPosts };
         });
 
+        // Get references to DOM elements once
         const dateList = document.getElementById('date-list');
+
         const entryDate = document.getElementById('entry-date');
+        const entryTime = document.getElementById('entry-time');
         const entryText = document.getElementById('entry-text');
+
         const entryHabits = document.getElementById('habits');
         const entryWatched = document.getElementById('entry-watched');
         const entryListened = document.getElementById('entry-listened');
         const entryPlayed = document.getElementById('entry-played');
-        const entryMicroblog = document.getElementById('entry-microblog');
 
+        const entryMicroblog = document.getElementById('entry-microblog');
+        const photoGallery = document.getElementById('photo-gallery');
+
+        // display one lifelog entry on the page
         function displayEntry(entry) {
+
           entryDate.textContent = entry.date;
+          entryTime.textContent = entry.time || '';
           entryText.textContent = entry.text || '';
 
-          // Habits
+          // habits 
           entryHabits.innerHTML = '';
           if (entry.habits && entry.habits.length) {
-            entry.habits.forEach(habit => {
-              const li = document.createElement('li');
-              li.textContent = habit;
-              entryHabits.appendChild(li);
+            entry.habits.forEach((habit) => {
+              const p = document.createElement('p');
+              p.textContent = habit;
+              entryHabits.appendChild(p);
             });
           }
 
-          entryWatched.textContent = `watched: ${entry.watched || ''}`;
-          entryListened.textContent = `listened to: ${entry.listened || ''}`;
-          entryPlayed.textContent = `played: ${entry.played || ''}`;
+          // watched, listened, played
+          entryWatched.innerHTML =
+            entry.watched !== false && entry.watched
+              ? `<strong>tv shows watched:</strong> <i>${entry.watched}</i>`
+              : '';
+          entryListened.innerHTML =
+            entry.listened !== false && entry.listened
+              ? `<strong>music listened to:</strong> <i>${entry.listened}</i>`
+              : '';
+          entryPlayed.innerHTML =
+            entry.played !== false && entry.played
+              ? `<strong>played:</strong> <i>${entry.played}</i>`
+              : '';
 
-
-          // Microblog posts
+          // microblog entries
           entryMicroblog.innerHTML = '';
           if (entry.microblog && entry.microblog.length) {
-            entry.microblog.forEach(post => {
-              const li = document.createElement('li');
-              li.textContent = post;
-              entryMicroblog.appendChild(li);
+            entry.microblog.forEach((post) => {
+              const p = document.createElement('p');
+              p.classList.add('microblog');
+              p.textContent = post;
+              entryMicroblog.appendChild(p);
             });
+          }
+
+          // images gallery
+          photoGallery.innerHTML = ''; 
+          if (entry.images && entry.images.length) {
+            entry.images.forEach((img) => {
+              const wrapper = document.createElement('div');
+              wrapper.classList.add('photo');
+
+              const caption = document.createElement('p');
+              caption.textContent = img.caption || '';
+
+              const image = document.createElement('img');
+              image.src = img.src;
+              image.alt = img.caption || `Photo from ${entry.date}`;
+              image.draggable = false;
+              image.style.width = '100%';
+
+              wrapper.appendChild(caption);
+              wrapper.appendChild(image);
+              photoGallery.appendChild(wrapper);
+            });
+          } else {
+            photoGallery.innerHTML = '<p>no images today :/</p>';
           }
         }
 
-        // Build clickable date list
-        merged.forEach(entry => {
+        //  clickable buttons for each date
+        merged.forEach((entry) => {
           const btn = document.createElement('button');
+          btn.classList.add('date-button');
           btn.textContent = entry.date;
           btn.onclick = () => displayEntry(entry);
           dateList.appendChild(btn);
         });
 
-        // Display the latest entry by default
+        //  latest entry by default
         if (merged.length > 0) {
           displayEntry(merged[0]);
         }
-
       } catch (err) {
         console.error('Error loading entries:', err);
       }

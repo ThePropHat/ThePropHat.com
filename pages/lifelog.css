@@ -12,14 +12,40 @@ h1 {
   font-style: italic;
 }
 
-
-.dates{
-border-style:solid;
-border-width:10px;
+p{
+  margin:1px;
 }
 
+#date-list{
+padding: 0px;
+}
 
-/* --- Background --- */
+.microblog{
+  padding:30px;
+  margin:10px;
+  border-style:solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+.photo{
+  position:static; 
+  width:100%;
+  border-style:solid;
+  border-width: 3px;
+  border-color: white;
+  font-style:italic;
+  margin:5px;
+}
+
+.entry{
+  display:flex;
+  flex-direction:column;
+  align-items:baseline;
+  justify-content:space-between;
+  margin: 0%;
+}
+
 .background {
   background: url('/images/made-by-me/lifelog-background.png') no-repeat center center;
   background-size: cover;
@@ -38,13 +64,13 @@ border-width:10px;
 .header {
   display: flex;
   justify-content: space-between;
-align-items:baseline;
+  align-items:baseline;
   width: 790px;      
   max-width: 90%;    
   margin-bottom: 0%; 
   height: 10%;
   box-sizing: border-box;
-  margin-bottom: -20px; /* pulls it up over card slightly */
+  margin-bottom: -20px; 
 
 }
 
@@ -60,18 +86,63 @@ text-decoration: none;
 }
 
 .right {
- overflow-y: scroll;
+  overflow-y: auto;
   flex: 1;
   max-width: 500px;
   margin-left: 20px;
+  max-height:680px;
+  padding: 3%;
 }
 
 .left{
- overflow-y: scroll;
-flex: 1;
+  overflow-y: auto;
+  flex: 1;
   max-width: 200px;
+  border-style:solid;
+  border-width: 1px;
+  border-color: white;
+  padding: 1%;
 }
 
+.microblog-post {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.date-button {
+  border: solid;
+  padding: 30px 50px;
+  cursor: pointer;
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-style:solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #252525;
+}
+
+.date-button:hover {
+  background-color: black;
+  color:white;
+}
 
 .card {
   display: flex;
@@ -85,15 +156,6 @@ flex: 1;
   justify-content: space-around;
   box-sizing: border-box;
 }
-
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 0%;
-  }
-
 
 .grow {
   transition: all 0.2s ease-in-out;
@@ -117,4 +179,14 @@ flex: 1;
     padding: 10px;
     margin: 30px;
   }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: -20px; 
+  }
+
 }
+
+

@@ -11,16 +11,18 @@ body, html {
 }
 
 .background {
-  background: url('images/made-by-me/homebackground.png') no-repeat center center;
+  background: url('/images/made-by-me/homebackground.png') no-repeat center center;
   background-size: cover;
-  min-height: 100vh; /* instead of fixed height */
   width: 100vw;
+  height: 100vh;
   display: flex;
-  justify-content: baseline;
-  align-items: center;
-  flex-direction: column;
-  overflow-y: auto; /* allow scroll if content taller */
+  flex-direction: column;  
+  align-items: center;    
+  justify-content: flex-start; 
+  padding-top: 3vh;
+  box-sizing: border-box;
 }
+
 
 
 .header-box {

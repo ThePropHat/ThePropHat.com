@@ -125,11 +125,11 @@
 
   <p>dont mind the scaffolding, im still unpacking around here</p> <br>
 
-  <p>currently building: homepage (thats where you are right now!)</a></p>
+  <p>currently building: lifelog</a></p>
 
 <div class="widget-center-clean shelf">
   <p>currently listening to:</p>
-  <p>NO NOW - Clarence Clarity</p>
+  <p>Telicatessen - Rob Sonic</p>
 </div>
         
     </div>
@@ -249,7 +249,7 @@ fetch("/json/microblog-2025.json")
     if (entries.length > 0) {
       const latest = entries[0]; // first entry = most recent
       const li = document.createElement("li");
-      li.innerHTML = `<strong>${latest.date}</strong> | ${latest.entry}`;
+      li.innerHTML = `<strong>${latest.date}</strong> | ${latest.entry} <strong> posted at ${latest.time}</strong>`;
       ul.appendChild(li);
     }
   });
