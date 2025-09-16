@@ -27,8 +27,7 @@ body, html {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  flex-wrap: wrap; /* Helps wrap items on small screens */
-  padding: 1rem;
+  flex-wrap: wrap;
 }
 
 .tph {
@@ -59,18 +58,18 @@ body, html {
 
 .card {
   display: flex;
-  flex-direction: row;     /* desktop default */
+  flex-direction: row;
   max-width: 1100px;      
   width: 100%;            
   background-color: #fffef3;
   border-radius: 20px;
   padding: 20px;
-  position: relative;      /* keep relative for children positioning */
+  position: relative;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 20px auto;       /* center it and add some top margin */
+  margin: 10px auto;
   box-sizing: border-box;  
-  flex-wrap: nowrap;          /* allow columns to wrap on smaller screens */
+  flex-wrap: nowrap;
 }
 
 
