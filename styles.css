@@ -70,7 +70,7 @@ body, html {
   justify-content: space-between;
   margin: 20px auto;       /* center it and add some top margin */
   box-sizing: border-box;  
-  flex-wrap: wrap;          /* allow columns to wrap on smaller screens */
+  flex-wrap: nowrap;          /* allow columns to wrap on smaller screens */
 }
 
 
@@ -86,6 +86,7 @@ flex-shrink: 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+flex:1;
 }
 
 
