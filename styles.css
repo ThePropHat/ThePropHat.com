@@ -62,7 +62,7 @@ body, html {
   flex-direction: row;     /* desktop default */
   max-width: 1100px;      
   width: 100%;            
-  background-color: #000;
+  background-color: #fffef3;
   padding: 20px;
   position: relative;      /* keep relative for children positioning */
   align-items: flex-start;
