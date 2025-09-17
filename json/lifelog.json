@@ -10,7 +10,7 @@
     "images": [
       {
         "src": "images/lifelog-photos/16-09-25.jpg",
-        "caption": "My morning view at work"
+        "caption": "my morning view at work"
       }
 
     ]
@@ -22,7 +22,13 @@
     "watched": ["South Park"],
     "listened": "NO NOW - Clarence Clarity",
     "played": "South Park: Stick of Truth",
-    "images": false
+    "images": [
+      {
+        "src": "images/lifelog-photos/15-09-25.jpg",
+        "caption": "m'lady Kiwi enjoys a rare treat (it is chimken)"
+      }
+
+    ]
 
   },
   {
@@ -32,7 +38,17 @@
     "watched": "South Park",
     "listened": "NO NOW - Clarence Clarity",
     "played": "Left 4 Dead 2",
-    "images": false
+    "images": [
+      {
+        "src": "images/lifelog-photos/14-09-25.jpg",
+        "caption": "m'lady Kiwi waits for her mouse friend to arrive"
+      },
+      {
+      "src": "images/lifelog-photos/14-09-25(1).jpg",
+        "caption": "he didnt show up :("
+    }
+
+    ]
   },
  {
     "date": "13-09-25",
@@ -41,6 +57,11 @@
     "watched": "South Park",
     "listened": "NO NOW - Clarence Clarity",
     "played": "Deadlock",
-    "images": false
+    "images": [
+      {
+        "src": "images/lifelog-photos/13-09-25.jpg",
+        "caption": "i know you're head over heels for her (i am)"
+      }
+    ]
   }
 ]

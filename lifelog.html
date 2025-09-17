@@ -59,13 +59,15 @@
         const microblogData = await microblogRes.json();
 
         // Merge microblog posts into lifelog entries by date
-        const merged = lifelogData.map((entry) => {
-          const microPosts = microblogData
-            .filter((m) => m.date === entry.date)
-            .map((m) => m.entry);
+        const merged = lifelogData.map((entry) => 
+        {
+        const microPosts = microblogData
+        .filter((m) => m.date === entry.date)
+        .map((m) => ({ time: m.time, entry: m.entry }));
 
-          return { ...entry, microblog: microPosts };
+  return { ...entry, microblog: microPosts };
         });
+
 
         // Get references to DOM elements once
         const dateList = document.getElementById('date-list');
@@ -80,6 +82,8 @@
         const entryPlayed = document.getElementById('entry-played');
 
         const entryMicroblog = document.getElementById('entry-microblog');
+        const timeMicroblog = document.getElementById('time-microblog');
+
         const photoGallery = document.getElementById('photo-gallery');
 
         // display one lifelog entry on the page
@@ -116,13 +120,14 @@
           // microblog entries
           entryMicroblog.innerHTML = '';
           if (entry.microblog && entry.microblog.length) {
-            entry.microblog.forEach((post) => {
-              const p = document.createElement('p');
-              p.classList.add('microblog');
-              p.textContent = post;
-              entryMicroblog.appendChild(p);
-            });
-          }
+          entry.microblog.forEach((post) => {
+          const p = document.createElement('p');
+          p.classList.add('microblog');
+          p.innerHTML = `<strong>${post.time}</strong> ${post.entry}`;
+          entryMicroblog.appendChild(p);
+  });
+}
+          
 
           // images gallery
           photoGallery.innerHTML = ''; 
