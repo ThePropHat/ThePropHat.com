@@ -1,12 +1,22 @@
 [
   {
+    "date": "17-09-25",
+    "text": "after waking up early, eating breakfast,and tidying up our kitchen, megan and i walked to the nearby library! i have lived here for 3 years, and lived in this area for almost 5, but have never come to this library before! im not a fan of the selection, so unfortunately i might not come too often. its a shame, because i was really looking forward to having a regular destination to walk, when i need. megan and i met at the nearby science center's park 5 years ago! i should add a reading log when i get home so that i can log what books i read here today",
+    "time": "2:19pm",
+    "habits": ["coding (5 day streak!)", "journaling (4 day streak!)", "walk (30 minutes),", "made breakfast", "dishes"],
+    "watched": "South Park",
+    "listened": "Hail to the Thief - Radiohead",
+    "played": false,
+    "images": false
+  },
+  {
     "date": "16-09-25",
     "text": "i feel SO stuck at work rn i want to quit so bad but i need $$$ for living. i want to plan a big vacation sometime soon,  but some major upcoming expenses makes that very hard. i miss my friends and i want to go somewhere cool with them. i REALLY need to redo the lifelog entries but i dread having to look at the javascript again LMAO",
     "time": "",
     "habits": ["coding (4 day streak!)", "journaling (3 day streak!)", "woke up early (2 day streak!)"],
     "watched":false,
     "listened": "Telicatessen - Rob Sonic",
-    "played": "Red Dead Redemption 2",
+    "played": ["Mafia: Definitive Edition","OXTO","Ultimate Chicken Horse"],
     "images": [
       {
         "src": "images/lifelog-photos/16-09-25.jpg",
