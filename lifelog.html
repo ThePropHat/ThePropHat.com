@@ -123,7 +123,7 @@
           entry.microblog.forEach((post) => {
           const p = document.createElement('p');
           p.classList.add('microblog');
-          p.innerHTML = `<strong>${post.time}</strong> ${post.entry}`;
+          p.innerHTML = `<strong>${post.time}</strong> <br> ${post.entry}`;
           entryMicroblog.appendChild(p);
   });
 }
