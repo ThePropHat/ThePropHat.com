@@ -104,27 +104,54 @@ align-items:flex-end;
    text-shadow: 2px 2px 4px #ccc;
 }
 
+@font-face {
+  font-family: IBM_CGA-2y; /* set name */
+  src: url(images/Web437_IBM_CGA-2y.woff); /* url of the font */
+}
 
 .widget-scroll{
-  background-color: rgb(68, 25, 25);
-  inline-size: 200px;
+  background-color: #0026ff;
+  inline-size: 250px;
   height: 200px;
   padding: 10px;
   padding-top: 0px;
   overflow-y: scroll;
   margin-bottom: 50px;
-  color:#FFB74D
+  color:rgb(255, 255, 255);
+  font-family:"IBM_CGA-2y";
 }
 
-.widget-scroll a{
-  color: rgb(172, 172, 228);
 
+.widget-scroll a{
+  color: rgb(255, 255, 255);
 }
 
 .shelf-right{
 height: 40px;
 }
 
+.widget-scroll-long{
+  background-color: #0026ff;
+  inline-size: 250px;
+  height: 300px;
+  padding: 10px;
+  padding-top: 0px;
+  overflow-y: scroll;
+  margin-bottom: 50px;
+  color:rgb(255, 255, 255);
+  font-family:"IBM_CGA-2y";
+}
+
+.widget-scroll-long a{
+  color: rgb(255, 255, 255);
+  text-decoration:none;
+  margin:10px;
+}
+
+.widget-scroll-long a:hover {
+  color: #0c016d;
+  
+}
 
 
 .widget-center{

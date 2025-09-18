@@ -1,9 +1,19 @@
 [
   {
+    "date": "18-09-25",
+    "text": "after waking up early, eating breakfast,and tidying up our kitchen, megan and i walked to the nearby library! i have lived here for 3 years, and lived in this area for almost 5, but have never come to this library before! im not a fan of the selection, so unfortunately i might not come too often. its a shame, because i was really looking forward to having a regular destination to walk, when i need. megan and i met at the nearby science center's park 5 years ago! i should add a reading log when i get home so that i can log what books i read here today",
+    "time": "4:22pm",
+    "habits": ["coding (6 day streak!)", "journaling (5 day streak!)"],
+    "watched": false,
+    "listened": ["Dark Times- Vince Staples"],
+    "played": "Mafia: Definitive Edition",
+    "images": false
+  },
+  {
     "date": "17-09-25",
     "text": "after waking up early, eating breakfast,and tidying up our kitchen, megan and i walked to the nearby library! i have lived here for 3 years, and lived in this area for almost 5, but have never come to this library before! im not a fan of the selection, so unfortunately i might not come too often. its a shame, because i was really looking forward to having a regular destination to walk, when i need. megan and i met at the nearby science center's park 5 years ago! i should add a reading log when i get home so that i can log what books i read here today",
     "time": ["2:19pm", "8:36pm"],
-    "habits": ["coding (5 day streak!)", "journaling (4 day streak!)", "walk (76 minutes),", "made breakfast", "dishes", "coding (4 day streak!)"],
+    "habits": ["coding (5 day streak!)", "journaling (4 day streak!)", "walk (76 minutes),", "made breakfast", "dishes"],
     "watched": "South Park",
     "listened": ["Hail to the Thief - Radiohead", "Dark Times- Vince Staples"],
     "played": false,
