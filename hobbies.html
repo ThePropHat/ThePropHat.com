@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HOBBIES</title>
+  <link rel="stylesheet" href="/pages/hobbies.css" />
+</head>
+<body>
+  <div class="background">
+    <header class="header">
+      <h1>hobbies</h1>
+      <a href="/homepage.html" class="grow">go back</a>
+    </header>
+    <script>
+        function openTab(evt, interestName) {
+            // Declare all variables
+            var i, tabcontent, tablinks;
+            // Get all elements with class="tabcontent" and hide them
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            // Show the current tab
+            document.getElementById(interestName).style.display = "block";
+
+
+            //                                            *CREDIT https://cervidaze.me/interests*
+        }
+    </script>
+    <script>
+        function showSubmenu(id) {
+          // hide all submenus
+          var menus = document.getElementsByClassName("submenu");
+          for (var i = 0; i < menus.length; i++) {
+            menus[i].style.display = "none";
+          }
+          // show the one we clicked
+          document.getElementById(id).style.display = "block";
+        }
+      </script>
+      
+
+    <main class="card">
+        <section class="center-top">
+            <aside id="sidenav">
+                <div class="links">
+                    <!-- parent categories -->
+                    <ul>
+                      <li><a href="#" onclick="showSubmenu('media-sub')">media</a></li>
+                      <li><a href="#" onclick="showSubmenu('art-sub')">art</a></li>
+                      <li><a href="#" onclick="showSubmenu('photo-sub')">photography</a></li>
+                      <li><a href="#" onclick="showSubmenu('comics-sub')">comic books</a></li>
+                    </ul>
+                  
+                </div>
+            </aside>
+
+        </section>
+
+        <div class="main-body">
+
+      <section class="left">
+        <section class="left">
+
+            <!-- submenus -->
+            <ul id="media-sub" class="submenu">
+              <li><a href="#" onclick="openTab(event, 'television')">television</a></li>
+              <li><a href="#" onclick="openTab(event, 'movies')"><del>movies</del></a></li>
+              <li><a href="#" onclick="openTab(event, 'movies')"><del>books</del></a></li>
+            </ul>
+          
+            <ul id="art-sub" class="submenu">
+              <li><a href="#" onclick="openTab(event, 'graphic design')"><del>graphic design</del></a></li>
+              <li><a href="#" onclick="openTab(event, 'screenshots')"><del>screenshots</del></a></li>
+            </ul>
+          
+            <ul id="photo-sub" class="submenu">
+              <li><a href="#" onclick="openTab(event, 'film')"><del>film</del></a></li>
+              <li><a href="#" onclick="openTab(event, 'digi')"><del>digi</del></a></li>
+            </ul>
+          
+            <ul id="comics-sub" class="submenu">
+              <li><a href="#" onclick="openTab(event, 'comiccollection')"><del>collection</del></a></li>
+              <li><a href="#" onclick="openTab(event, 'comiclog')"><del>log</del></a></li>
+            </ul>
+          </section>
+          
+      </section>
+
+      <section class="right">
+        <article id="entry">
+            <section class="right">
+                <article id="entry">
+                    
+                  <main class="tabcontent" id="television">
+                    <h1>what are you watching?</h1>
+                    <ul>
+                        <li>The Wire | ****</li>
+                        <img src="/images/the-wire.webp" width="50%">
+                        <p>ive only watched the first season but im really enjoying The Wire! it does a good job being a cop show that isnt
+                            <a href="https://en.wikipedia.org/wiki/Copaganda">copaganda</a>. Megan and i watched this often summer 2025, but we paused
+                            to watch South Park. im so excited to watch season 2 but i have to bug Megan about it!!!
+                        </p>
+                        <li>South Park | ****</li>
+                        <img src="/images/southpark.jpg" width="50%">
+                        <p>Megan and i always watch the same thing on tv, and she has been going CRAZY about South Park lately! we recently played and finished 
+                            South Park: Stick of Truth & 
+                        </p>
+                    </ul>
+                    <h1>what have you seen?</h1>
+                    <ul>
+                        <li>Twin Peaks | *****</li>
+                        <img src="/images/twinpeaks.jpg" width="50%">
+                        <p>RIP DAVID LYNCH
+                        </p>
+                        
+                    </ul>
+                  </main>
+              
+                  <main class="tabcontent" id="movies">
+                    <h1></h1>
+                    <p></p>
+                  </main>
+              
+                  <main class="tabcontent" id="graphic design">
+                    <<h1></h1>
+                    <p></p>
+                  </main>
+              
+                
+                </article>
+              </section>
+              
+        </article>
+      </section>
+    </div>
+    </main>
+  </div>
+
+
+</body>
+</html>
