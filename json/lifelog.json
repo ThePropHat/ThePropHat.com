@@ -2,7 +2,7 @@
   {
     "date": "17-09-25",
     "text": "after waking up early, eating breakfast,and tidying up our kitchen, megan and i walked to the nearby library! i have lived here for 3 years, and lived in this area for almost 5, but have never come to this library before! im not a fan of the selection, so unfortunately i might not come too often. its a shame, because i was really looking forward to having a regular destination to walk, when i need. megan and i met at the nearby science center's park 5 years ago! i should add a reading log when i get home so that i can log what books i read here today",
-    "time": "2:19pm",
+    "time": ["2:19pm", "8:36pm"],
     "habits": ["coding (5 day streak!)", "journaling (4 day streak!)", "walk (76 minutes),", "made breakfast", "dishes", "coding (4 day streak!)"],
     "watched": "South Park",
     "listened": ["Hail to the Thief - Radiohead", "Dark Times- Vince Staples"],
@@ -11,8 +11,15 @@
       {
         "src": "images/lifelog-photos/17-09-25.jpg",
         "caption": "the corpse of our 20 piece mcnugget meal"
+      },
+      {
+        "src": "images/made-by-me/hobbies-finished.png",
+        "caption": "this feels so close to what i wanted"
+      },
+      {
+        "src": "images/made-by-me/hobbies-design.png",
+        "caption": "original design w/approximation"
       }
-
     ]
   },
   {
