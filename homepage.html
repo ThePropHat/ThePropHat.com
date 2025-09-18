@@ -26,10 +26,27 @@
   
   <div class="header-box">
     
-      <div class="tph grow">
-        <a href="https://theprophat.com/homepage.html"><img src="images/made-by-me/sitelogo.png" alt="THEPROPHAT" draggable="false" style="position:static;"> </a>
-        
-      </div>
+    <div class="tph grow">
+      <a href="https://theprophat.com/homepage.html">
+        <img id="random-logo" src="images/made-by-me/sitelogo.png" alt="THEPROPHAT" draggable="false" style="position:static;"> 
+      </a>
+    </div>
+
+      <script>
+        // array of possible logos
+        const logos = [
+          "/images/made-by-me/sitelogo.png",
+          "/images/made-by-me/sitelogoD.png",
+        ];
+      
+        // pick random logo
+        const randomIndex = Math.floor(Math.random() * logos.length);
+      
+        // replace logo
+          const logoImg = document.getElementById("random-logo");
+          logoImg.src = logos[randomIndex];
+      </script>
+      
       
            <ul class="links">
                 <li class = "grow"><a href="https://tylerhensondesigns.com/" target="_blank"><img src="images/made-by-me/portfolio-link.png" draggable="false"> </a></li>
@@ -46,6 +63,7 @@
   <div class="widget-scroll">
   <p><strong> CHANGELOG: </strong></p>
   <ul>
+    <li><strong>18-09-25</strong> | add <i>random logo</i> logic</li><br>
     <li><strong>17-09-25</strong> | open <i><a href="/pages/hobbies-2025.html">HOBBIES</a></i></li><br>
     <li><strong>16-09-25</strong> | add <i>images</i> to lifelog</li><br></li>
     <li><strong>15-09-25</strong> | open <i><a href="/pages/lifelog.html">LIFELOG</a></i></li><br>
