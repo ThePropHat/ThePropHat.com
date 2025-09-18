@@ -27,7 +27,7 @@ body, html {
   
   .background {
     background: url('/images/made-by-me/hobbies-background.png') no-repeat center center;
-    background-size: stretch;
+    background-size: cover;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -47,7 +47,7 @@ body, html {
     bottom: 0;
     right: 0;
     width: 1110px;
-    height:625px;
+    height:60vh;
     max-width: 90%;
     padding: 20px;
     align-items:baseline;
@@ -75,8 +75,8 @@ body, html {
     bottom: 0;
     right: 0;
     width: 1110px;
-    height:545px;
-    max-width: 90%;
+    height:55vh;
+    max-width: 90vh;
     /* */
     align-items:center;
   }
