@@ -305,12 +305,3 @@ div::-webkit-scrollbar-thumb {
 div::-webkit-scrollbar-thumb:hover {
   background: #001aa8;
 }
-
-#chattable{
-  width:270px;
-  background-color:#001aa8;
-  color:white;
-  font-family: IBM_CGA-2y;
-  display:none;
-
-}
