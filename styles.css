@@ -283,3 +283,34 @@ a:active {
     width: 150px;
   }
 }
+
+/* width */
+div::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+div::-webkit-scrollbar-track {
+  background: #001dc0;
+}
+
+/* Handle */
+div::-webkit-scrollbar-thumb {
+  border-style:solid;
+  border-width: 0.5px;
+  border-color: white;
+}
+
+/* Handle on hover */
+div::-webkit-scrollbar-thumb:hover {
+  background: #001aa8;
+}
+
+#chattable{
+  width:270px;
+  background-color:#001aa8;
+  color:white;
+  font-family: IBM_CGA-2y;
+  display:none;
+
+}

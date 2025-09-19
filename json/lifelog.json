@@ -1,10 +1,20 @@
 [
   {
+    "date": "19-09-25",
+    "text": "a happy 1 week birthday here at theprophat.com :D LONG day at work, as i had anticipated. it was shockingly busy and i was stuck making drinks for most of the day. we reorganized the backroom recently which i strongly dislike at the moment. i hate when my entire day is work and thats all i have to talk about. theprophat out.",
+    "time": "3:58pm",
+    "habits": ["coding (1 week streak!)", "journaling (6 day streak!)", "read comic book", "wake up before 8am"],
+    "watched": false,
+    "listened": ["Psyence Fiction - UNKLE"],
+    "played": "Mafia: Definitive Edition",
+    "images": false
+  },
+  {
     "date": "18-09-25",
     "text": "slow day today in anticipation for a long day at work tomorrow. got some really cool visual features tweaked and plenty more ideas. being at work, away from my computer, always helps me form new ideas, and hopefully tomorrow is no different. feeling cozy, happy, lazy.",
     "time": ["4:22pm"," 6:26pm"],
     "habits": ["coding (6 day streak!)", "journaling (5 day streak!)"],
-    "watched": "Her",
+    "watched":  false,
     "listened": ["Dark Times- Vince Staples"],
     "played": "Mafia: Definitive Edition",
     "images": false
