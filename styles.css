@@ -110,7 +110,7 @@ align-items:flex-end;
 }
 
 .widget-scroll{
-  background-color: #0026ff;
+  background-color: #001dc0;
   inline-size: 250px;
   height: 200px;
   padding: 10px;
@@ -131,7 +131,7 @@ height: 40px;
 }
 
 .widget-scroll-long{
-  background-color: #0026ff;
+  background-color: #001dc0;
   inline-size: 250px;
   height: 300px;
   padding: 10px;
