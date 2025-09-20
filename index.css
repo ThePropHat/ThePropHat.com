@@ -1,0 +1,54 @@
+body, html {
+    font-family: "ARGENTPIXEL-ITAL", serif;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    background: #121212;
+  }
+  
+  .background {
+    background-color: #121212;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  
+    padding-top: 3vh;
+    box-sizing: border-box;
+    color:#383040;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .index{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+   
+  }
+
+   p{
+    margin:0;
+    font-size: 20px;
+   }
+
+  a {
+    text-decoration: none;
+    color: #383040;
+    font-family: "ARGENTPIXEL", sans-serif;
+    font-size: 20px;
+  }
+
+  a:hover{
+    color: #927ea5;
+  }
+  
+  @font-face {
+    font-family: "ARGENTPIXEL";
+    src: url("images/ArgentPixelCF-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "ARGENTPIXEL-ITAL"; /* set name */
+    src: url("images/ArgentPixelCF-Italic.woff"); /* url of the font */
+  }
