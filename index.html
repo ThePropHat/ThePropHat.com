@@ -10,13 +10,30 @@
 <body>
 
   <div class="background"><div class="index">
-    <p>thou art before the court of</p>
+    <p id="random-greeting">thou art before the court of</p>
       
         <a href="https://theprophat.com/homepage.html">THEPROPHAT</a>
         </div>
 
         </div>
         
+        <script>
+        // array of possible h2 texts
+      const greetings = [
+      "thou art before the court of",
+      "arise, you are nearing the court of",
+      "once knelt, thou belongest to the court of",
+      "by oath or by curse, thou art claimed by the court of",
+      "thy name fades, but thou art known in the court of"
+  
+      ];
 
+        
+        const greetingIndex = Math.floor(Math.random() * greetings.length);
+
+       
+        document.getElementById("random-greeting").innerText = greetings[greetingIndex];
+
+        </script>
 </body>
 </html>
