@@ -1,13 +1,18 @@
 [
    {
     "date": "21-09-25",
-    "text": "had a delicious breakfast at the nearby diner with megan and her friend, also had an interesting and unexpected visitor arrive at my court this morning. they even played a little trick on me!",
+    "text": "had a delicious breakfast at the nearby diner with megan and her friend, also had an interesting and unexpected visitor arrive at my court this morning. they even played a little trick on me! im really itching to get back into making music so maybe ill find a place to upload it here?",
     "time": "12:52",
     "habits": ["coding (9 day streak!)", "journaling (8 day streak!)", "wake up before 8am (3 day streak!)"],
     "watched": false,
     "listened": ["Loaded - Brotha Lynch Hung"],
     "played": "Rimworld",
-    "images": false
+    "images": [
+      {
+        "src": "images/lifelog-photos/21-09-25.jpg",
+        "caption": "another day, still no mouse :("
+      }
+    ]
   },
    {
     "date": "20-09-25",
@@ -17,7 +22,16 @@
     "watched": false,
     "listened": ["In Evening Air - Future Islands", "Loaded - Brotha Lynch Hung"],
     "played": false,
-    "images": false
+    "images": [
+      {
+        "src": "images/lifelog-photos/20-09-25.jpg",
+        "caption": "yeah this might be the worst thing you could order from me"
+      },
+      {
+        "src": "images/lifelog-photos/20-09-25(1).jpg",
+        "caption": "I LOVE MY EGG WIFE SHE GOT ME THESE PINS :D"
+      }
+    ]
   },
   {
     "date": "19-09-25",
