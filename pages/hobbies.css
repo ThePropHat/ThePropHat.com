@@ -28,7 +28,7 @@ body, html {
   .background {
     background: url('/images/made-by-me/hobbies-background.png') no-repeat center center;
     background-size: cover;
-    position: fixed;
+    position: relative;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -37,19 +37,19 @@ body, html {
     justify-content: flex-start; 
     padding-top: 10vh;
     box-sizing: border-box;
+    overflow: hidden;
   }
   
   
   .header {
     display: flex;
     flex-direction: row;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
-    width: 1110px;
-    height:625px;
-    max-width: 90%;
-    padding: 20px;
+    width: 64%;
+    height:585px;
+    padding:20px;
     align-items:baseline;
     justify-content: space-between;
     box-sizing: border-box;
@@ -65,16 +65,17 @@ body, html {
   .header h1{
   color: #ffffff;
   text-decoration: none;
+  margin:0px
   }
   
   .card {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
-    width: 1110px;
-    height:545px;
+    width: 64%;
+    height:59%;
     max-width: 90%;
     /* */
     align-items:center;
@@ -131,6 +132,7 @@ body, html {
   .tabcontent li{
     padding-bottom:30px;
   }
+
   .tabcontent a{
     padding-bottom:30px;
     text-decoration:none;
@@ -157,7 +159,7 @@ body, html {
 
   .left {
     flex: 0 0 200px; /* fixed width for the left nav */
-    max-width: 200px;
+    max-width: 90px;
     padding: 1%;
     overflow-y: auto;
   }
@@ -174,26 +176,25 @@ body, html {
  
   /* width */
   ::-webkit-scrollbar {
-    width: 20px;
+    width: 10px;
+
   }
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #000000;
+    background: #322933;
   }
   
   
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    border-style:solid;
-    border-width: 1px;
-    border-color: white;
+    background: #698c90;
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: #252525;
+    background: #3d5153;
   }
   
   .grow {
