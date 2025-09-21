@@ -292,3 +292,19 @@ div::-webkit-scrollbar-thumb {
 div::-webkit-scrollbar-thumb:hover {
   background: #001aa8;
 }
+
+.courtcard {
+  --rotation: 0deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.1s;
+  margin-left: 60px;
+  margin-bottom: 10px;
+}
+
+#king {
+  --rotation: -3deg;
+}
+
+.courtcard:hover {
+  transform: scale(1.1) rotate(var(--rotation));
+}

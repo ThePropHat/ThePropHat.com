@@ -1,0 +1,132 @@
+body, html {
+    font-family: "ARGENTPIXEL-ITAL", serif;
+    margin: 0;
+    min-height: 100vh;
+    padding: 0;
+    background: #121212;
+  }
+
+p{
+  color:rgba(255, 0, 0, 0.308);
+  margin:0px;
+}
+
+h1{
+    font-family: "ARGENTPIXEL";
+    color:#be0000;
+    margin:0px;
+    margin-bottom:3%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+.background {
+  background: url('/images/made-by-me/court-background.png');
+    background-size: cover;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    justify-content: center;
+    padding-top: 10vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.cards{
+    display:flex;
+    text-align:center;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+.cards img{
+ margin: 30px;
+}
+
+.card {
+  --rotation: 0deg;
+  transform: rotate(var(--rotation));
+  transition: transform 0.1s;
+  margin: 30px;
+}
+
+#king {
+  --rotation: -3deg;
+}
+#queen {
+  --rotation: 1.2deg;
+}
+#jack {
+  --rotation: -1.5deg;
+}
+#ace {
+  --rotation: 2.5deg;
+}
+
+.card:hover {
+  transform: scale(1.1) rotate(var(--rotation));
+}
+
+ul{
+    list-style-type: none;
+}
+
+ 
+  @font-face {
+    font-family: "ARGENTPIXEL";
+    src: url("../images/ArgentPixelCF-Regular.woff") format("woff");
+  }
+
+  @font-face {
+    font-family: "ARGENTPIXEL-ITAL"; /* set name */
+    src: url("../images/ArgentPixelCF-Italic.woff"); /* url of the font */
+  }
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #000000;
+  margin: 10% auto;
+  padding: 2rem;
+  width: 80%;
+  max-width: 500px;
+  color: white;
+  text-align: center;
+  position: relative;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+}
