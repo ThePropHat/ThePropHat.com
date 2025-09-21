@@ -44,11 +44,11 @@ body, html {
   .header {
     display: flex;
     flex-direction: row;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     width: 64%;
-    height:585px;
+    height:67%;
     padding:20px;
     align-items:baseline;
     justify-content: space-between;
