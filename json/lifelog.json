@@ -1,8 +1,11 @@
-[
+[ 
    {
     "date": "21-09-25",
     "text": "had a delicious breakfast at the nearby diner with megan and her friend, also had an interesting and unexpected visitor arrive at my court this morning. they even played a little trick on me! im really itching to get back into making music so maybe ill find a place to upload it here?",
-    "time": "12:52",
+    "time": ["12:52pm"," 1:59pm"],
+    "mood": ["calm", "playful", "excited"],
+    "weather": "sunny",
+    "locations": "Ricky's Diner",
     "habits": ["coding (9 day streak!)", "journaling (8 day streak!)", "wake up before 8am (3 day streak!)"],
     "watched": false,
     "listened": ["Loaded - Brotha Lynch Hung"],
@@ -10,7 +13,7 @@
     "images": [
       {
         "src": "images/lifelog-photos/21-09-25.jpg",
-        "caption": "another day, still no mouse :("
+        "caption": "another day, still no mouse outside :( she is going to be so sad in the winter"
       }
     ]
   },
@@ -79,7 +82,6 @@
   {
     "date": "16-09-25",
     "text": "i feel SO stuck at work rn i want to quit so bad but i need $$$ for living. i want to plan a big vacation sometime soon,  but some major upcoming expenses makes that very hard. i miss my friends and i want to go somewhere cool with them. i REALLY need to redo the lifelog entries but i dread having to look at the javascript again LMAO",
-    "time": "",
     "habits": ["coding (4 day streak!)", "journaling (3 day streak!)", "woke up early (2 day streak!)"],
     "watched":false,
     "listened": "Telicatessen - Rob Sonic",

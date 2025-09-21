@@ -29,6 +29,10 @@ async function loadEntries() {
     const entryPlayed = document.getElementById('entry-played');
     const entryMicroblog = document.getElementById('entry-microblog');
     const photoGallery = document.getElementById('photo-gallery');
+    const entryMood = document.getElementById('entry-mood');
+    const entryWeather = document.getElementById('entry-weather');
+    const entryLocation = document.getElementById('entry-location');
+    
 
     function displayEntry(entry) {
       entryDate.textContent = entry.date;
@@ -48,13 +52,30 @@ async function loadEntries() {
         entry.watched !== false && entry.watched
           ? `<strong>tv shows watched:</strong> <i>${formatList(entry.watched)}</i>`
           : '';
+
       entryListened.innerHTML =
         entry.listened !== false && entry.listened
           ? `<strong>music listened to:</strong> <i>${formatList(entry.listened)}</i>`
           : '';
+
       entryPlayed.innerHTML =
         entry.played !== false && entry.played
           ? `<strong>played:</strong> <i>${formatList(entry.played)}</i>`
+          : '';
+
+             entryMood.innerHTML =
+        entry.mood !== false && entry.mood
+          ? `<strong>i felt:</strong> <i>${formatList(entry.mood)}</i>`
+          : '';
+
+             entryLocation.innerHTML =
+        entry.locations !== false && entry.locations
+          ? `<i>${formatList(entry.locations)}</i>`
+          : '';
+
+             entryWeather.innerHTML =
+        entry.weather !== false && entry.weather
+          ? `<strong>the weather today was:</strong> <i>${formatList(entry.weather)}</i>`
           : '';
 
       entryMicroblog.innerHTML = '';
@@ -64,7 +85,11 @@ async function loadEntries() {
           p.classList.add('microblog');
           p.innerHTML = `<strong>${post.time}</strong> <br> ${post.entry}`;
           entryMicroblog.appendChild(p);
+          
         });
+      }
+        else {
+        entryMicroblog.innerHTML = '<p>no microblog today :/</p>';
       }
 
       photoGallery.innerHTML = '';
