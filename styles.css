@@ -302,7 +302,7 @@ div::-webkit-scrollbar-thumb:hover {
 }
 
 #king {
-  --rotation: -3deg;
+  --rotation: 2.3deg;
 }
 
 .courtcard:hover {
