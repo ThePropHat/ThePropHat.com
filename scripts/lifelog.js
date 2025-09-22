@@ -21,10 +21,10 @@ async function loadEntries() {
 
     const dateList = document.getElementById('date-list');
     const entryDate = document.getElementById('entry-date');
-    const entryTime = document.getElementById('entry-time');
     const entryText = document.getElementById('entry-text');
     const entryHabits = document.getElementById('habits');
-    const entryWatched = document.getElementById('entry-watched');
+    const entryTVWatched = document.getElementById('entry-tv');
+    const entryMovieWatched = document.getElementById('entry-movie');
     const entryListened = document.getElementById('entry-listened');
     const entryPlayed = document.getElementById('entry-played');
     const entryMicroblog = document.getElementById('entry-microblog');
@@ -36,7 +36,6 @@ async function loadEntries() {
 
     function displayEntry(entry) {
       entryDate.textContent = entry.date;
-      entryTime.textContent = entry.time || '';
       entryText.textContent = entry.text || '';
 
       entryHabits.innerHTML = '';
@@ -48,9 +47,14 @@ async function loadEntries() {
         });
       }
 
-      entryWatched.innerHTML =
-        entry.watched !== false && entry.watched
-          ? `<strong>tv shows watched:</strong> <i>${formatList(entry.watched)}</i>`
+      entryTVWatched.innerHTML =
+        entry.tv !== false && entry.tv
+          ? `<strong>tv shows watched:</strong> <i>${formatList(entry.tv)}</i>`
+          : '';
+
+          entryMovieWatched.innerHTML =
+        entry.movie !== false && entry.movie
+          ? `<strong>movies watched:</strong> <i>${formatList(entry.movie)}</i>`
           : '';
 
       entryListened.innerHTML =

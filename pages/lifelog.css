@@ -14,6 +14,7 @@ h1 {
 
 p{
   margin:1px;
+  white-space: pre-wrap;
 }
 
 #date-list{
