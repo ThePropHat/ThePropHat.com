@@ -192,3 +192,8 @@ text-decoration: none;
 }
 
 
+#entry-text{
+  border-style: solid;
+  padding: 20px;
+  border-width: 1px;
+}
