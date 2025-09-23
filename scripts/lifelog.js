@@ -26,6 +26,8 @@ async function loadEntries() {
     const entryTVWatched = document.getElementById('entry-tv');
     const entryMovieWatched = document.getElementById('entry-movie');
     const entryListened = document.getElementById('entry-listened');
+    const entryBook = document.getElementById('entry-book');
+    const entryComic = document.getElementById('entry-comic');
     const entryPlayed = document.getElementById('entry-played');
     const entryMicroblog = document.getElementById('entry-microblog');
     const photoGallery = document.getElementById('photo-gallery');
@@ -57,10 +59,22 @@ async function loadEntries() {
           ? `<strong>movies watched:</strong> <i>${formatList(entry.movie)}</i>`
           : '';
 
+      entryBook.innerHTML =
+        entry.book !== false && entry.book
+          ? `<strong>books read:</strong> <i>${formatList(entry.book)}</i>`
+          : '';
+
+      entryComic.innerHTML =
+        entry.comic !== false && entry.comic
+          ? `<strong>comic books read:</strong> <i>${formatList(entry.comic)}</i>`
+          : '';
+
+
       entryListened.innerHTML =
         entry.listened !== false && entry.listened
           ? `<strong>music listened to:</strong> <i>${formatList(entry.listened)}</i>`
           : '';
+
 
       entryPlayed.innerHTML =
         entry.played !== false && entry.played

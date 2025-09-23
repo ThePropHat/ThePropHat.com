@@ -5,9 +5,11 @@
     "mood": ["calm"],
     "weather": ["cloudy", "cold"],
     "locations": false,
-    "habits": false,
+    "habits": ["coding", "journaling", "made breakfast", "reading"],
     "tv": false,
     "movie": false,
+    "comic": false,
+    "book": "Titus Groan - Mervyn Peake",
     "listened": ["Wild Onion - Twin Peaks"],
     "played": false,
     "images": false
@@ -54,6 +56,7 @@
     "habits": ["coding (8 day streak!)", "journaling (7 day streak!)", "read comic book (2 day streak!", "wake up before 8am (2 day streak!)", "graphic design"],
     "tv": false,
     "listened": ["In Evening Air - Future Islands", "Loaded - Brotha Lynch Hung"],
+    "comic": "The Immortal Thor #25",
     "played": false,
     "images": [
       {
@@ -72,6 +75,7 @@
     "time": "3:58pm",
     "habits": ["coding (1 week streak!)", "journaling (6 day streak!)", "read comic book", "wake up before 8am"],
     "tv": false,
+    "comic": "Imperial #3",
     "listened": ["Psyence Fiction - UNKLE"],
     "played": "Mafia: Definitive Edition",
     "images": false
@@ -127,8 +131,9 @@
   {
     "date": "15-09-25",
     "text": "should have gone for a long walk, but spent another day coding here. playing the end of Stick of Truth with Megan though and really enjoying coming back to it!",
-    "habits": ["coding (3 day streak!)", "journaling (2 day streak!)", "woke up early"],
+    "habits": ["coding (3 day streak!)", "journaling (2 day streak!)", "woke up early", "read comic book (2 day streak!"],
     "tv": ["South Park"],
+    "comic": "Imperial #2",
     "listened": "NO NOW - Clarence Clarity",
     "played": "South Park: Stick of Truth",
     "images": [
@@ -143,9 +148,10 @@
   {
     "date": "14-09-25",
     "text": "day off, spent the entire time working on this website. played left 4 dead with my friend Nessa! we want to try playing with more people, we had a TON of fun playing infected versus mode",
-    "habits": ["coding (2 day streak!)", "reading (2 day streak!)"],
+    "habits": ["coding (2 day streak!)", "reading (2 day streak!)", "read comic book"],
     "tv": "South Park",
     "listened": "NO NOW - Clarence Clarity",
+    "comic": "Imperial #1 (re-read)",
     "played": "Left 4 Dead 2",
     "images": [
       {
