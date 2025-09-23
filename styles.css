@@ -80,7 +80,7 @@ body, html {
   margin: 10px auto;
   box-sizing: border-box;  
   flex-wrap: nowrap;
-  text-shadow: 2px 2px 0px #1adbbd;
+  
 }
 
 
@@ -113,6 +113,7 @@ align-items:flex-end;
   transform: skew(-5deg);
   animation: pulse 2s infinite ease-in-out;
   display: inline-block;
+  text-shadow: 2px 2px 0px #1adbbd;
 }
 
 
