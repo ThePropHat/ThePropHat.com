@@ -2,7 +2,7 @@
     {
     "date": "23-09-25",
     "text": "conquered my insomnia last night. it was harder than i was expecting but i managed to get a decent, dreamless sleep. it feels rough having to start over all my habit counts again, but i dont feel like it was my fault. thankful to have today off work. \n\nlots of new eyes on my portfolio lately has me feeling very confident and inspired. if thats you and you're here reading this, thanks!",
-    "mood": ["calm"],
+    "mood": ["calm", "sleepy"],
     "weather": ["cloudy", "cold"],
     "locations": false,
     "habits": ["coding", "journaling", "made breakfast", "reading"],
@@ -58,6 +58,7 @@
     "listened": ["In Evening Air - Future Islands", "Loaded - Brotha Lynch Hung"],
     "comic": "The Immortal Thor #25",
     "played": false,
+    "locations":"Work",
     "images": [
       {
         "src": "images/lifelog-photos/20-09-25.jpg",
@@ -77,6 +78,7 @@
     "tv": false,
     "comic": "Imperial #3",
     "listened": ["Psyence Fiction - UNKLE"],
+    "locations":"Work",
     "played": "Mafia: Definitive Edition",
     "images": false
   },
@@ -98,6 +100,7 @@
     "tv": "South Park",
     "listened": ["Hail to the Thief - Radiohead", "Dark Times- Vince Staples"],
     "played": false,
+    "locations":["Library", "McDonalds"],
     "images": [
       {
         "src": "images/lifelog-photos/17-09-25.jpg",
@@ -120,6 +123,7 @@
     "tv":false,
     "listened": "Telicatessen - Rob Sonic",
     "played": ["Mafia: Definitive Edition","OXTO","Ultimate Chicken Horse"],
+    "locations":"Work",
     "images": [
       {
         "src": "images/lifelog-photos/16-09-25.jpg",
@@ -172,6 +176,7 @@
     "tv": "South Park",
     "listened": "NO NOW - Clarence Clarity",
     "played": "Deadlock",
+    "locations":"Tiramisu",
     "images": [
       {
         "src": "images/lifelog-photos/13-09-25.jpg",
