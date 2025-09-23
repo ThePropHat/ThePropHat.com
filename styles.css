@@ -1,13 +1,21 @@
 body, html {
-  font-family: "Rubik", sans-serif;
+  font-family: "Monocraft", sans-serif;
   margin: 0;
   min-height: 100vh;
   padding: 0;
   background: black;
+  font-size: 16px;
+  
+}
+
+@font-face {
+  font-family: Monocraft; /* set name */
+  src: url(images/Monocraft.ttc); /* url of the font */
 }
 
 .text p{
-  color:red
+  color:red;
+  
 }
 
 .background {
@@ -72,6 +80,7 @@ body, html {
   margin: 10px auto;
   box-sizing: border-box;  
   flex-wrap: nowrap;
+  text-shadow: 2px 2px 0px #1adbbd;
 }
 
 
@@ -100,9 +109,14 @@ align-items:flex-end;
   flex-shrink: 0;
 }
 
-.random-heading{
-   text-shadow: 2px 2px 4px #ccc;
+.random-heading {
+  transform: skew(-5deg);
+  animation: pulse 2s infinite ease-in-out;
+  display: inline-block;
 }
+
+
+
 
 @font-face {
   font-family: IBM_CGA-2y; /* set name */
@@ -222,6 +236,22 @@ a:hover {
 a:active {
   color: #2D3A4D;
 }
+
+@keyframes pulse {
+  0% {
+    transform: skew(-5deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: skew(-5deg) scale(1.05);
+    opacity: 0.85;
+  }
+  100% {
+    transform: skew(-5deg) scale(1);
+    opacity: 1;
+  }
+}
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
