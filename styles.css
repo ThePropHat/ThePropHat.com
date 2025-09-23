@@ -97,6 +97,7 @@ flex-shrink: 0;
   flex-direction: column;
   justify-content: flex-start;
 flex:1;
+text-shadow: 2px 2px 0px #1adbbd;
 }
 
 
