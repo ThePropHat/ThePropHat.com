@@ -183,6 +183,7 @@ background-color: black;
 flex-shrink: 0;
 max-width: 500px;
 text-align: center;
+color: rgb(155, 11, 11);
 }
 
 .widget{
