@@ -8,13 +8,13 @@
     "habits": false,
     "tv": false,
     "movie": false,
-    "listened": false,
+    "listened": ["Wild Onion - Twin Peaks"],
     "played": false,
     "images": false
   },
   {
     "date": "22-09-25",
-    "text": "lost a fight with insomnia. not too happy to have that return, i havent really had to deal with that since high school. and like i used to back then i, stubbornly, laid there until it was time to get up. the world can be such a dreamy place if you let it. had a hard time focusing on anything. my stomach hurt and i felt dizzy all day. \n\nbetter days ahead.",
+    "text": "lost a fight with insomnia. not too happy to have that return, i havent really had to deal with that since high school. and like i used to back then i, stubbornly, laid there until it was time to get up. the world can be such a dreamy place if you let it. having a hard time focusing on anything. my stomach hurts and i feel dizzy. \n\nbetter days ahead.",
     "mood": ["sleepy", "frustrated"],
     "weather": ["cloudy", "cold"],
     "locations": "Work",
