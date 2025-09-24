@@ -10,7 +10,7 @@ body, html {
 
 @font-face {
   font-family: Monocraft; /* set name */
-  src: url(images/Monocraft.ttc); /* url of the font */
+  src: url(images/Monocraft.ttf); /* url of the font */
 }
 
 .text p{
