@@ -6,7 +6,7 @@
     "weather": ["cloudy", "cold"],
     "locations": false,
     "habits": ["coding", "journaling", "made breakfast", "reading"],
-    "tv": false,
+    "tv": ["Band of Brothers"],
     "movie": false,
     "comic": false,
     "book": "Titus Groan - Mervyn Peake",
