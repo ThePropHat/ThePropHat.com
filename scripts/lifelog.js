@@ -34,6 +34,7 @@ async function loadEntries() {
     const entryMood = document.getElementById('entry-mood');
     const entryWeather = document.getElementById('entry-weather');
     const entryLocation = document.getElementById('entry-location');
+    const entryAudio = document.getElementById('entry-audio');
     
 
     function displayEntry(entry) {
@@ -95,6 +96,18 @@ async function loadEntries() {
         entry.weather !== false && entry.weather
           ? `<strong>the weather today was:</strong> <i>${formatList(entry.weather)}</i>`
           : '';
+
+          // audio
+entryAudio.innerHTML = ''; // clear previous
+if (entry.audio) {
+  const audioEl = document.createElement('audio');
+  audioEl.controls = true;
+  audioEl.src = entry.audio;
+  entryAudio.appendChild(audioEl);
+} else {
+  entryAudio.textContent = 'no song for today';
+}
+
 
       entryMicroblog.innerHTML = '';
       if (entry.microblog && entry.microblog.length) {
