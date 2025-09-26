@@ -75,7 +75,7 @@ body, html {
   bottom: 20px;
   right: 20px;
   transform: rotate(var(--rotation));
-  transition: transform 0.1s;
+  transition: transform 0.03s;
 }
 
 #king {
@@ -83,7 +83,7 @@ body, html {
 }
 
 .courtcard:hover {
-  transform: scale(1.1) rotate(var(--rotation));
+  transform: scale(1.2) rotate(var(--rotation));
 }
 
  
