@@ -13,13 +13,11 @@
 <body>
 <div class="background">
 
-  <div class="head">
-    
+  <header class="head">
   <a href="https://theprophat.com/homepage.html" style="text-decoration:none;">
     <h2 class ="random-heading" id="random-heading">they call me www.theprophat.com</h2></a>
+    </header>
     
-</div>
-
 
 <script>
   // array of possible h2 texts
@@ -53,27 +51,27 @@
   document.getElementById("random-heading").innerText = headings[headerIndex];
 </script>
 
-<div class="card">
- <div><a href="lifelog.html">LIFELOG</a></div>
-    <div><a href="hobbies.html">HOBBIES</a></div>
-    <div><a href="neighbourhood.html">NEIGHBOURHOOD</a></div>
-    <div><a href="http://tv.theprophat.com:8158/" target="_blank">TWIG VALLEY</a></div>
-    
-  
-</div>
+ <main class="content-area">
+      <div class="card">
+        <div><a href="lifelog.html">LIFELOG</a></div>
+        <div><a href="hobbies.html">HOBBIES</a></div>
+        <div><a href="neighbourhood.html">NEIGHBOURHOOD</a></div>
+        <div><a href="http://tv.theprophat.com:8158/" target="_blank">TWIG VALLEY</a></div>
+      </div>
+    </main>
 
 <a href="court.html"><img id=king alt="the-king's-court" class="courtcard" src="/images/made-by-me/king.png" width="3%"></a>
 
-<div class="foot">
+<footer class="foot">
 <!--                                                                                                                                              VIEW COUNTER -->
 <p>for astrochimp Ham & spacedog Laika</p>
-</div>
+</footer>
   
 </div>
 
 
 <script>
-// Fetch and show the most recent microblog entry
+// fetch and show the most recent microblog entry
 fetch("/json/microblog-2025.json")
   .then(res => res.json())
   .then(entries => {

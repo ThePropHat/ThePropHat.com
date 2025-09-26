@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Official website of ThePropHat - My personal projects, hobbies, and blog posts.">
+<meta property="og:title" content="www.theprophat.com">
+<meta property="og:image" content="/images/logos/site-logo.png">
+<title>THEPROPHAT.COM</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="instruction">TRICK OR TREAT!</div>
+
+  <div id="door-container">
+    <div id="frame">
+      <div id="outcome"></div>
+    </div>
+    <div id="door">
+      <div id="knob"></div>
+    </div>
+  </div>
+
+  <button id="closeBtn">Close Door</button>
+
+   <script>
+    const door = document.getElementById("door");
+    const frame = document.getElementById("frame");
+    const outcome = document.getElementById("outcome");
+    const closeBtn = document.getElementById("closeBtn");
+    let doorOpen = false;
+
+    const knockSound = new Audio('knock.mp3');
+
+    const normalOutcomes = [
+      { type: "combo", content: { text: "You got a coffee crisp!", image: "coffeecrisp.png", audio: "coffeecrisp.mp3" } },
+      { type: "combo", content: { text: "You got an aero!", image: "aero.png", audio: "aero.mp3" } },
+      { type: "combo", content: { text: "You got cheezies!", image: "cheezies.png", audio: "cheezies.mp3" } },
+      { type: "combo", content: { text: "You got a wagon wheel!", image: "wagonwheel.png", audio: "wagonwheel.mp3" } },
+      { type: "combo", content: { text: "You got rockets!", image: "rockets.png", audio: "rockets.mp3" } },
+      { type: "combo", content: { text: "You got smarties!", image: "smarties.png", audio: "smarties.mp3" } },
+      { type: "combo", content: { text: "You got a ton of kitkats!", image: "kitkat.png", audio: "kitkat.mp3" } },
+
+
+      { type: "combo", content: { text: "a spooky spider ring!", image: "spider.png", audio: "spider.mp3" } },
+      { type: "combo", content: { text: "a ghost jumps out!", image: "ghost.png", audio: "ghost.mp3" } },
+      { type: "combo", content: { text: "You got vampire teeth!", image: "teeth.png", audio: "teeth.mp3" } },
+      { type: "combo", content: { text: "You got a rock!", image: "rock.png", audio: "rock.mp3" } },
+      { type: "combo", content: { text: "You got The Rock!", image: "therock.png", audio: "therock.mp3" } },
+
+
+      { type: "combo", content: { text: "LOOK BEHIND YOU", image: false, audio: "nothing.mp3" } },
+      { type: "combo", content: { text: "you got the dud...", image: "dud.png", audio: "rock.mp3" } },
+      { type: "combo", content: { text: "your cat is plotting against you...", image: false, audio: "nothing.mp3" } },
+      { type: "combo", content: { text: "the door opens, yet no one is there...", image: false, audio: "nothing.mp3" } },
+      { type: "combo", content: { text: "BOO!", image: false, audio: "nothing.mp3" } },
+      { type: "combo", content: { text: "you have been cursed for 24 hours...", image: false, audio: "nothing.mp3" } },
+      
+    ];
+
+   const rareOutcomes = [
+  { type: "combo", content: { text: "You got the secret button!", image: "button.gif", audio: "taxevasion.mp3" } },
+  { type: "combo", content: { text: "You got nothing!", image: "sad.png", audio: "nothing.mp3" } },
+  { type: "combo", content: { text: "YOU HAVE BEEN AUDITED FOR TAX EVASION!", image: false, audio: "taxevasion.mp3" } }
+];
+
+    function playKnocks(count = 1, interval = 250, callback) {
+      let knocks = 0;
+      const knockInterval = setInterval(() => {
+        knockSound.currentTime = 0;
+        knockSound.play();
+        knocks++;
+        if (knocks >= count) {
+          clearInterval(knockInterval);
+          if (callback) callback();
+        }
+      }, interval);
+    }
+
+    door.addEventListener("click", () => {
+      if (!doorOpen) {
+        playKnocks(3, 250, () => {
+          door.classList.add("open");
+          frame.classList.add("opened");
+          doorOpen = true;
+
+          const isRare = Math.random() < 0.05;
+        const outcomes = isRare ? rareOutcomes : normalOutcomes;
+        const result = outcomes[Math.floor(Math.random() * outcomes.length)];
+
+
+          if (result.type === "combo") {
+            const textEl = document.createElement("div");
+            textEl.textContent = result.content.text;
+            textEl.style.marginBottom = "8px";
+            outcome.appendChild(textEl);
+
+            if (result.content.image) {
+              const imgEl = document.createElement("img");
+              imgEl.src = result.content.image;
+              imgEl.alt = "Outcome";
+              imgEl.style.maxWidth = "100%";
+              imgEl.style.maxHeight = "100%";
+              outcome.appendChild(imgEl);
+            }
+
+            if (result.content.audio) {
+              const audioEl = document.createElement("audio");
+              audioEl.src = result.content.audio;
+              audioEl.autoplay = true;
+              audioEl.controls = false;
+              outcome.appendChild(audioEl);
+            }
+          }
+
+          outcome.classList.add("visible");
+          closeBtn.style.display = "inline-block";
+        });
+      }
+    });
+
+    closeBtn.addEventListener("click", () => {
+      door.classList.remove("open");
+      frame.classList.remove("opened");
+      doorOpen = false;
+      outcome.classList.remove("visible");
+      outcome.innerHTML = "";
+      closeBtn.style.display = "none";
+
+      randomizeDoorStyle()
+    });
+
+    const doorColors = [
+  'linear-gradient(to bottom, #4b1f1f, #2a0f0f)',
+  'linear-gradient(to bottom, #3a2f1f, #1f0f0f)',
+  'linear-gradient(to bottom, #2f1f3a, #0f0f1f)',
+  'linear-gradient(to bottom, #4b1f1f, #2a0f0f)',
+  'linear-gradient(to bottom, #3a2f1f, #1f0f0f)',
+  'linear-gradient(to bottom, #2f1f3a, #0f0f1f)',
+  'linear-gradient(to bottom, #5a1f1f, #2f0f0f)',
+  'linear-gradient(to bottom, #4f2a1f, #1f0f0f)',
+  'linear-gradient(to bottom, #3f1f2a, #0f0f1f)',
+  'linear-gradient(to bottom, #4b2a1f, #1a0f0f)',
+  'linear-gradient(to bottom, #3a1f2f, #0f0f1a)',
+  'linear-gradient(to bottom, #5b1f2a, #2f0f14)',
+  'linear-gradient(to bottom, #42211f, #1f0f1f)',
+  'linear-gradient(to bottom, #4f1f3f, #2a0f1a)',
+  'linear-gradient(to bottom, #3f1a2f, #0f0f0f)',
+  'linear-gradient(to bottom, #5a1f3a, #2f0f1f)',
+  'linear-gradient(to bottom, #482a1f, #1f0f0f)',
+  'linear-gradient(to bottom, #392f1f, #0f0f0f)',
+  'linear-gradient(to bottom, #4f1f2f, #2a0f14)',
+  'linear-gradient(to bottom, #3a1f3f, #0f0f1f)',
+  'linear-gradient(to bottom, #5a2f1f, #2f0f0f)',
+  'linear-gradient(to bottom, #4b1f2a, #1f0f1f)',
+  'linear-gradient(to bottom, #3f2a1f, #0f0f0f)',
+  'linear-gradient(to bottom, #5b1f1f, #2f0f0f)',
+  'linear-gradient(to bottom, #422f1f, #1f0f0f)',
+  'linear-gradient(to bottom, #4f2a2f, #2a0f1f)',
+  'linear-gradient(to bottom, #3f1f3f, #0f0f2a)',
+  'linear-gradient(to bottom, #5a1f2f, #2f0f14)',
+  'linear-gradient(to bottom, #482a2f, #1f0f0f)',
+  'linear-gradient(to bottom, #392f2a, #0f0f1f)',
+  'linear-gradient(to bottom, #4f1f1f, #2a0f0f)',
+  'linear-gradient(to bottom, #3a2f2f, #0f0f1f)',
+  'linear-gradient(to bottom, #5a2a1f, #2f0f0f)'
+];
+
+function randomizeDoorStyle() {
+  door.style.background = doorColors[Math.floor(Math.random() * doorColors.length)];
+}
+  </script>
+</body>
+</html>

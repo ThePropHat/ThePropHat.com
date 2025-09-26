@@ -1,0 +1,117 @@
+    body {
+      background: #161616;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      font-family: "ARGENTPIXEL";
+    }
+
+     #outcome img {
+    width: 100%;
+    height: 100%;
+  object-fit: cover; /* fill the frame while keeping proportions */
+}
+
+    #instruction {
+      font-size: 16px;
+      margin-bottom: 15px;
+      opacity: 0.8;
+      font-weight: bold;
+    }
+
+    #door-container {
+      position: relative;
+      width: 160px;
+      height: 260px;
+      perspective: 1200px;
+      margin-bottom: 20px;
+    }
+
+    #frame {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      border: 6px solid #331f1f;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 0;
+      overflow: hidden;
+      transition: background 0.5s ease;
+
+      
+    }
+
+    #frame.opened {
+      background: #000000; /* slightly brighter when door opens */
+    }
+
+    #outcome {
+      font-size: 18px;
+      opacity: 0;
+      transition: opacity 0.6s ease, text-shadow 0.6s ease;
+      text-align: center;
+      padding: 10px;
+      text-shadow: 0 0 4px rgba(255,255,255,0.3);
+      font-weight: bold;
+    }
+
+    #outcome.visible {
+      opacity: 1;
+
+    }
+
+    #door {
+      width: 100%;
+      height: 100%;
+      background: rgb(0, 0, 0);
+      border: 6px solid #4b2e2e;
+      position: absolute;
+      transform-origin: left;
+      transition: transform 0.8s ease;
+      box-shadow: 0 0 15px rgba(0,0,0,0.8);
+      cursor: pointer;
+      z-index: 1;
+
+       background: linear-gradient(to bottom, #4b1f1f, #2a0f0f);
+  border: 6px solid #4b2e2e;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 0 15px rgba(0,0,0,0.8);
+    }
+
+    #door.open {
+      transform: rotateY(-100deg);
+    }
+
+    #knob {
+      width: 15px;
+      height: 15px;
+      background: rgb(163, 113, 3);
+      border-radius: 50%;
+      position: absolute;
+      right: 15px;
+      bottom: 100px;
+    }
+
+    #closeBtn {
+      margin-top: 20px;
+      background: rgb(58, 58, 58);
+      color: white;
+      padding: 8px 14px;
+      font-size: 16px;
+      cursor: pointer;
+      display: none;
+      font-family: "ARGENTPIXEL";
+    }
+
+    #closeBtn:hover {
+      background: rgb(155, 151, 151);
+    }
+
+      @font-face {
+    font-family: "ARGENTPIXEL";
+    src: url("/images/ArgentPixelCF-Regular.woff") format("woff");
+  }

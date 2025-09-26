@@ -13,7 +13,6 @@ body, html {
 
 .head {
   position: relative;
-  top: -260px; 
   font-family: ARGENTPIXEL-ITAL;
 }
 
@@ -47,27 +46,33 @@ body, html {
 }
 
 .foot {
-  position: relative;
-  bottom: -250px;
-  font-size: 0.9rem;
+ font-size: 0.9rem;
   text-align: center;
-  width: 100%;
   font-family: ARGENTPIXEL-ITAL;
+  padding-bottom: 20px;
 }
 
 .background {
-      background: url('/images/made-by-me/home-background.png') no-repeat center center;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      position: relative;
+    background: url('/images/made-by-me/home-background.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  position: relative;
 }
 
+.content-area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  max-height: 50vh;
+}
 
 
 .courtcard {
