@@ -12,7 +12,7 @@
      #outcome img {
     width: 100%;
     height: 100%;
-  object-fit: cover; /* fill the frame while keeping proportions */
+    object-fit: cover; 
 }
 
     #instruction {
@@ -47,7 +47,7 @@
     }
 
     #frame.opened {
-      background: #000000; /* slightly brighter when door opens */
+      background: #000000;
     }
 
     #outcome {
@@ -76,10 +76,9 @@
       box-shadow: 0 0 15px rgba(0,0,0,0.8);
       cursor: pointer;
       z-index: 1;
-
-       background: linear-gradient(to bottom, #4b1f1f, #2a0f0f);
-  border: 6px solid #4b2e2e;
-  box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 0 15px rgba(0,0,0,0.8);
+      background: linear-gradient(to bottom, #4b1f1f, #2a0f0f);
+      border: 6px solid #4b2e2e;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 0 15px rgba(0,0,0,0.8);
     }
 
     #door.open {
