@@ -71,12 +71,11 @@ body, html {
 
 
 .courtcard {
-  --rotation: 0deg;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
   transform: rotate(var(--rotation));
   transition: transform 0.1s;
-  margin-left: 60px;
-  margin-bottom: 10px;
-  position: sticky;
 }
 
 #king {
