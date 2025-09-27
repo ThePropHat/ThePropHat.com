@@ -114,3 +114,139 @@
     font-family: "ARGENTPIXEL";
     src: url("/images/ArgentPixelCF-Regular.woff") format("woff");
   }
+
+
+    #inventory-panel {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      padding: 10px;
+      font-family: ARGENTPIXEL;
+      max-height: 80vh;
+      overflow-y: auto;
+      z-index: 999;
+    }
+
+    
+
+    #inventory-panel h2 {
+      font-size: 1.2rem;
+      margin-top: 0;
+    }
+
+    #inventory-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #inventory-list li {
+      margin: 4px 0;
+    }
+
+    #reset-progress{
+      background: rgb(58, 58, 58);
+      color: white;
+      padding: 8px 14px;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: "ARGENTPIXEL";
+      margin-top: 10px;
+      margin-left: 0px
+    }
+
+      #reset-progress:hover {
+      background: rgb(155, 151, 151);
+    }
+
+        .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.75);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .modal.hidden {
+      display: none;
+    }
+
+    .modal-content {
+      color: white;
+      padding: 20px 30px;
+      text-align: center;
+      font-family: ARGENTPIXEL;
+      max-width: 90%;
+    }
+
+    .modal-buttons {
+      margin-top: 20px;
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .modal-buttons button {
+      background: #3a0000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-family: ARGENTPIXEL-ITAL;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .modal-buttons button:hover {
+       background: #240000;
+    }
+
+    #submit-score-btn{
+      background: rgb(58, 58, 58);
+      color: white;
+      padding: 8px 14px;
+      font-size: 16px;
+      cursor: pointer;
+      font-family: "ARGENTPIXEL";
+      margin-top: 10px;
+      margin-left: 0px
+    }
+
+
+    #submit-score-btn:hover {
+      background: rgb(155, 151, 151);
+    }
+
+    #leaderboard-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-family: "ARGENTPIXEL";
+  z-index: 999;
+  padding: 10px;
+  max-width: 200px;
+}
+
+#leaderboard-container h2 {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+#leaderboard-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+#leaderboard-list li {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}

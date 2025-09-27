@@ -1,11 +1,27 @@
 [ 
   {
+    "date": "26-09-25",
+    "text": "no notes for today, just know it was a good one :)",
+    "mood": ["productive", "happy", "playful"],
+    "weather": ["sunny", "chill"],
+    "locations": ["Work"],
+    "habits": ["coding (4 day streak!)", "journaling (4 day streak!)", "reading (4 day streak!)", "play instrument (2 day streak!)"],
+    "tv": false,
+    "movie": "There Will Be Blood",
+    "comic": false,
+    "book": "Titus Groan - Mervyn Peake",
+    "listened": false,
+    "played": false,
+    "images": false,
+    "audio": "audio/26-09-25.mp3"
+  },
+  {
     "date": "25-09-25",
     "text": "spent an hour struggling to get my audio interface working, gave up and just played with my OP-1. even set up a little spot for me to log my recordings! this might actually be the most important log here, as i dont really archive my music anywhere else.",
     "mood": ["productive", "happy", "playful"],
     "weather": ["sunny", "cold"],
     "locations": ["Work","Grocery Store"],
-    "habits": ["coding (3 day streak!)", "journaling (3 day streak!)", "reading (3 day streak!)"],
+    "habits": ["coding (3 day streak!)", "journaling (3 day streak!)", "reading (3 day streak!)", "play instrument"],
     "tv": false,
     "movie": "There Will Be Blood",
     "comic": false,
