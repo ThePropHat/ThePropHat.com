@@ -197,3 +197,27 @@ text-decoration: none;
   padding: 20px;
   border-width: 1px;
 }
+
+.island {
+  position: absolute;
+  top: 150px; 
+  left: calc(50% + 420px);
+  width: 180px;
+  background-color: black;
+  padding: 15px;
+  color: white;
+  font-style: italic;
+  z-index: 10;
+  overflow-y: auto;
+}
+
+.island h2 {
+  margin-top: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+.island p {
+  font-size: 14px;
+  text-align: center;
+}
