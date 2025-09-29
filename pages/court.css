@@ -4,6 +4,7 @@ body, html {
     min-height: 100vh;
     padding: 0;
     background: #121212;
+    
   }
 
 p{
@@ -38,45 +39,12 @@ a{
     overflow: hidden;
 }
 
-.cards{
-    display:flex;
-    text-align:center;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    transition: transform 0.4s;
-}
-
-.cards img{
- margin: 30px;
-}
-
-.card {
-  --rotation: 0deg;
-  transform: rotate(var(--rotation));
-  transition: transform 0.1s;
-  margin: 30px;
-}
-
-#king {
-  --rotation: -3deg;
-}
-#queen {
-  --rotation: 1.2deg;
-}
-#jack {
-  --rotation: -1.5deg;
-}
-#ace {
-  --rotation: 2.5deg;
-}
-
-.card:hover {
-  transform: scale(1.1) rotate(var(--rotation));
-}
 
 ul{
-    list-style-type: none;
+  padding: 0;
+  margin: 10px;
+  list-style: none;
+  text-align: center;
 }
 
  
@@ -90,43 +58,78 @@ ul{
     src: url("../images/ArgentPixelCF-Italic.woff"); /* url of the font */
   }
 
-
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.8);
+.flip-card {
+  background-color: transparent;
+  width: 250px;
+  height: 420px;
+  perspective: 1000px;
+  display: inline-block;
+  margin: 10px;
 }
 
-.modal-content {
-  background-color: #000000;
-  margin: 10% auto;
-  padding: 2rem;
-  width: 80%;
-  max-width: 500px;
-  color: white;
-  text-align: center;
+.flip-card-inner {
   position: relative;
-  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.close {
-  color: #aaa;
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
   position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  
 }
 
-.close:hover,
-.close:focus {
-  color: #fff;
-  text-decoration: none;
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  
+}
+
+.flip-card-back {
+  background-color: #111;
+  color: white;
+  transform: rotateY(180deg);
+  padding: 15px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-style:solid;
+  border-width: 1px;
+  border-color: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #252525;
+}
+
+a:hover{
+  color: aqua;
 }
