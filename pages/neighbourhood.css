@@ -36,6 +36,14 @@ body, html {
   a:hover{
     color: #927ea5;
   }
+
+  .grow { 
+  transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+  transform: scale(1.1); 
+}
   
   @font-face {
     font-family: "ARGENTPIXEL";
