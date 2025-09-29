@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WWW.THEPROPHAT.COM</title>
+<link rel="stylesheet" href="/index.css">
+
+</head>
+<body>
+
+  <div class="background"><div class="index">
+    <p id="random-greeting">thou art before the court of</p>
+      
+        <a href="https://theprophat.com/homepage.html">RETURN</a>
+        </div>
+
+        </div>
+        
+        <script>
+        // array of possible h2 texts
+      const greetings = [
+      "you knock, but hear no footsteps...",
+      "are you meant to be here?",
+      "the path ahead looks long and cold...",
+      "the door opens, yet there is no one around to greet you...",
+      "are you sure you know where you're going?",
+  
+      ];
+
+        
+        const greetingIndex = Math.floor(Math.random() * greetings.length);
+
+       
+        document.getElementById("random-greeting").innerText = greetings[greetingIndex];
+
+        </script>
+</body>
+</html>
