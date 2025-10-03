@@ -1,5 +1,53 @@
 [ 
   {
+    "date": "03-10-25",
+    "text": "today went by so quickly! and now im finally on a well deserved birthday break. cant wait to do nothing for awhile :o",
+    "mood": ["calm", "happy"],
+    "weather": ["sunny", "chill"],
+    "locations": ["Work", "Postbox", "Grocery Store"],
+    "habits": ["journaling", "coding"],
+    "tv": false,
+    "movie": false,
+    "comic": false,
+    "book": false,
+    "listened": "Malibu Ken - Malibu Ken",
+    "played": false,
+    "images":   false,
+    "audio": false
+  },
+  {
+    "date": "02-10-25",
+    "text": "its always a good day when it rains",
+    "mood": ["wet", "happy"],
+    "weather": ["cloudy", "cold", "rainy"],
+    "locations": ["Work", "Grocery Store"],
+    "habits": ["journaling (2 day streak!)", "coding (2 day streak!)"],
+    "tv": ["Band of Brothers"],
+    "movie": false,
+    "comic": false,
+    "book": false,
+    "listened": "Achievement - pilotredsun",
+    "played": false,
+    "images": false,
+    "audio": false
+  },
+  {
+    "date": "01-10-25",
+    "text": "good little day off work today! went on a walk and found the strangest little pond in the middle of the city. ominous",
+    "mood": ["happy"],
+    "weather": ["cloudy", "chill", "smokey"],
+    "locations": ["Strange pond", "Grocery Store"],
+    "habits": ["walk (64 minutes),"],
+    "tv": "The Wire",
+    "movie": false,
+    "comic": false,
+    "book": false,
+    "listened": "† - Justice",
+    "played": ["Half Sword", "Red Dead Redemption 2"],
+    "images":   false,
+    "audio": false
+  },
+  {
     "date": "30-09-25",
     "text": "long day at work, but the contractors fucking up our tech systems actually made it totally manageable. turns out theprophat loves getting paid to do dishes slowly",
     "mood": ["restless", "happy"],
@@ -11,7 +59,7 @@
     "comic": false,
     "book": false,
     "listened": "Achievement - pilotredsun",
-    "played": false,
+    "played": "Clover Pit",
     "images":     {
         "src": "images/lifelog-photos/30-09-25(3).JPG",
         "caption": "the sun shines weakly here"
