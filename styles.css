@@ -102,4 +102,141 @@ body, html {
     src: url("images/ArgentPixelCF-Italic.woff"); /* url of the font */
   }
 
+
+#microblog-terminal {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(0, 0, 0, 0.85);
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  font-family: monospace;
+  padding: 12px 15px;
+  max-width: 350px;
+  z-index: 9999;
+  box-shadow: 0 0 10px #00ff99;
+  pointer-events: none; /* disable interaction */
+  user-select: none;
+}
+
+#microblog-terminal a {
+  pointer-events: auto; /* enable clicking link */
+  user-select: text;
+}
+
+.terminal-header {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 8px;
+  border-bottom: 1px dashed #00ff99;
+  padding-bottom: 5px;
+  font-family: ARGENTPIXEL-ITAL, monospace;
+  text-align: left;
+}
+
+.typed-line {
+  font-family: monospace;
+  white-space: pre-wrap;
+  overflow: hidden;
+  border-right: 2px solid #00ff99;
+  animation: blink 1s step-end infinite;
+  min-height: 2em;
+  text-align: left;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
   
+
+  /* 🎈 BIRTHDAY GAME STYLES 🎉 */
+#birthday-game {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.birthday-score, .birthday-timer {
+  position: absolute;
+  font-size: 20px;
+  color: white;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-family: ARGENTPIXEL-ITAL;
+}
+
+.birthday-timer {
+  top: 10px;
+  left: 10px;
+}
+
+.birthday-score {
+  top: 10px;
+  right: 10px;
+}
+
+.birthday-balloon {
+  width: 60px;
+  height: 80px;
+  position: absolute;
+  bottom: -100px;
+  border-radius: 50% 50% 45% 45%;
+  background-color: red;
+  cursor: pointer;
+  animation: float-up 5s linear forwards;
+  pointer-events: auto;
+  box-shadow: inset -4px -4px rgba(0,0,0,0.2);
+}
+
+@keyframes float-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-110vh); }
+}
+
+.birthday-message {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background: #fff8c4;
+  color: black;
+  padding: 20px;
+  border: 4px solid black;
+  z-index: 1001;
+  font-family: ARGENTPIXEL;
+}
+
+#birthday-leaderboard {
+  position: absolute;
+  top: 70px;
+  left: 10px;
+  color: white;
+  padding: 15px;
+  font-family: ARGENTPIXEL-ITAL;
+  z-index: 999;
+  width: 250px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+#birthday-leaderboard h2 {
+  font-size: 1.2rem;
+  margin-top: 0;
+  text-align: center;
+}
+
+#birthday-leaderboard ol {
+  padding-left: 20px;
+}
+

@@ -8,6 +8,10 @@
 <meta property="og:image" content="/images/logos/site-logo.png">
 <title>THEPROPHAT.COM</title>
 <link rel="stylesheet" href="styles.css">
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+
 
 </head>
 <body>
@@ -76,25 +80,223 @@
 <p>for astrochimp Ham & spacedog Laika</p>
 
 </footer>
-  
+
+<!-- 
+<div id="birthday-game" style="display: none;">
+  <h1 class="birthday-timer">⏱️ <span id="game-time">30</span>s</h1>
+  <div class="birthday-score">🎈 Popped: <span id="game-score">0</span></div>
+  <div class="birthday-message" id="birthday-message">
+     HAPPY BIRTHDAY, THEPROPHAT!<br>
+    You popped <span id="final-score">0</span> balloons!
+  </div>
+</div>
+   -->
+
 </div>
 
 
-
 <script>
-// fetch and show the most recent microblog entry
+// Fetch and animate microblog entries like they're being typed
 fetch("/json/microblog-2025.json")
   .then(res => res.json())
   .then(entries => {
-    const ul = document.getElementById("microblog");
-    if (entries.length > 0) {
-      const latest = entries[0]; // first entry = most recent
-      const li = document.createElement("li");
-      li.innerHTML = `<strong>${latest.date}</strong> | ${latest.entry} <strong> posted at ${latest.time}</strong>`;
-      ul.appendChild(li);
+    if (!entries || entries.length === 0) return;
+
+    let index = 0;
+    const entryBox = document.getElementById("microblog-entry");
+    const linkEl = document.getElementById("microblog-link");
+
+    // Base URL for lifelog, adjust if different
+    const lifelogBaseURL = "https://theprophat.com/pages/lifelog.html";
+
+    function typeEntry(text, callback) {
+      let i = 0;
+      entryBox.textContent = "";
+
+      const interval = setInterval(() => {
+        // Show typing cursor flicker at even steps
+        entryBox.textContent = text.slice(0, i) + (i % 2 === 0 ? '█' : '');
+        i++;
+        if (i > text.length) {
+          clearInterval(interval);
+          entryBox.textContent = text; // final text without cursor
+          if (callback) callback();
+        }
+      }, 40);
     }
+
+    function cycleEntries() {
+      const current = entries[index];
+      const displayText = `${current.date} | ${current.entry} (at ${current.time})`;
+
+      // Show the typed text
+      typeEntry(displayText, () => {
+        // Show link to lifelog post for the same day
+        linkEl.href = `${lifelogBaseURL}#${current.date}`;
+        linkEl.style.display = "inline-block";
+        linkEl.textContent = `View Post (${current.date})`;
+
+        // Wait 10 seconds before next entry
+        setTimeout(() => {
+          index = (index + 1) % entries.length;
+          linkEl.style.display = "none";
+          cycleEntries();
+        }, 10000);
+      });
+    }
+
+    cycleEntries();
+  })
+  .catch(err => {
+    console.error("Failed to load microblog entries:", err);
   });
 </script>
+<!--  DELETE TO ACTIVATE BIRTHDAY PROTOCOL
+<script>
+  // 🎈 Firebase Config for Birthday Game
+  const birthdayFirebaseConfig = {
+    apiKey: "AIzaSyDjKxw294bqm4i9I5tjO7TrQV_jjW4En4g",
+    authDomain: "theprophathalloween2025.firebaseapp.com",
+    projectId: "theprophathalloween2025",
+    storageBucket: "theprophathalloween2025.appspot.com",
+    messagingSenderId: "489777678361",
+    appId: "1:489777678361:web:f9d424107d8120ca514288"
+  };
+
+  firebase.initializeApp(birthdayFirebaseConfig);
+  const birthdayDatabase = firebase.database();
+
+  function submitBirthdayScore(name, score) {
+    const ref = birthdayDatabase.ref('birthdayScores');
+    ref.push({
+      name: name,
+      score: score,
+      timestamp: Date.now()
+    });
+  }
+
+  function listenBirthdayLeaderboard() {
+    const ref = birthdayDatabase.ref('birthdayScores').orderByChild('score').limitToLast(10);
+    ref.on('value', (snapshot) => {
+      const scores = [];
+      snapshot.forEach(childSnapshot => {
+        scores.push(childSnapshot.val());
+      });
+      scores.sort((a, b) => b.score - a.score);
+
+      const list = document.getElementById('birthday-leaderboard-list');
+      if (list) {
+        list.innerHTML = '';
+        scores.forEach(({ name, score }) => {
+          const li = document.createElement('li');
+          li.textContent = `${name}: ${score} balloons`;
+          list.appendChild(li);
+        });
+      }
+    });
+  }
+
+  // Leaderboard UI
+  const leaderboardBox = document.createElement('div');
+  leaderboardBox.id = 'birthday-leaderboard';
+  leaderboardBox.innerHTML = `
+    <h2>THEPROPHAT'S BIRTHDAY GUESTS</h2>
+    <ol id="birthday-leaderboard-list"></ol>
+  `;
+  document.querySelector('.background').appendChild(leaderboardBox);
+
+
+  listenBirthdayLeaderboard();
+</script>
+
+<script>
+// 🎈 Birthday Balloon Game 🎉
+
+(function() {
+  const gameDuration = 30; // seconds
+  const spawnRate = 500; // ms
+  const colors = ["#FF4C4C", "#FFD700", "#8A2BE2", "#00CED1", "#32CD32", "#FF69B4"];
+
+  let gameTime = gameDuration;
+  let gameScore = 0;
+  let balloonInterval, countdownTimer;
+
+  const gameContainer = document.getElementById("birthday-game");
+  const timeDisplay = document.getElementById("game-time");
+  const scoreDisplay = document.getElementById("game-score");
+  const message = document.getElementById("birthday-message");
+  const finalScore = document.getElementById("final-score");
+
+  function createBalloon() {
+    const balloon = document.createElement("div");
+    balloon.classList.add("birthday-balloon");
+    balloon.style.left = `${Math.random() * 90 + 5}%`;
+    balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+    balloon.style.animationDuration = `${3 + Math.random() * 2}s`;
+
+    balloon.addEventListener("click", () => {
+      gameScore++;
+      scoreDisplay.textContent = gameScore;
+      balloon.remove();
+    });
+
+    gameContainer.appendChild(balloon);
+
+    // Cleanup
+    setTimeout(() => {
+      if (balloon.parentElement) balloon.remove();
+    }, 6000);
+  }
+
+  function startGame() {
+    gameContainer.style.display = "block";
+    gameTime = gameDuration;
+    gameScore = 0;
+    scoreDisplay.textContent = 0;
+    timeDisplay.textContent = gameTime;
+    message.style.display = "none";
+
+    balloonInterval = setInterval(createBalloon, spawnRate);
+    countdownTimer = setInterval(() => {
+      gameTime--;
+      timeDisplay.textContent = gameTime;
+      if (gameTime <= 0) endGame();
+    }, 1000);
+  }
+
+function endGame() {
+  clearInterval(balloonInterval);
+  clearInterval(countdownTimer);
+  document.querySelectorAll(".birthday-balloon").forEach(b => b.remove());
+  finalScore.textContent = gameScore;
+  message.style.display = "block";
+
+  const haul = gameScore;
+  const storedName = localStorage.getItem('birthdayName');
+  let name = prompt("Enter your name to record your high score!", storedName || "Guest");
+
+  if (name) {
+    localStorage.setItem('birthdayName', name);
+    submitBirthdayScore(name, haul);
+  }
+}
+
+  // 🎈 START THE GAME AUTOMATICALLY
+  window.addEventListener("load", () => {
+    // Delay start if you want it to feel like a surprise
+    setTimeout(startGame, 1500);
+  });
+
+})();
+</script>
+
+-->
+
+<div id="microblog-terminal">
+  <div class="terminal-header">MICROBLOG</div>
+  <div id="microblog-entry" class="typed-line"></div>
+  <a id="microblog-link" href="#" target="_blank" rel="noopener noreferrer" style="color:#00ff99; font-size: 0.85em; text-decoration: underline; display:none; margin-top:8px; cursor:pointer;">View Lifelog Post</a>
+</div>
 
 </body>
 </html>
