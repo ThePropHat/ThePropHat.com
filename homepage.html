@@ -131,10 +131,6 @@ fetch("/json/microblog-2025.json")
 
       // Show the typed text
       typeEntry(displayText, () => {
-        // Show link to lifelog post for the same day
-        linkEl.href = `${lifelogBaseURL}#${current.date}`;
-        linkEl.style.display = "inline-block";
-        linkEl.textContent = `View Post (${current.date})`;
 
         // Wait 10 seconds before next entry
         setTimeout(() => {

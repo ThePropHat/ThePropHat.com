@@ -107,14 +107,13 @@ body, html {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background: rgba(0, 0, 0, 0.85);
-  color: #00ff99;
-  border: 2px solid #00ff99;
+  background: rgba(0, 0, 0, 0.507);
+  color: #1adb81;
+  border: 2px solid #1adb81;
   font-family: monospace;
   padding: 12px 15px;
   max-width: 350px;
   z-index: 9999;
-  box-shadow: 0 0 10px #00ff99;
   pointer-events: none; /* disable interaction */
   user-select: none;
 }
@@ -128,7 +127,7 @@ body, html {
   font-weight: bold;
   color: #fff;
   margin-bottom: 8px;
-  border-bottom: 1px dashed #00ff99;
+  border-bottom: 1px dashed #1adb81;
   padding-bottom: 5px;
   font-family: ARGENTPIXEL-ITAL, monospace;
   text-align: left;
@@ -138,7 +137,7 @@ body, html {
   font-family: monospace;
   white-space: pre-wrap;
   overflow: hidden;
-  border-right: 2px solid #00ff99;
+  border-right: 2px solid #1adb81;
   animation: blink 1s step-end infinite;
   min-height: 2em;
   text-align: left;
@@ -151,7 +150,7 @@ body, html {
 }
   
 
-  /* 🎈 BIRTHDAY GAME STYLES 🎉 */
+  /* 🎈 BIRTHDAY GAME */
 #birthday-game {
   position: absolute;
   top: 0;
