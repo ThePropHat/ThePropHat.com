@@ -1,4 +1,36 @@
 [ 
+   {
+    "date": "05-10-25",
+    "text": "BIRTHDAY ITS MY BIRTHDAY SAY HAPPY BIRTHDAY TO ME SAY IT NOW.",
+    "mood": ["calm", "happy"],
+    "weather": ["sunny", "chill"],
+    "locations": false,
+    "habits": ["journaling", "coding"],
+    "tv": false,
+    "movie": false,
+    "comic": false,
+    "book": false,
+    "listened": false,
+    "played": false,
+    "images":   false,
+    "audio": false
+  },
+   {
+    "date": "04-10-25",
+    "text": "went on a little adventure with the egg, had a great time! got tons of new books AND comic books to read on my birthday vacation. played the first ever game of NeoCities Prop Hunt which despite low turnout, was a successful venture!",
+    "mood": ["calm", "happy"],
+    "weather": ["sunny", "chill"],
+    "locations": ["Variant Edition", "Value Village", "A&W", "Queen Mary's Market"],
+    "habits": ["journaling", "coding"],
+    "tv": false,
+    "movie": false,
+    "comic": false,
+    "book": false,
+    "listened": false,
+    "played": ["Red Dead Redemption 2", "Garry's Mod"],
+    "images":   false,
+    "audio": false
+  },
   {
     "date": "03-10-25",
     "text": "today went by so quickly! and now im finally on a well deserved birthday break. cant wait to do nothing for awhile :o",
