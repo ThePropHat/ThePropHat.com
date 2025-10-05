@@ -81,7 +81,7 @@
 
 </footer>
 
-<!-- 
+
 <div id="birthday-game" style="display: none;">
   <h1 class="birthday-timer">⏱️ <span id="game-time">30</span>s</h1>
   <div class="birthday-score">🎈 Popped: <span id="game-score">0</span></div>
@@ -90,7 +90,7 @@
     You popped <span id="final-score">0</span> balloons!
   </div>
 </div>
-   -->
+  
 
 </div>
 
@@ -146,8 +146,17 @@ fetch("/json/microblog-2025.json")
   .catch(err => {
     console.error("Failed to load microblog entries:", err);
   });
+
+
+  
 </script>
-<!--  DELETE TO ACTIVATE BIRTHDAY PROTOCOL
+
+<audio id="birthday-music" loop>
+  <source src="audio/birthday_music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
 <script>
   // 🎈 Firebase Config for Birthday Game
   const birthdayFirebaseConfig = {
@@ -222,6 +231,22 @@ fetch("/json/microblog-2025.json")
   const scoreDisplay = document.getElementById("game-score");
   const message = document.getElementById("birthday-message");
   const finalScore = document.getElementById("final-score");
+  const music = document.getElementById("birthday-music");
+
+  // ✅ Move this here so it's available globally inside the game
+  const popSounds = [
+    new Audio("audio/pop1.mp3"),
+    new Audio("audio/pop2.mp3"),
+    new Audio("audio/pop3.mp3"),
+    new Audio("audio/pop4.mp3"),
+    new Audio("audio/pop5.mp3"),
+    new Audio("audio/pop6.mp3"),
+    new Audio("audio/pop7.mp3"),
+    new Audio("audio/pop8.mp3"),
+    new Audio("audio/pop9.mp3"),
+    new Audio("audio/pop10.mp3"),
+    
+  ];
 
   function createBalloon() {
     const balloon = document.createElement("div");
@@ -233,12 +258,19 @@ fetch("/json/microblog-2025.json")
     balloon.addEventListener("click", () => {
       gameScore++;
       scoreDisplay.textContent = gameScore;
+
+      // ✅ Play random pop sound
+      const pop = popSounds[Math.floor(Math.random() * popSounds.length)];
+      pop.currentTime = 0;
+      pop.playbackRate = 0.85 + Math.random() * 0.4;
+      pop.play();
+
       balloon.remove();
     });
 
     gameContainer.appendChild(balloon);
 
-    // Cleanup
+    // Cleanup after 6 seconds
     setTimeout(() => {
       if (balloon.parentElement) balloon.remove();
     }, 6000);
@@ -252,6 +284,10 @@ fetch("/json/microblog-2025.json")
     timeDisplay.textContent = gameTime;
     message.style.display = "none";
 
+    // Start music
+    music.currentTime = 0;
+    music.play();
+
     balloonInterval = setInterval(createBalloon, spawnRate);
     countdownTimer = setInterval(() => {
       gameTime--;
@@ -260,33 +296,36 @@ fetch("/json/microblog-2025.json")
     }, 1000);
   }
 
-function endGame() {
-  clearInterval(balloonInterval);
-  clearInterval(countdownTimer);
-  document.querySelectorAll(".birthday-balloon").forEach(b => b.remove());
-  finalScore.textContent = gameScore;
-  message.style.display = "block";
+  function endGame() {
+    clearInterval(balloonInterval);
+    clearInterval(countdownTimer);
+    document.querySelectorAll(".birthday-balloon").forEach(b => b.remove());
 
-  const haul = gameScore;
-  const storedName = localStorage.getItem('birthdayName');
-  let name = prompt("Enter your name to record your high score!", storedName || "Guest");
+    // Stop music
+    music.pause();
 
-  if (name) {
-    localStorage.setItem('birthdayName', name);
-    submitBirthdayScore(name, haul);
+    finalScore.textContent = gameScore;
+    message.style.display = "block";
+
+    const haul = gameScore;
+    const storedName = localStorage.getItem('birthdayName');
+    let name = prompt("sign your name?", storedName || "Guest");
+
+    if (name) {
+      localStorage.setItem('birthdayName', name);
+      submitBirthdayScore(name, haul);
+    }
   }
-}
 
   // 🎈 START THE GAME AUTOMATICALLY
   window.addEventListener("load", () => {
-    // Delay start if you want it to feel like a surprise
     setTimeout(startGame, 1500);
   });
 
 })();
 </script>
 
--->
+
 
 <div id="microblog-terminal">
   <div class="terminal-header">MICROBLOG</div>
