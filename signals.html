@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Signals from ThePropHat.com</title>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+</head>
+<body>
+
+
+      <div class="signal-header">WOULDYOULIKETOSENDMEAMESSAGE?</div>
+      <div id="signal-feed" class="signal-feed">
+      </div>
+
+      <form id="signal-form">
+        <input id="signal-name" type="text" placeholder="NAME" maxlength="20" />
+        <input id="signal-message" type="text" placeholder="MESSAGE" maxlength="100" required />
+        <button type="submit">SEND</button>
+      </form>
+    </div>
+
+    <footer>
+       <a href="https://theprophat.com/homepage.html" class="grow">go back</a>
+    </footer>
+  </div>
+
+  <script>
+ // ✅ Use the compat SDK
+  const firebaseConfig = {
+    apiKey: "AIzaSyCtlgNf9x8OnMGbeWePPgmyIeUOQ4sg20w",
+    authDomain: "theprophatsignals.firebaseapp.com",
+    databaseURL: "https://theprophatsignals-default-rtdb.firebaseio.com",
+    projectId: "theprophatsignals",
+    storageBucket: "theprophatsignals.firebasestorage.app",
+    messagingSenderId: "416477268379",
+    appId: "1:416477268379:web:ac81db12333f4699ceb93e"
+  };
+
+  // ✅ Initialize using compat syntax
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database();
+  const signalRef = db.ref("signalLog");
+
+  const feed = document.getElementById("signal-feed");
+
+    function formatTimestamp(ts) {
+      const d = new Date(ts);
+      return `${d.toLocaleDateString()} @ ${d.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}`;
+    }
+
+    document.getElementById("signal-form").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const name = document.getElementById("signal-name").value || "Anonymous";
+      const message = document.getElementById("signal-message").value.trim();
+      if (!message) return;
+
+      const signal = {
+        name: name,
+        message: message,
+        timestamp: Date.now()
+      };
+
+      signalRef.push(signal);
+      this.reset();
+    });
+
+    signalRef.limitToLast(50).on("child_added", snapshot => {
+      const { name, message, timestamp } = snapshot.val();
+
+      const div = document.createElement("div");
+      div.classList.add("signal");
+      div.textContent = `[${formatTimestamp(timestamp)}] ${name}: ${message}`;
+      feed.appendChild(div);
+      feed.scrollTop = feed.scrollHeight;
+    });
+  </script>
+
+</body>
+</html>
