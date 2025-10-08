@@ -46,7 +46,6 @@ function formatTimestamp(ts) {
   return `${d.toLocaleDateString()} @ ${d.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}`;
 }
 
-// create message + replies
 function createSignalDiv(key, name, message, timestamp, replies = []) {
   const div = document.createElement("div");
   div.style.borderBottom = "1px solid #ccc";
@@ -64,20 +63,27 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
   replies.forEach(r => {
     const replyDiv = document.createElement("div");
     replyDiv.style.color = "red";
-    replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message} `;
+    replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message}`;
+    replyContainer.appendChild(replyDiv);
+  });
 
-  // reply form
+  div.appendChild(replyContainer);
+
+  // reply form (once per message)
   const replyForm = document.createElement("form");
   replyForm.style.marginTop = "4px";
+
   const replyNameInput = document.createElement("input");
   replyNameInput.type = "text";
   replyNameInput.placeholder = "NAME";
   replyNameInput.maxLength = 20;
   replyNameInput.style.width = "80px";
+
   const replyMessageInput = document.createElement("input");
   replyMessageInput.type = "text";
   replyMessageInput.placeholder = "reply...";
   replyMessageInput.maxLength = 500;
+
   const replyBtn = document.createElement("button");
   replyBtn.type = "submit";
   replyBtn.textContent = "↵";
@@ -92,9 +98,7 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
     if (!replyMsg) return;
     const replyName = replyNameInput.value.trim() || "Anonymous";
     const replyObj = { name: replyName, message: replyMsg, timestamp: Date.now() };
-    signalRef.child(key).child("replies").push(replyObj, snap => {
-      replyObj._key = snap.key;
-    });
+    signalRef.child(key).child("replies").push(replyObj);
     replyMessageInput.value = "";
   });
 
