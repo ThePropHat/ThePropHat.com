@@ -79,10 +79,11 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
     drawer.style.display = "none";
     drawer.style.marginTop = "4px";
     drawer.style.color = "red";
+    toggleBtn.style.color = "red";
+    toggleBtn.textContent = `▶ ${replies.length} replies`;
 
     replies.forEach(r => {
       const replyDiv = document.createElement("div");
-      replyDiv.style.color = "red";
       replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message}`;
       drawer.appendChild(replyDiv);
     });
