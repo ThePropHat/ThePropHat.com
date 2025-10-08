@@ -52,6 +52,7 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
   div.style.marginBottom = "8px";
   div.style.paddingBottom = "4px";
 
+  // main message
   const header = document.createElement("div");
   header.textContent = `[${formatTimestamp(timestamp)}] ${name}: ${message}`;
   div.appendChild(header);
@@ -60,16 +61,48 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
   const replyContainer = document.createElement("div");
   replyContainer.style.marginLeft = "20px";
 
-  replies.forEach(r => {
+  if (replies.length === 1) {
+    // just one reply, show directly
+    const r = replies[0];
     const replyDiv = document.createElement("div");
     replyDiv.style.color = "red";
     replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message}`;
     replyContainer.appendChild(replyDiv);
-  });
+  } else if (replies.length > 1) {
+    // multiple replies, make collapsible drawer
+    const toggleBtn = document.createElement("span");
+    toggleBtn.style.cursor = "pointer";
+    toggleBtn.textContent = `▶ ${replies.length} replies`;
+    toggleBtn.style.userSelect = "none";
+
+    const drawer = document.createElement("div");
+    drawer.style.display = "none";
+    drawer.style.marginTop = "4px";
+
+    replies.forEach(r => {
+      const replyDiv = document.createElement("div");
+      replyDiv.style.color = "red";
+      replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message}`;
+      drawer.appendChild(replyDiv);
+    });
+
+    toggleBtn.addEventListener("click", () => {
+      if (drawer.style.display === "none") {
+        drawer.style.display = "block";
+        toggleBtn.textContent = `▼ ${replies.length} replies`;
+      } else {
+        drawer.style.display = "none";
+        toggleBtn.textContent = `▶ ${replies.length} replies`;
+      }
+    });
+
+    replyContainer.appendChild(toggleBtn);
+    replyContainer.appendChild(drawer);
+  }
 
   div.appendChild(replyContainer);
 
-  // reply form (once per message)
+  // reply form
   const replyForm = document.createElement("form");
   replyForm.style.marginTop = "4px";
 
