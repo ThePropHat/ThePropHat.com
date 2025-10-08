@@ -1,121 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Signals from ThePropHat.com</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Signals from ThePropHat.com</title>
 
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 </head>
 <body style="font-family:monospace; background:#fff; color:#000; margin:20px;">
 
-  <div class="signal-header">WOULDYOULIKETOSENDMEAMESSAGE?</div><br>
+<div class="signal-header">WOULDYOULIKETOSENDMEAMESSAGE?</div><br>
 
-  <div id="signal-feed" style="white-space:pre-wrap; max-width:600px;"></div>
+<div id="signal-feed" style="white-space:pre-wrap; max-width:600px;"></div>
 
-  <form id="signal-form" style="margin-top:10px;">
-    <input id="signal-name" type="text" placeholder="NAME" maxlength="20" />
-    <input id="signal-message" type="text" placeholder="MESSAGE" maxlength="1000" required />
-    <button type="submit">SEND</button>
-  </form>
+<form id="signal-form" style="margin-top:10px;">
+  <input id="signal-name" type="text" placeholder="NAME" maxlength="20" />
+  <input id="signal-message" type="text" placeholder="MESSAGE" maxlength="1000" required />
+  <button type="submit">SEND</button>
+</form>
 
-  <footer style="margin-top:20px;">
-    <a href="https://theprophat.com/homepage.html">go back</a>
-  </footer>
+<footer style="margin-top:20px;">
+  <a href="https://theprophat.com/homepage.html">go back</a>
+</footer>
 
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyCtlgNf9x8OnMGbeWePPgmyIeUOQ4sg20w",
-      authDomain: "theprophatsignals.firebaseapp.com",
-      databaseURL: "https://theprophatsignals-default-rtdb.firebaseio.com",
-      projectId: "theprophatsignals",
-      storageBucket: "theprophatsignals.firebasestorage.app",
-      messagingSenderId: "416477268379",
-      appId: "1:416477268379:web:ac81db12333f4699ceb93e"
-    };
+<script>
+const firebaseConfig = {
+  apiKey: "AIzaSyCtlgNf9x8OnMGbeWePPgmyIeUOQ4sg20w",
+  authDomain: "theprophatsignals.firebaseapp.com",
+  databaseURL: "https://theprophatsignals-default-rtdb.firebaseio.com",
+  projectId: "theprophatsignals",
+  storageBucket: "theprophatsignals.firebasestorage.app",
+  messagingSenderId: "416477268379",
+  appId: "1:416477268379:web:ac81db12333f4699ceb93e"
+};
 
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.database();
-    const signalRef = db.ref("signalLog");
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+const signalRef = db.ref("signalLog");
 
-    const feed = document.getElementById("signal-feed");
+const feed = document.getElementById("signal-feed");
 
-    function formatTimestamp(ts) {
-      const d = new Date(ts);
-      return `${d.toLocaleDateString()} @ ${d.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}`;
-    }
+function formatTimestamp(ts) {
+  const d = new Date(ts);
+  return `${d.toLocaleDateString()} @ ${d.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'})}`;
+}
 
-    function createSignalDiv(key, name, message, timestamp, replies=[]) {
-      const div = document.createElement("div");
-      div.style.borderBottom = "1px solid #ccc";
-      div.style.marginBottom = "8px";
-      div.style.paddingBottom = "4px";
+// create message + replies
+function createSignalDiv(key, name, message, timestamp, replies = []) {
+  const div = document.createElement("div");
+  div.style.borderBottom = "1px solid #ccc";
+  div.style.marginBottom = "8px";
+  div.style.paddingBottom = "4px";
 
-      const header = document.createElement("div");
-      header.textContent = `[${formatTimestamp(timestamp)}] ${name}: ${message}`;
-      div.appendChild(header);
+  const header = document.createElement("div");
+  header.textContent = `[${formatTimestamp(timestamp)}] ${name}: ${message}`;
+  div.appendChild(header);
 
-      // Replies container
-      const replyContainer = document.createElement("div");
-      replyContainer.style.marginLeft = "20px";
-      replies.forEach(r => {
-        const replyDiv = document.createElement("div");
-        replyDiv.style.color = "red";
-        replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message}`;
-        replyContainer.appendChild(replyDiv);
-      });
-      div.appendChild(replyContainer);
+  // replies container
+  const replyContainer = document.createElement("div");
+  replyContainer.style.marginLeft = "20px";
 
-      // Reply input
-      const replyForm = document.createElement("form");
-      replyForm.style.marginTop = "4px";
-      const replyInput = document.createElement("input");
-      replyInput.type = "text";
-      replyInput.placeholder = "reply...";
-      replyInput.maxLength = 500;
-      const replyBtn = document.createElement("button");
-      replyBtn.type = "submit";
-      replyBtn.textContent = "↵";
-      replyForm.appendChild(replyInput);
-      replyForm.appendChild(replyBtn);
+  replies.forEach(r => {
+    const replyDiv = document.createElement("div");
+    replyDiv.style.color = "red";
+    replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message} `;
 
-      replyForm.addEventListener("submit", function(e){
-        e.preventDefault();
-        const replyMessage = replyInput.value.trim();
-        if(!replyMessage) return;
-        const reply = { name: "Anonymous", message: replyMessage, timestamp: Date.now() };
-        signalRef.child(key).child("replies").push(reply);
-        replyInput.value = "";
-      });
-
-      div.appendChild(replyForm);
-
-      return div;
-    }
-
-    document.getElementById("signal-form").addEventListener("submit", function(e) {
-      e.preventDefault();
-      const name = document.getElementById("signal-name").value || "Anonymous";
-      const message = document.getElementById("signal-message").value.trim();
-      if (!message) return;
-
-      const signal = { name, message, timestamp: Date.now() };
-      signalRef.push(signal);
-      this.reset();
+    // delete button
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "x";
+    delBtn.style.color = "red";
+    delBtn.style.marginLeft = "4px";
+    delBtn.style.background = "none";
+    delBtn.style.border = "none";
+    delBtn.style.cursor = "pointer";
+    delBtn.addEventListener("click", () => {
+      signalRef.child(key).child("replies").child(r._key).remove();
     });
 
-    // Listen for changes including replies
-    signalRef.limitToLast(50).on("value", snapshot => {
-      feed.innerHTML = "";
-      snapshot.forEach(child => {
-        const val = child.val();
-        const replies = val.replies ? Object.values(val.replies) : [];
-        feed.appendChild(createSignalDiv(child.key, val.name, val.message, val.timestamp, replies));
-      });
-      feed.scrollTop = feed.scrollHeight;
-    });
-  </script>
+    replyDiv.appendChild(delBtn);
+    replyContainer.appendChild(replyDiv);
+  });
 
+  div.appendChild(replyContainer);
+
+  // reply form
+  const replyForm = document.createElement("form");
+  replyForm.style.marginTop = "4px";
+  const replyNameInput = document.createElement("input");
+  replyNameInput.type = "text";
+  replyNameInput.placeholder = "NAME";
+  replyNameInput.maxLength = 20;
+  replyNameInput.style.width = "80px";
+  const replyMessageInput = document.createElement("input");
+  replyMessageInput.type = "text";
+  replyMessageInput.placeholder = "reply...";
+  replyMessageInput.maxLength = 500;
+  const replyBtn = document.createElement("button");
+  replyBtn.type = "submit";
+  replyBtn.textContent = "↵";
+
+  replyForm.appendChild(replyNameInput);
+  replyForm.appendChild(replyMessageInput);
+  replyForm.appendChild(replyBtn);
+
+  replyForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const replyMsg = replyMessageInput.value.trim();
+    if (!replyMsg) return;
+    const replyName = replyNameInput.value.trim() || "Anonymous";
+    const replyObj = { name: replyName, message: replyMsg, timestamp: Date.now() };
+    signalRef.child(key).child("replies").push(replyObj, snap => {
+      replyObj._key = snap.key;
+    });
+    replyMessageInput.value = "";
+  });
+
+  div.appendChild(replyForm);
+
+  return div;
+}
+
+// main message submit
+document.getElementById("signal-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const name = document.getElementById("signal-name").value || "Anonymous";
+  const message = document.getElementById("signal-message").value.trim();
+  if (!message) return;
+  const signal = { name, message, timestamp: Date.now() };
+  signalRef.push(signal);
+  this.reset();
+});
+
+// listen for messages + replies
+signalRef.limitToLast(50).on("value", snapshot => {
+  feed.innerHTML = "";
+  snapshot.forEach(child => {
+    const val = child.val();
+    const replies = val.replies ? Object.entries(val.replies).map(([k,v]) => ({ ...v, _key: k })) : [];
+    feed.appendChild(createSignalDiv(child.key, val.name, val.message, val.timestamp, replies));
+  });
+  feed.scrollTop = feed.scrollHeight;
+});
+</script>
 </body>
 </html>
