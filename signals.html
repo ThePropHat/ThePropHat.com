@@ -8,19 +8,19 @@
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 </head>
-<body style="font-family:monospace; background:#fff; color:#000; margin:0; padding:0;">
+<body style="font-family:monospace; background:#fff; color:#000; margin:20px;">
 
 <div class="signal-header">WOULDYOULIKETOSENDMEAMESSAGE?</div><br>
 
-<div id="signal-feed" style="white-space:pre-wrap;"></div>
+<div id="signal-feed" style="white-space:pre-wrap; max-width:600px;"></div>
 
-<form id="signal-form" style="margin-top:4px;">
-  <input id="signal-name" type="text" placeholder="NAME" maxlength="20" style="width:80px;">
-  <input id="signal-message" type="text" placeholder="MESSAGE" maxlength="1000" style="width:60%;">
-  <button type="submit">↵</button>
+<form id="signal-form" style="margin-top:10px;">
+  <input id="signal-name" type="text" placeholder="NAME" maxlength="20" />
+  <input id="signal-message" type="text" placeholder="MESSAGE" maxlength="1000" required />
+  <button type="submit">SEND</button>
 </form>
 
-<footer style="margin-top:8px;">
+<footer style="margin-top:20px;">
   <a href="https://theprophat.com/homepage.html">go back</a>
 </footer>
 
@@ -41,10 +41,9 @@ const signalRef = db.ref("signalLog");
 
 const feed = document.getElementById("signal-feed");
 
-// Relative timestamp function
 function formatTimestamp(ts) {
   const now = Date.now();
-  const diff = now - ts;
+  const diff = now - ts; // difference in ms
   const seconds = Math.floor(diff / 1000);
   const minutes = Math.floor(seconds / 60);
   const hours = Math.floor(minutes / 60);
@@ -59,40 +58,45 @@ function formatTimestamp(ts) {
   const d = new Date(ts);
   return `${d.toLocaleDateString()} @ ${d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}`;
 }
-
-// Create message div with replies
 function createSignalDiv(key, name, message, timestamp, replies = []) {
   const div = document.createElement("div");
+  div.style.borderBottom = "1px solid #ccc";
+  div.style.marginBottom = "8px";
+  div.style.paddingBottom = "4px";
 
-  // Main message
+  // main message
   const header = document.createElement("div");
   header.textContent = `[${formatTimestamp(timestamp)}] ${name}: ${message}`;
   div.appendChild(header);
 
-  // Replies container
+  // replies container
   const replyContainer = document.createElement("div");
+  replyContainer.style.marginLeft = "20px";
 
   if (replies.length === 1) {
+    // just one reply, show directly
     const r = replies[0];
     const replyDiv = document.createElement("div");
-    replyDiv.style.color = "red"; // single reply in red
-    replyDiv.textContent = `    ↳ [${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message}`;
+    replyDiv.style.color = "red";
+    replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message}`;
     replyContainer.appendChild(replyDiv);
   } else if (replies.length > 1) {
+    // multiple replies, make collapsible drawer
     const toggleBtn = document.createElement("span");
     toggleBtn.style.cursor = "pointer";
-    toggleBtn.style.userSelect = "none";
-    toggleBtn.style.color = "red"; // toggle text in red
     toggleBtn.textContent = `▶ ${replies.length} replies`;
+    toggleBtn.style.userSelect = "none";
 
     const drawer = document.createElement("div");
     drawer.style.display = "none";
-    drawer.style.marginTop = "2px";
-    drawer.style.color = "red"; // all replies in drawer are red
+    drawer.style.marginTop = "4px";
+    drawer.style.color = "red";
+    toggleBtn.style.color = "red";
+    toggleBtn.textContent = `▶ ${replies.length} replies`;
 
     replies.forEach(r => {
       const replyDiv = document.createElement("div");
-      replyDiv.textContent = `    ↳ [${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message}`;
+      replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message}`;
       drawer.appendChild(replyDiv);
     });
 
@@ -112,9 +116,9 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
 
   div.appendChild(replyContainer);
 
-  // Reply form
+  // reply form
   const replyForm = document.createElement("form");
-  replyForm.style.marginTop = "2px";
+  replyForm.style.marginTop = "4px";
 
   const replyNameInput = document.createElement("input");
   replyNameInput.type = "text";
@@ -126,7 +130,6 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
   replyMessageInput.type = "text";
   replyMessageInput.placeholder = "reply...";
   replyMessageInput.maxLength = 500;
-  replyMessageInput.style.width = "60%";
 
   const replyBtn = document.createElement("button");
   replyBtn.type = "submit";
@@ -151,7 +154,7 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
   return div;
 }
 
-// Main message submit
+// main message submit
 document.getElementById("signal-form").addEventListener("submit", function(e) {
   e.preventDefault();
   const name = document.getElementById("signal-name").value || "Anonymous";
@@ -162,7 +165,7 @@ document.getElementById("signal-form").addEventListener("submit", function(e) {
   this.reset();
 });
 
-// Listen for messages + replies
+// listen for messages + replies
 signalRef.limitToLast(50).on("value", snapshot => {
   feed.innerHTML = "";
   snapshot.forEach(child => {
