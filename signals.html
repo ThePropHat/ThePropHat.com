@@ -78,6 +78,7 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
     const drawer = document.createElement("div");
     drawer.style.display = "none";
     drawer.style.marginTop = "4px";
+    drawer.style.color = "red";
 
     replies.forEach(r => {
       const replyDiv = document.createElement("div");
