@@ -66,24 +66,6 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
     replyDiv.style.color = "red";
     replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message} `;
 
-    // delete button
-    const delBtn = document.createElement("button");
-    delBtn.textContent = "x";
-    delBtn.style.color = "red";
-    delBtn.style.marginLeft = "4px";
-    delBtn.style.background = "none";
-    delBtn.style.border = "none";
-    delBtn.style.cursor = "pointer";
-    delBtn.addEventListener("click", () => {
-      signalRef.child(key).child("replies").child(r._key).remove();
-    });
-
-    replyDiv.appendChild(delBtn);
-    replyContainer.appendChild(replyDiv);
-  });
-
-  div.appendChild(replyContainer);
-
   // reply form
   const replyForm = document.createElement("form");
   replyForm.style.marginTop = "4px";
