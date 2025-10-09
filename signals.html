@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Signals from ThePropHat.com</title>
+<title>sign my card - THEPROPHAT</title>
 
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
@@ -30,10 +30,9 @@
 
   <!-- RIGHT SIDE: Shared Drawing Canvas -->
   <div style="flex:1; min-width:300px;">
-    <div style="margin-bottom:8px;">LIVE CARD (shared drawing)</div>
+    <div style="margin-bottom:8px;">sign the card?</div>
     <canvas id="shared-canvas" width="600" height="400" style="border:1px solid #ccc; background:#fafafa;"></canvas>
     <div style="margin-top:5px;">
-      <button id="clear-canvas">clear</button>
       <input type="color" id="color-picker" value="#000000" />
       <input type="range" id="brush-size" min="1" max="10" value="2" />
     </div>
@@ -59,9 +58,6 @@ const db = firebase.database();
 const signalRef = db.ref("signalLog");
 const drawRef = db.ref("drawings");
 
-/* ---------------------------
-   EXISTING GUESTBOOK CODE
-----------------------------*/
 const feed = document.getElementById("signal-feed");
 
 function formatTimestamp(ts) {
@@ -188,10 +184,6 @@ signalRef.limitToLast(50).on("value", snapshot => {
   });
   feed.scrollTop = feed.scrollHeight;
 });
-
-/* ---------------------------
-   NEW: LIVE DRAWING SECTION
-----------------------------*/
 const canvas = document.getElementById("shared-canvas");
 const ctx = canvas.getContext("2d");
 let drawing = false;
