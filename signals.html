@@ -3,46 +3,28 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>sign my card - THEPROPHAT</title>
+<title>Signals from ThePropHat.com</title>
 
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
 </head>
-
 <body style="font-family:monospace; background:#fff; color:#000; margin:20px;">
 
-<div style="display:flex; flex-wrap:wrap; gap:20px; align-items:flex-start;">
-  <!-- LEFT SIDE: Guestbook -->
-  <div style="flex:1; min-width:300px;">
-    <div class="signal-header">WOULDYOULIKETOSENDMEAMESSAGE?</div><br>
-    <div id="signal-feed" style="white-space:pre-wrap; max-width:600px;"></div>
+<div class="signal-header">WOULDYOULIKETOSENDMEAMESSAGE?</div><br>
 
-    <form id="signal-form" style="margin-top:10px;">
-      <input id="signal-name" type="text" placeholder="NAME" maxlength="20" />
-      <input id="signal-message" type="text" placeholder="MESSAGE" maxlength="1000" required />
-      <button type="submit">SEND</button>
-    </form>
+<div id="signal-feed" style="white-space:pre-wrap; max-width:600px;"></div>
 
-    <footer style="margin-top:20px;">
-      <a href="https://theprophat.com/homepage.html">go back</a>
-    </footer>
-  </div>
+<form id="signal-form" style="margin-top:10px;">
+  <input id="signal-name" type="text" placeholder="NAME" maxlength="20" />
+  <input id="signal-message" type="text" placeholder="MESSAGE" maxlength="1000" required />
+  <button type="submit">SEND</button>
+</form>
 
-  <!-- RIGHT SIDE: Shared Drawing Canvas -->
-  <div style="flex:1; min-width:300px;">
-    <div style="margin-bottom:8px;">sign the card?</div>
-    <canvas id="shared-canvas" width="600" height="400" style="border:1px solid #ccc; background:#fafafa;"></canvas>
-    <div style="margin-top:5px;">
-      <input type="color" id="color-picker" value="#000000" />
-      <input type="range" id="brush-size" min="1" max="10" value="2" />
-    </div>
-  </div>
-</div>
+<footer style="margin-top:20px;">
+  <a href="https://theprophat.com/homepage.html">go back</a>
+</footer>
 
 <script>
-/* ---------------------------
-   FIREBASE CONFIG
-----------------------------*/
 const firebaseConfig = {
   apiKey: "AIzaSyCtlgNf9x8OnMGbeWePPgmyIeUOQ4sg20w",
   authDomain: "theprophatsignals.firebaseapp.com",
@@ -56,56 +38,61 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 const signalRef = db.ref("signalLog");
-const drawRef = db.ref("drawings");
 
 const feed = document.getElementById("signal-feed");
 
 function formatTimestamp(ts) {
   const now = Date.now();
-  const diff = now - ts;
+  const diff = now - ts; // difference in ms
   const seconds = Math.floor(diff / 1000);
   const minutes = Math.floor(seconds / 60);
   const hours = Math.floor(minutes / 60);
   const days = Math.floor(hours / 24);
+
   if (seconds < 10) return 'just now';
   if (seconds < 60) return `${seconds}s ago`;
   if (minutes < 60) return `${minutes}m ago`;
   if (hours < 24) return `${hours}h ago`;
   if (days < 7) return `${days}d ago`;
+
   const d = new Date(ts);
   return `${d.toLocaleDateString()} @ ${d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})}`;
 }
-
 function createSignalDiv(key, name, message, timestamp, replies = []) {
   const div = document.createElement("div");
   div.style.borderBottom = "1px solid #ccc";
   div.style.marginBottom = "8px";
   div.style.paddingBottom = "4px";
 
+  // main message
   const header = document.createElement("div");
   header.textContent = `[${formatTimestamp(timestamp)}] ${name}: ${message}`;
   div.appendChild(header);
 
+  // replies container
   const replyContainer = document.createElement("div");
   replyContainer.style.marginLeft = "20px";
 
   if (replies.length === 1) {
+    // just one reply, show directly
     const r = replies[0];
     const replyDiv = document.createElement("div");
     replyDiv.style.color = "red";
     replyDiv.textContent = `[${formatTimestamp(r.timestamp)}] ${r.name}: ${r.message}`;
     replyContainer.appendChild(replyDiv);
   } else if (replies.length > 1) {
+    // multiple replies, make collapsible drawer
     const toggleBtn = document.createElement("span");
     toggleBtn.style.cursor = "pointer";
     toggleBtn.textContent = `▶ ${replies.length} replies`;
     toggleBtn.style.userSelect = "none";
-    toggleBtn.style.color = "red";
 
     const drawer = document.createElement("div");
     drawer.style.display = "none";
     drawer.style.marginTop = "4px";
     drawer.style.color = "red";
+    toggleBtn.style.color = "red";
+    toggleBtn.textContent = `▶ ${replies.length} replies`;
 
     replies.forEach(r => {
       const replyDiv = document.createElement("div");
@@ -129,6 +116,7 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
 
   div.appendChild(replyContainer);
 
+  // reply form
   const replyForm = document.createElement("form");
   replyForm.style.marginTop = "4px";
 
@@ -162,9 +150,11 @@ function createSignalDiv(key, name, message, timestamp, replies = []) {
   });
 
   div.appendChild(replyForm);
+
   return div;
 }
 
+// main message submit
 document.getElementById("signal-form").addEventListener("submit", function(e) {
   e.preventDefault();
   const name = document.getElementById("signal-name").value || "Anonymous";
@@ -175,6 +165,7 @@ document.getElementById("signal-form").addEventListener("submit", function(e) {
   this.reset();
 });
 
+// listen for messages + replies
 signalRef.limitToLast(50).on("value", snapshot => {
   feed.innerHTML = "";
   snapshot.forEach(child => {
@@ -183,56 +174,6 @@ signalRef.limitToLast(50).on("value", snapshot => {
     feed.appendChild(createSignalDiv(child.key, val.name, val.message, val.timestamp, replies));
   });
   feed.scrollTop = feed.scrollHeight;
-});
-const canvas = document.getElementById("shared-canvas");
-const ctx = canvas.getContext("2d");
-let drawing = false;
-let lastPos = null;
-
-const colorPicker = document.getElementById("color-picker");
-const brushSize = document.getElementById("brush-size");
-
-canvas.addEventListener("mousedown", e => {
-  drawing = true;
-  lastPos = { x: e.offsetX, y: e.offsetY };
-});
-canvas.addEventListener("mouseup", () => drawing = false);
-canvas.addEventListener("mouseleave", () => drawing = false);
-
-canvas.addEventListener("mousemove", e => {
-  if (!drawing) return;
-  const newPos = { x: e.offsetX, y: e.offsetY };
-  const stroke = {
-    from: lastPos,
-    to: newPos,
-    color: colorPicker.value,
-    width: parseInt(brushSize.value),
-  };
-  drawRef.push(stroke);
-  drawLine(stroke);
-  lastPos = newPos;
-});
-
-function drawLine({from, to, color, width}) {
-  ctx.strokeStyle = color;
-  ctx.lineWidth = width;
-  ctx.lineCap = "round";
-  ctx.beginPath();
-  ctx.moveTo(from.x, from.y);
-  ctx.lineTo(to.x, to.y);
-  ctx.stroke();
-}
-
-// Listen for new strokes
-drawRef.on("child_added", snap => {
-  const stroke = snap.val();
-  drawLine(stroke);
-});
-
-// Clear canvas (and Firebase)
-document.getElementById("clear-canvas").addEventListener("click", () => {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawRef.remove();
 });
 </script>
 </body>
