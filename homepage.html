@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Official website of ThePropHat - My personal projects, hobbies, and blog posts.">
+<meta name="description" content="website of ThePropHat">
 <meta property="og:title" content="www.theprophat.com">
 <meta property="og:image" content="/images/logos/site-logo.png">
 <title>THEPROPHAT.COM</title>
@@ -67,7 +67,6 @@
         <div><a href="signals.html">GUESTBOOK</a></div>
         <div><a href="http://tv.theprophat.com:8158/" target="_blank">TWIG VALLEY</a></div>
         <div><a href="https://tylerhensondesigns.com/" target="_blank">PORTFOLIO</a></div>
-        <a href="/microworld/halloween-2025/the-door.html"><img  src="microworld/halloween-2025/trickortreatbutton.gif"></a>
       </div>
     </main>
 
@@ -82,16 +81,6 @@
 
 </footer>
 
-
-<div id="birthday-game" style="display: none;">
-  <h1 class="birthday-timer">⏱️ <span id="game-time">30</span>s</h1>
-  <div class="birthday-score">🎈 Popped: <span id="game-score">0</span></div>
-  <div class="birthday-message" id="birthday-message">
-     HAPPY BIRTHDAY, THEPROPHAT!<br>
-    You popped <span id="final-score">0</span> balloons!
-  </div>
-</div>
-  
 
 </div>
 
@@ -151,182 +140,6 @@ fetch("/json/microblog-2025.json")
 
   
 </script>
-
-
-<audio id="birthday-music" loop>
-  <source src="audio/birthday_music.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-
-<script>
-  // 🎈 Firebase Config for Birthday Game
-  const birthdayFirebaseConfig = {
-    apiKey: "AIzaSyDjKxw294bqm4i9I5tjO7TrQV_jjW4En4g",
-    authDomain: "theprophathalloween2025.firebaseapp.com",
-    projectId: "theprophathalloween2025",
-    storageBucket: "theprophathalloween2025.appspot.com",
-    messagingSenderId: "489777678361",
-    appId: "1:489777678361:web:f9d424107d8120ca514288"
-  };
-
-  firebase.initializeApp(birthdayFirebaseConfig);
-  const birthdayDatabase = firebase.database();
-
-  function submitBirthdayScore(name, score) {
-    const ref = birthdayDatabase.ref('birthdayScores');
-    ref.push({
-      name: name,
-      score: score,
-      timestamp: Date.now()
-    });
-  }
-
-  function listenBirthdayLeaderboard() {
-    const ref = birthdayDatabase.ref('birthdayScores').orderByChild('score').limitToLast(10);
-    ref.on('value', (snapshot) => {
-      const scores = [];
-      snapshot.forEach(childSnapshot => {
-        scores.push(childSnapshot.val());
-      });
-      scores.sort((a, b) => b.score - a.score);
-
-      const list = document.getElementById('birthday-leaderboard-list');
-      if (list) {
-        list.innerHTML = '';
-        scores.forEach(({ name, score }) => {
-          const li = document.createElement('li');
-          li.textContent = `${name}: ${score} balloons`;
-          list.appendChild(li);
-        });
-      }
-    });
-  }
-
-  // Leaderboard UI
-  const leaderboardBox = document.createElement('div');
-  leaderboardBox.id = 'birthday-leaderboard';
-  leaderboardBox.innerHTML = `
-    <h2>THEPROPHAT'S BIRTHDAY GUESTS</h2>
-    <ol id="birthday-leaderboard-list"></ol>
-  `;
-  document.querySelector('.background').appendChild(leaderboardBox);
-
-
-  listenBirthdayLeaderboard();
-</script>
-
-<script>
-// 🎈 Birthday Balloon Game 🎉
-
-(function() {
-  const gameDuration = 30; // seconds
-  const spawnRate = 500; // ms
-  const colors = ["#FF4C4C", "#FFD700", "#8A2BE2", "#00CED1", "#32CD32", "#FF69B4"];
-
-  let gameTime = gameDuration;
-  let gameScore = 0;
-  let balloonInterval, countdownTimer;
-
-  const gameContainer = document.getElementById("birthday-game");
-  const timeDisplay = document.getElementById("game-time");
-  const scoreDisplay = document.getElementById("game-score");
-  const message = document.getElementById("birthday-message");
-  const finalScore = document.getElementById("final-score");
-  const music = document.getElementById("birthday-music");
-
-  // ✅ Move this here so it's available globally inside the game
-  const popSounds = [
-    new Audio("audio/pop1.mp3"),
-    new Audio("audio/pop2.mp3"),
-    new Audio("audio/pop3.mp3"),
-    new Audio("audio/pop4.mp3"),
-    new Audio("audio/pop5.mp3"),
-    new Audio("audio/pop6.mp3"),
-    new Audio("audio/pop7.mp3"),
-    new Audio("audio/pop8.mp3"),
-    new Audio("audio/pop9.mp3"),
-    new Audio("audio/pop10.mp3"),
-    
-  ];
-
-  function createBalloon() {
-    const balloon = document.createElement("div");
-    balloon.classList.add("birthday-balloon");
-    balloon.style.left = `${Math.random() * 90 + 5}%`;
-    balloon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-    balloon.style.animationDuration = `${3 + Math.random() * 2}s`;
-
-    balloon.addEventListener("click", () => {
-      gameScore++;
-      scoreDisplay.textContent = gameScore;
-
-      // ✅ Play random pop sound
-      const pop = popSounds[Math.floor(Math.random() * popSounds.length)];
-      pop.currentTime = 0;
-      pop.playbackRate = 0.85 + Math.random() * 0.4;
-      pop.play();
-
-      balloon.remove();
-    });
-
-    gameContainer.appendChild(balloon);
-
-    // Cleanup after 6 seconds
-    setTimeout(() => {
-      if (balloon.parentElement) balloon.remove();
-    }, 6000);
-  }
-
-  function startGame() {
-    gameContainer.style.display = "block";
-    gameTime = gameDuration;
-    gameScore = 0;
-    scoreDisplay.textContent = 0;
-    timeDisplay.textContent = gameTime;
-    message.style.display = "none";
-
-    // Start music
-    music.currentTime = 0;
-    music.play();
-
-    balloonInterval = setInterval(createBalloon, spawnRate);
-    countdownTimer = setInterval(() => {
-      gameTime--;
-      timeDisplay.textContent = gameTime;
-      if (gameTime <= 0) endGame();
-    }, 1000);
-  }
-
-  function endGame() {
-    clearInterval(balloonInterval);
-    clearInterval(countdownTimer);
-    document.querySelectorAll(".birthday-balloon").forEach(b => b.remove());
-
-    // Stop music
-    music.pause();
-
-    finalScore.textContent = gameScore;
-    message.style.display = "block";
-
-    const haul = gameScore;
-    const storedName = localStorage.getItem('birthdayName');
-    let name = prompt("sign your name?", storedName || "Guest");
-
-    if (name) {
-      localStorage.setItem('birthdayName', name);
-      submitBirthdayScore(name, haul);
-    }
-  }
-
-  // 🎈 START THE GAME AUTOMATICALLY
-  window.addEventListener("load", () => {
-    setTimeout(startGame, 1500);
-  });
-
-})();
-</script>
-
 
 
 <div id="microblog-terminal">
