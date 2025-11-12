@@ -90,12 +90,12 @@ async function loadEntries() {
 
              entryMood.innerHTML =
         entry.mood !== false && entry.mood
-          ? `<strong>i felt:</strong> <i>${formatList(entry.mood)}</i>`
+          ? `<strong>you felt:</strong> <i>${formatList(entry.mood)}</i>`
           : '';
 
              entryLocation.innerHTML =
         entry.locations !== false && entry.locations
-          ? `<i>${formatList(entry.locations)}</i>`
+          ? `<i><b>places you went today: </b>${formatList(entry.locations)}</i>`
           : '';
 
              entryWeather.innerHTML =
@@ -106,7 +106,7 @@ async function loadEntries() {
 // audio
 if (entry.audio) {
   entryAudio.style.display = 'block'; // make sure it's visible
-  entryAudio.innerHTML = '';
+  entryAudio.innerHTML = '<h1>here is a little song you wrote today</h1>';
   const audioEl = document.createElement('audio');
   audioEl.controls = true;
   audioEl.src = entry.audio;
@@ -118,7 +118,7 @@ if (entry.audio) {
 
    if (entry.microblog && entry.microblog.length) {
   entryMicroblog.style.display = 'block';
-  entryMicroblog.innerHTML = '';
+  entryMicroblog.innerHTML = '<h1>entries from todays microblog</h1>';
   entry.microblog.forEach(post => {
     const p = document.createElement('p');
     p.classList.add('microblog');
@@ -148,8 +148,6 @@ if (entry.audio) {
           wrapper.appendChild(image);
           photoGallery.appendChild(wrapper);
         });
-      } else {
-        photoGallery.innerHTML = '<p>no images today :/</p>';
       }
     }
 
