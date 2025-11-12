@@ -41,6 +41,12 @@ async function loadEntries() {
       entryDate.textContent = entry.date;
       entryText.textContent = entry.text || '';
 
+        const allButtons = document.querySelectorAll('.date-button');
+  allButtons.forEach(btn => btn.classList.remove('active'));
+
+  const activeButton = Array.from(allButtons).find(btn => btn.textContent === entry.date);
+  if (activeButton) activeButton.classList.add('active');
+
       entryHabits.innerHTML = '';
       if (entry.habits && entry.habits.length) {
         entry.habits.forEach(habit => {
@@ -97,31 +103,31 @@ async function loadEntries() {
           ? `<strong>the weather today was:</strong> <i>${formatList(entry.weather)}</i>`
           : '';
 
-          // audio
-entryAudio.innerHTML = ''; // clear previous
+// audio
 if (entry.audio) {
+  entryAudio.style.display = 'block'; // make sure it's visible
+  entryAudio.innerHTML = '';
   const audioEl = document.createElement('audio');
   audioEl.controls = true;
   audioEl.src = entry.audio;
   entryAudio.appendChild(audioEl);
 } else {
-  entryAudio.textContent = 'no song for today';
+  entryAudio.style.display = 'none'; // hide the whole container if no audio
 }
 
 
-      entryMicroblog.innerHTML = '';
-      if (entry.microblog && entry.microblog.length) {
-        entry.microblog.forEach(post => {
-          const p = document.createElement('p');
-          p.classList.add('microblog');
-          p.innerHTML = `<strong>${post.time}</strong> <br> ${post.entry}`;
-          entryMicroblog.appendChild(p);
-          
-        });
-      }
-        else {
-        entryMicroblog.innerHTML = '<p>no microblog today :/</p>';
-      }
+   if (entry.microblog && entry.microblog.length) {
+  entryMicroblog.style.display = 'block';
+  entryMicroblog.innerHTML = '';
+  entry.microblog.forEach(post => {
+    const p = document.createElement('p');
+    p.classList.add('microblog');
+    p.innerHTML = `<strong>${post.time}</strong> <br> ${post.entry}`;
+    entryMicroblog.appendChild(p);
+  });
+} else {
+  entryMicroblog.style.display = 'none'; // hide container if empty
+}
 
       photoGallery.innerHTML = '';
       if (entry.images && entry.images.length) {
