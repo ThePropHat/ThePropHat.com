@@ -26,8 +26,8 @@ body, html {
 .card{
   display: flex;
   flex-direction: column;
-  gap: 70px;
-  font-size: 50px;
+  gap: 50px;
+  font-size: 45px;
   font-weight: bold;
   background: rgba(0, 0, 0, 0);
 }
@@ -36,7 +36,6 @@ body, html {
   color: white;
   text-shadow: 2px 2px 0px red;
   text-decoration: none;
-
 }
 
 .card a:hover{
@@ -53,7 +52,7 @@ body, html {
 }
 
 .background {
-    background: url('/images/made-by-me/home-background.png') no-repeat center center;
+  background: url('/images/made-by-me/home-background.png') no-repeat center center;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -137,16 +136,10 @@ body, html {
   font-family: monospace;
   white-space: pre-wrap;
   overflow: hidden;
-  border-right: 2px solid #1adb81;
-  animation: blink 1s step-end infinite;
+  animation: blink step-end infinite;
   min-height: 2em;
   text-align: left;
 }
 
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
 
 

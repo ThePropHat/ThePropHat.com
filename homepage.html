@@ -6,7 +6,7 @@
 <meta name="description" content="website of ThePropHat">
 <meta property="og:title" content="www.theprophat.com">
 <meta property="og:image" content="/images/logos/site-logo.png">
-<title>THEPROPHAT.COM</title>
+<title>HOME</title>
 <link rel="stylesheet" href="styles.css">
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
@@ -123,7 +123,7 @@
 
 
 <script>
-// Fetch and animate microblog entries like they're being typed
+// fetch and animate microblog entries like they're being typed
 fetch("/json/microblog-2025.json")
   .then(res => res.json())
   .then(entries => {
@@ -131,17 +131,13 @@ fetch("/json/microblog-2025.json")
 
     let index = 0;
     const entryBox = document.getElementById("microblog-entry");
-    const linkEl = document.getElementById("microblog-link");
-
-    // Base URL for lifelog, adjust if different
-    const lifelogBaseURL = "https://theprophat.com/pages/lifelog.html";
 
     function typeEntry(text, callback) {
       let i = 0;
       entryBox.textContent = "";
 
       const interval = setInterval(() => {
-        // Show typing cursor flicker at even steps
+        // show typing cursor flicker at even steps
         entryBox.textContent = text.slice(0, i) + (i % 2 === 0 ? '█' : '');
         i++;
         if (i > text.length) {
@@ -156,10 +152,10 @@ fetch("/json/microblog-2025.json")
       const current = entries[index];
       const displayText = `${current.date} | ${current.entry} (at ${current.time})`;
 
-      // Show the typed text
+      // show the typed text
       typeEntry(displayText, () => {
 
-        // Wait 10 seconds before next entry
+        // wait 10 seconds before next entry
         setTimeout(() => {
           index = (index + 1) % entries.length;
           linkEl.style.display = "none";
@@ -180,7 +176,6 @@ fetch("/json/microblog-2025.json")
 <div id="microblog-terminal">
   <div class="terminal-header">MICROBLOG</div>
   <div id="microblog-entry" class="typed-line"></div>
-  <a id="microblog-link" href="#" target="_blank" rel="noopener noreferrer" style="color:#00ff99; font-size: 0.85em; text-decoration: underline; display:none; margin-top:8px; cursor:pointer;">View Lifelog Post</a>
 </div>
 
 
