@@ -26,15 +26,15 @@ body, html {
 .card{
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  font-size: 40px;
+  gap: 70px;
+  font-size: 50px;
   font-weight: bold;
   background: rgba(0, 0, 0, 0);
 }
 
 .card a{
   color: white;
-  text-shadow: 2px 2px 0px #5a5a5a;
+  text-shadow: 2px 2px 0px red;
   text-decoration: none;
 
 }
