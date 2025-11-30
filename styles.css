@@ -41,7 +41,7 @@ body, html {
 
 .card a:hover{
   color: rgb(255, 0, 0);
-  text-shadow: 2px 2px 0px #490000;
+  text-shadow: 2px 2px 0px white;
   font-family: ARGENTPIXEL-ITAL;
 }
 
