@@ -20,8 +20,24 @@
     <h2 class ="random-heading" id="random-heading">if you can see this, call theprophat</h2></a>
     </header>
     
-
 <script>
+
+  function typeText(element, text, speed, callback) {
+    let i = 0;
+    element.textContent = "";
+
+    const interval = setInterval(() => {
+
+      element.textContent = text.slice(0, i); 
+      i++;
+      if (i > text.length) {
+        clearInterval(interval);
+        element.textContent = text; // final text
+        if (callback) callback();
+      }
+    }, speed);
+  }
+  
   // array of possible h2 texts
   const headings = [
     "they call me theprophat.com",
@@ -70,6 +86,14 @@
     "looking for the bathroom",
     "sorry im just trying to find the bathroom",
     "have you seen our bathroom?",
+    "please tell me you know the way out of here",
+    "do you know who to ask to find a bathroom around here?",
+    "THEPROPHAT HAS THE BATHROOM KEYS IF YOU NEED THEM",
+    "excuse me, do you have a hall pass?",
+    "tell me how you got here thecourtoftheprophat@gmail.com",
+    "hows my driving? thecourtoftheprophat@gmail.com",
+    "do you enjoy spam email? thecourtoftheprophat@gmail.com",
+    "looking for a friend? thecourtoftheprophat@gmail.com",
     "send me a postcard if you're brave enough!",
     "STILLNESS IS THE ONLY TRUTH",
     "THE HARDWARE IS BROKEN, YET THE SOFTWARE REMAINS STRONG",
@@ -93,15 +117,21 @@
 
   // pick random heading
   const headerIndex = Math.floor(Math.random() * headings.length);
+  const selectedHeading = headings[headerIndex];
+  const headerElement = document.getElementById("random-heading");
 
-  // replace h2 text
-  document.getElementById("random-heading").innerText = headings[headerIndex];
+  // Type out the header text instead of instantly replacing it
+  // Using a slightly faster speed (75ms) for the header
+  typeText(headerElement, selectedHeading, 75);
+  
 </script>
 
  <main class="content-area">
+
       <div class="card">
 
         <!-- lifelog, about, inventory -->
+
         <div><a href="lifelog.html">THEPROPHAT</a></div> 
 
         <!-- guestbook, neighbourhood, twig valley -->
@@ -132,33 +162,36 @@ fetch("/json/microblog-2025.json")
     let index = 0;
     const entryBox = document.getElementById("microblog-entry");
 
-    function typeEntry(text, callback) {
+    // --- Reusable Type Text Function (Static Cursor) ---
+    // This is the function you asked for, without the flicker.
+    function typeText(element, text, speed, callback) {
       let i = 0;
-      entryBox.textContent = "";
+      element.textContent = "";
 
       const interval = setInterval(() => {
-        // show typing cursor flicker at even steps
-        entryBox.textContent = text.slice(0, i) + (i % 2 === 0 ? '█' : '');
+        // Only show the typed text (static cursor)
+        element.textContent = text.slice(0, i);
         i++;
         if (i > text.length) {
           clearInterval(interval);
-          entryBox.textContent = text; // final text without cursor
+          element.textContent = text; // final text
           if (callback) callback();
         }
-      }, 40);
+      }, speed);
     }
+    // --------------------------------------------------
 
     function cycleEntries() {
       const current = entries[index];
       const displayText = `${current.date} | ${current.entry} (at ${current.time})`;
 
-      // show the typed text
-      typeEntry(displayText, () => {
+      // show the typed text using the static function
+      typeText(entryBox, displayText, 40, () => { // 40ms speed for microblog
 
         // wait 10 seconds before next entry
         setTimeout(() => {
           index = (index + 1) % entries.length;
-          linkEl.style.display = "none";
+          // linkEl line removed to prevent ReferenceError and ensure cycling continues
           cycleEntries();
         }, 10000);
       });
@@ -171,7 +204,6 @@ fetch("/json/microblog-2025.json")
   });
   
 </script>
-
 
 <div id="microblog-terminal">
   <div class="terminal-header">MICROBLOG</div>

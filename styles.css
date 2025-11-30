@@ -26,8 +26,8 @@ body, html {
 .card{
   display: flex;
   flex-direction: column;
-  gap: 50px;
-  font-size: 45px;
+  gap: 70px;
+  font-size: 50px;
   font-weight: bold;
   background: rgba(0, 0, 0, 0);
 }
@@ -36,6 +36,7 @@ body, html {
   color: white;
   text-shadow: 2px 2px 0px red;
   text-decoration: none;
+
 }
 
 .card a:hover{
@@ -45,7 +46,9 @@ body, html {
 }
 
 .foot {
- font-size: 0.9rem;
+  font-size: 0.9rem;
+  color: #ffff;
+  text-shadow: 1px 1px 0px #1adb81;
   text-align: center;
   font-family: ARGENTPIXEL-ITAL;
   padding-bottom: 20px;
@@ -106,20 +109,14 @@ body, html {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background: rgba(0, 0, 0, 0.507);
-  color: #1adb81;
-  border: 2px solid #1adb81;
+  color: #ffff;
+  text-shadow: 1px 1px 0px #1adb81;
   font-family: monospace;
   padding: 12px 15px;
-  max-width: 350px;
+  width: 350px;
   z-index: 9999;
   pointer-events: none; /* disable interaction */
   user-select: none;
-}
-
-#microblog-terminal a {
-  pointer-events: auto; /* enable clicking link */
-  user-select: text;
 }
 
 .terminal-header {
@@ -140,6 +137,3 @@ body, html {
   min-height: 2em;
   text-align: left;
 }
-
-
-
