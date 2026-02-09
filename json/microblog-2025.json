@@ -1,16 +1,20 @@
 [
+  {"date":"09-02-26",
+    "time":"12:53pm",
+      "entry":"forgor one comma and its game over"
+  },
   {
-    "date": "09-02-25",
+    "date": "09-02-26",
     "time":"12:47pm",
         "entry":"this goofy ass microblog, i think maybe the year change ruined it? bug testing in progress :/"
-  }
+  },
     {
-    "date": "09-02-25",
+    "date": "09-02-26",
     "time":"12:11pm",
         "entry": "casually spends 40 minutes working on my site anyway LMAO. welcome back theprophat. LOVING VIM"
   },
     {
-    "date": "09-02-25",
+    "date": "09-02-26",
     "time":"11:34am",
         "entry": "hello again theprophat.com!! i missed you! not really bc i've been using you as my homepage, but not as a log of any kind! this is just me testing out VIM and git cli though so don't get your hopes up . . ."
   },
