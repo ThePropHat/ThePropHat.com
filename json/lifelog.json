@@ -1,544 +1,938 @@
 [
-             {
-    "date": "09-02-26",
-    "text": "writing this entry in NeoVIM for the first time! wow it is surely unlike ANY text editor i have ever used, but i really like the workflow and i bet i could totally use it as a proper journal if i grew more familiar (not that you aren't an acceptable journal, beloved website). i have been reading a TON lately, currently on a 70(!) day reading streak which i'm super proud of. i am determined to extend this to the end of the year, and i know i can do it too. i have effectively replaced all my tv and movie watching with reading and i do not regret this at all. if only i could read AND exercise, i might become unstoppable. \n\nand DO NOT SUGGEST AUDIOBOOKS BECAUSE THATS NOT THE SAME.",
-    "mood": ["well tended"],
-    "weather": ["sunny", "warm"],
-    "locations": false,
-    "habits": ["journaling","reading"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": "The Last Unicorn - Peter S. Beagle",
-    "listened": "Lustmore - Lapalux",
-    "played": ["Half Sword"],
-    "images":   false,
-    "audio": false
-  },
-             {
-    "date": "29-11-25",
-    "text": "i had this realization last night that megan is my sole source of my current social life, and that i put this on her too much. she fell asleep quite early last night, which frustrated me. but with some introspection i have determined this is of my own doing. today i'm going to make a vow to speak to someone else besides her. she has the whole day off, so this evening i'm going online and speaking with someboday. anybody. i will not allow myself to become isolation prone any longer, i'm willing and ready to become a social little butterfly again. i complained yesterday that no one gets back to me at a pace i prefer, yet i do the same myself. i am going to remedy this error also.\n\na quote from Seneca for you on this day\n'Ponder for a long time whether you shall admit a given person to your friendship; but when you have decided to admit him, welcome him with all your heart and soul.",
-    "mood": ["restless"],
-    "weather": ["cloudy", "freezing"],
-    "locations": false,
-    "habits": ["journaling"],
-    "tv": "For All Mankind",
-    "movie": false,
-    "comic": false,
-    "book": "Assassin's Apprentice - Robin Hobb",
-    "listened": "Dummy - Portishead",
-    "played": ["Half Sword"],
-    "images":   false,
-    "audio": false
-  },
-           {
-    "date": "28-11-25",
-    "text": "i FINALLY found out what clinic i was referred to . . . only to find out they are closed on friday (today) and weekends. i'm also pretty sure i wont be going to work next week, but i'm hoping i can get on the newest schedule. no one is getting back to me in any regard, from friends to clinics to work. i'm beginning to get frustrated.\n\nprogress on my arm, however, is significant! i watched a video by an orthopedic and apparently i should have been told to stretch my arm out as much as i could in the first few days. likely, i'll be losing as much as 10% mobility in my left arm. hoping my elbow licking days haven't come to an end, but i just tried and it isn't looking great. i am stretching now as much as i can tolerate, and i'm really impressed how much i can bully through the pain. still, it will take up to 6 months (!) before i can use it like i used to.\n\nit finally snowed last night! the snow has fallen lightly once or twice this season but i think winter is finally amogus. i really love the snow, there is something so distinct about the winter air that i cant quite pin down. like beyond the fact that its physically colder, it just makes me feel some kind of way. i have friends who have never seen a day of snow, and i pity them. how could you miss out on an entire weather? some people miss out on it their entire lives. i wonder if they think about it. i'll report back on that.\n\ni just discovered the 'end' button and what its actually good for. this! coding on one single line with no line breaks, trying to get allllllll the way back to where i was typing only to be kicked to the next line. with the 'end' key, i fight this battle no more! i'm working on being better at navigating my digital workstations with hotkeys. idk why i always put it off because it is immensely satisfying. this longer entry is a direct result of this discovery!! before, i would be a bit wary of writing for too long, lest i have to fight the line demon. but not i can write to my little heart's content.\n\ni love to teach and i really want to teach my friends this lovely little art of coding. while i'm by no means an expert, i've been thinking a lot about putting together a 1 day class curriculum, with a promise of a fully functional personal site by the end. i'm going to talk to the twig valley crew tonight and gauge their interest.\n\nspeaking of the twig valley crew, i feel as though i've been neglecting them lately. neglect isn't the correct word, i've been more active in their chats, at the expense of ignoring everyone else. but they call nightly, and i rarely participate these days. this is not so much a reflection of them, or even my opinion of them, but of my current mental state. i'm in a great mood, but i find myself prone to isolation more than ever. i haven't really spoken to anyone beside megan in several weeks. i didn't realize how much of my social needs were met by work, yet i feel no need still to satisfy them like i once might have. further investigation on this is necessary, though at the moment i don't feel any negative effects from this, besides that sense that i've been MIA to a fair few people.\n\nyou desire another quote, huh? well, okay. here is something from aurelius i've been thinking about.\n'The impediment to action advances action. What stands in the way becomes the way.'",
-    "mood": ["stiff", "reflective"],
-    "weather": ["cloudy", "cold", "snowy"],
-    "locations": ["Ricky's Diner", "Grocery Store"],
-    "habits": ["journaling"],
-    "tv": "The Sopranos",
-    "movie": false,
-    "comic": "Ultimate Spider-Man Vol. 1",
-    "book": "Assassin's Apprentice - Robin Hobb",
-    "listened": "Forever & Ever - Sales",
-    "played": ["Minecraft","Grand Theft Auto IV: The Lost & Damned"],
-    "images":   false,
-    "audio": false
-  },
-         {
-    "date": "26-11-25",
-    "text": "10 days later, im feeling pretty confident that a) doctors dont care about me rn and b) im going to heal from this much quicker than expected. im typing this with two hands (!) quite comfortably, as well as being out of my sling for longer and longer. im feeling the coding bug again, inspired by my good buddy donald's sudden interest in this silly hobby. if you read this my good pal, know that im inspired by you more often than you think\n\n im getting back into working on The Odin Project, as ive recommended to my friends do. this means picking back up where i left with javascript. for the 3rd time. i dont really WANT to start fresh again but its probably in my best interest if i want to continue writing javascript.\n\n its nice to write without introspection but i want settle this debt with a little bit of paraphrased wisdom from the great BDoubleO100.\n'Ignorance is hating something you don't yet understand'",
-    "mood": ["calm","frustrated", "in pain"],
-    "weather": ["cloudy", "cold"],
-    "locations": false,
-    "habits": ["journaling", "coding"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": "Assassin's Apprentice - Robin Hobb",
-    "listened": ["Jinx - Crumb", "Moon Safari - Air"],
-    "played": false,
-    "images":   false,
-    "audio": false
-  },
-        {
-    "date": "16-11-25",
-    "text": "short entry because i broke my arm skateboarding. its been 4 days now, still pretty stiff and in pain. wish the doctors would see me already, but i get that its not in my control, and they wont likely do very much anyway. mostly concerned about wtf im going to do at work when i return.\n\nwish i could play minecraft",
-    "mood": ["calm","frustrated", "in pain"],
-    "weather": ["cloudy", "cold"],
-    "locations": false,
-    "habits": ["journaling"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": ["Hot Wet & Sassy - Tobacco"],
-    "played": false,
-    "images":   false,
-    "audio": false
-  },
-      {
-    "date": "12-11-25",
-    "text": "farewell neocities, hello personal personal site! i actually feel as though ive broken a sort of chain, though i was losing my investment in the neocities community anyway. i dont believe that site is very sustainable and this site is better off without it. i was having trouble with the big picture on this site and now i totally feel like it has its own direction. id even consider taking it off the web totally, but i like the thought of being able to upload things to this site that i can share with my friends and family. i feel way less weird about posting about my personal life on here and i find it well to have a minor attachment like neocities gone from my life. as much as i loved making friends on there, the ship has sailed!\n\nfuck transphobia and long live theprophat.com \n\nbroke my arm skateboarding today too lmao",
-    "mood": ["calm", "content", "reflective"],
-    "weather": ["partly cloudy", "cold"],
-    "locations": false,
-    "habits": ["journaling", "skateboarding"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": ["Jinx - Crumb"],
-    "played": false,
-    "images":   false,
-    "audio": false
-  },
-      {
-    "date": "11-11-25",
-    "text": "few holidays hold as much power over me as Remembrance Day. there is no greater sadness in this world than men killing other men en masse. i think frequently upon the blood watered fields of Flanders. of the great things we never can accomplish because we're so invested in each other's destruction.\n\n'We are the Dead. Short days ago\nWe lived, felt dawn, saw sunset glow,\nLoved and were loved, and now we lie,\nIn Flanders fields.'",
-    "mood": ["calm", "content", "reflective"],
-    "weather": ["mostly sunny", "cold"],
-    "locations": false,
-    "habits": ["journaling", "reading", "skateboarding"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": "Epistulae Morales ad Lucilium - Seneca",
-    "listened": ["Portishead - Portishead", "Spirit World Field Guide - Aesop Rock"],
-    "played": ["skate.", "Bloons TD 5", "Mouthwashing"],
-    "images":   false,
-    "audio": false
-  },
     {
-    "date": "10-11-25",
-    "text": "through much self reflection, i have found myself in a much better head space these days. working out who i am is no easy chore, but it is one i value greatly. i have patience for anyone, yet this kindness i rarely afford to myself. i am learning to hold on to this patience with care.\n\ni always allow others to sway me and surprise me. i encourage it. i even seek it out. i want to understand people, even those i feel are unwise and irrational. i want to help everyone all the time, but i need to focus on doing this by leading by example. by keeping my own head straight and maintaining a life i deem virtuous, i can ensure my happiness comes from what i have within, and that my drive is purely internal. i learned this as a teenager, and it seems i was overdue for another lesson.\n\n anyway skateboarding",
-    "mood": ["calm", "content"],
-    "weather": ["cloudy", "warm"],
-    "locations": ["Work","Grocery Store"],
-    "habits": ["journaling", "cold shower", "reading", "baking"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": "Epistulae Morales ad Lucilium - Seneca",
-    "listened": "Portishead - Portishead",
-    "played": false,
-    "images":   false,
-    "audio": false
-  },
-   {
-    "date": "19-10-25",
-    "text": "i go through 2 week cycles, where i’m hyper focused for 2 weeks, and then feel like i sit at my computer and do nothing for 2 weeks. i’m in the latter 2 weeks right now. from 10am to 3:30pm i have been on my computer bouncing back between music, reddit, and youtube and haven’t found a single stopping point. i’m grinding my teeth and bouncing my legs in my chair. i did 11 squats and balanced on one foot on my office chair for 4 minutes. i feel pretty depressive in these two weeks. i just feel maybe a bit depressive lately, but i think it is directly tied to this crash. i feel lonely on top of all this, but i don’t want to initiate conversation and idek if i WANT to be in conversation. it feels like a ball rolling down a hill that i can’t stop. i do kinda want to talk to people but i don’t want to come up with the words to type. i want something to talk about but i have nothing to say. i did a creative micro project already but i’m still feeling in the loop. i did it as a gift to a friend to maybe alleviate that but they haven’t seen it yet. i think i might need to see a specialist about an ADHD diagnosis.",
-    "mood": ["restless", "down"],
-    "weather": ["cloudy", "chill"],
-    "locations": false,
-    "habits": ["journaling"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": "Sinner Get Ready - Lingua Ignota",
-    "played": "skate.",
-    "images":   false,
-    "audio": false
-  },
-   {
-    "date": "05-10-25",
-    "text": "ITS MY BIRTHDAY SAY HAPPY BIRTHDAY TO ME SAY IT NOW.",
-    "mood": ["calm", "happy"],
-    "weather": ["sunny", "chill"],
-    "locations": false,
-    "habits": ["journaling", "coding"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": false,
-    "played": false,
-    "images":   false,
-    "audio": false
-  },
-   {
-    "date": "04-10-25",
-    "text": "went on a little adventure with the egg, had a great time! got tons of new books AND comic books to read on my birthday vacation. played the first ever game of NeoCities Prop Hunt which despite low turnout, was a successful venture!",
-    "mood": ["calm", "happy"],
-    "weather": ["sunny", "chill"],
-    "locations": ["Variant Edition", "Value Village", "A&W", "Queen Mary's Market"],
-    "habits": ["journaling", "coding"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": false,
-    "played": ["Red Dead Redemption 2", "Garry's Mod"],
-    "images":   false,
-    "audio": false
-  },
-  {
-    "date": "03-10-25",
-    "text": "today went by so quickly! and now im finally on a well deserved birthday break. cant wait to do nothing for awhile :o",
-    "mood": ["calm", "happy"],
-    "weather": ["sunny", "chill"],
-    "locations": ["Work", "Postbox", "Grocery Store"],
-    "habits": ["journaling", "coding"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": "Malibu Ken - Malibu Ken",
-    "played": false,
-    "images":   false,
-    "audio": false
-  },
-  {
-    "date": "02-10-25",
-    "text": "its always a good day when it rains",
-    "mood": ["wet", "happy"],
-    "weather": ["cloudy", "cold", "rainy"],
-    "locations": ["Work", "Grocery Store"],
-    "habits": ["journaling (2 day streak!)", "coding (2 day streak!)"],
-    "tv": ["Band of Brothers"],
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": "Achievement - pilotredsun",
-    "played": false,
-    "images": false,
-    "audio": false
-  },
-  {
-    "date": "01-10-25",
-    "text": "good little day off work today! went on a walk and found the strangest little pond in the middle of the city. ominous",
-    "mood": ["happy"],
-    "weather": ["cloudy", "chill", "smokey"],
-    "locations": ["Strange pond", "Grocery Store"],
-    "habits": ["walk (64 minutes),"],
-    "tv": "The Wire",
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": "† - Justice",
-    "played": ["Half Sword", "Red Dead Redemption 2"],
-    "images":   false,
-    "audio": false
-  },
-  {
-    "date": "30-09-25",
-    "text": "long day at work, but the contractors fucking up our tech systems actually made it totally manageable. turns out theprophat loves getting paid to do dishes slowly",
-    "mood": ["restless", "happy"],
-    "weather": ["cloudy", "warm", "smokey"],
-    "locations": ["Work", "Postbox", "Grocery Store"],
-    "habits": ["journaling (2 day streak!)", "coding (2 day streak!)"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": "Achievement - pilotredsun",
-    "played": "Clover Pit",
-    "images":     {
-        "src": "images/lifelog-photos/30-09-25(3).JPG",
-        "caption": "the sun shines weakly here"
-      },
-    "audio": false
-  },
-   {
-    "date": "29-09-25",
-    "text": "felt really great today, even though im still in this weird lazy funk. trying to force myself to be productive and clean my house, but its not easy. megan feels the same way, maybe i just have to wait for us to both feel alright again. its not like anyone sees our house but us anyway.",
-    "mood": ["restless", "happy"],
-    "weather": ["cloudy", "warm", "windy"],
-    "locations": ["Work", "Postbox", "Grocery Store"],
-    "habits": ["journaling", "coding"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": false,
-    "played": "Red Dead Redemption 2",
-    "images": false,
-    "audio": false
-  },
-  {
-    "date": "28-09-25",
-    "text": "took the day to do nothing at all. enjoyed it. felt pretty low all day, not really sure why. no reason for it, just the way life goes i guess.",
-    "mood": ["down", "calm"],
-    "weather": ["sunny", "chill"],
-    "locations": false,
-    "habits": false,
-    "tv": false,
-    "movie": "The Founder",
-    "comic": false,
-    "book": false,
-    "listened": ["By the Time I Get To Phoenix - Injury Reserve","Achievement - pilotredsun"],
-    "played": ["Red Dead Redemption 2", "Mafia II: Definitive Edition", "Ages of Conflict: World War Simulator", "skate.", "Half Sword"],
-    "images": false,
-    "audio": false
-  },
-  {
-    "date": "27-09-25",
-    "text": "spent most of my day adding the new inventory and scoring system for trick or treat. im planning on adding way more candies but i think there are a good amount for day 2. \n\nfixed the plex server pc today, that was bothering me for a few days but its all better now. still need to find a replacement external hdd :/",
-    "mood": ["productive", "happy", "playful"],
-    "weather": ["sunny", "chill"],
-    "locations": ["Work"],
-    "habits": ["coding (5 day streak!)", "journaling (5 day streak!)", "play instrument (3 day streak!)"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": false,
-    "listened": ["Saturation - Arbee","Delaware - Drop Nineteens"],
-    "played": false,
-    "images": false,
-    "audio": "audio/27-09-25.mp3"
-  },
-  {
-    "date": "26-09-25",
-    "text": "no notes for today, just know it was a good one :)",
-    "mood": ["productive", "happy", "playful"],
-    "weather": ["sunny", "chill"],
-    "locations": ["Work"],
-    "habits": ["coding (4 day streak!)", "journaling (4 day streak!)", "reading (4 day streak!)", "play instrument (2 day streak!)"],
-    "tv": false,
-    "movie": false,
-    "comic": false,
-    "book": "Titus Groan - Mervyn Peake",
-    "listened": "By the Time I Get to Phoenix - Injury Reserve",
-    "played": ["skate.", "Mafia II: Definitive Edition","Vampire Survivors"],
-    "images": false,
-    "audio": "audio/26-09-25.mp3"
-  },
-  {
-    "date": "25-09-25",
-    "text": "spent an hour struggling to get my audio interface working, gave up and just played with my OP-1. even set up a little spot for me to log my recordings! this might actually be the most important log here, as i dont really archive my music anywhere else.",
-    "mood": ["productive", "happy", "playful"],
-    "weather": ["sunny", "cold"],
-    "locations": ["Work","Grocery Store"],
-    "habits": ["coding (3 day streak!)", "journaling (3 day streak!)", "reading (3 day streak!)", "play instrument"],
-    "tv": false,
-    "movie": "There Will Be Blood",
-    "comic": false,
-    "book": "Titus Groan - Mervyn Peake",
-    "listened": ["By the Time I Get To Phoenix - Injury Reserve","† - Justice"],
-    "played": false,
-    "images": false,
-    "audio": "audio/25-09-25.mp3"
-  },
-   {
-    "date": "24-09-25",
-    "text": "NEW COMIC BOOK DAY NEW COMIC BOOK DAY NEW COMIC BOOK DAY too bad im not going! but maybe later in the week, or next ncbd....\n\nhad a fine day today, feeling the best ive felt all week, and the best ive felt since i got sick earlier this month too i think. easy day at work, easy day at home. no complaints. the music bug is starting to hit me again, always right before i go to bed. tomorrow for sure you will see 'guitar' on my habits list.",
-    "mood": ["calm", "happy", "playful"],
-    "weather": ["cloudy", "cold"],
-    "locations": "Work",
-    "habits": ["coding (2 day streak!)", "journaling (2 day streak!)", "reading (2 day streak!)"],
-    "tv": ["The Wire"],
-    "movie": "Catch Me If You Can",
-    "comic": "Assorted Crisis Events #2",
-    "book": false,
-    "listened": ["Wild Onion - Twin Peaks", "† - Justice", "Start a People - Black Moth Super Rainbow", "By the Time I Get To Phoenix - Injury Reserve", "Music from the Adventures of Pete & Pete - Polaris", "Eating Us - Black Moth Super Rainbow", "Big Fish Theory - Vince Staples"],
-    "played": "Mafia II: Definitive Edition",
-    "images": false
-  },
+        "date": "09-02-25",
+        "text": "writing this entry in NeoVIM for the first time! wow it is surely unlike ANY text editor i have ever used, but i really like the workflow and i bet i could totally use it as a proper journal if i grew more familiar (not that you aren't an acceptable journal, beloved website). i have been reading a TON lately, currently on a 70(!) day reading streak which i'm super proud of. i am determined to extend this to the end of the year, and i know i can do it too. i have effectively replaced all my tv and movie watching with reading and i do not regret this at all. if only i could read AND exercise, i might become unstoppable. \n\nand DO NOT SUGGEST AUDIOBOOKS BECAUSE THATS NOT THE SAME.",
+        "mood": [
+            "well tended"
+        ],
+        "weather": [
+            "sunny",
+            "warm"
+        ],
+        "locations": false,
+        "habits": [
+            "journaling",
+            "reading"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": "The Last Unicorn - Peter S. Beagle",
+        "listened": "Lustmore - Lapalux",
+        "played": [
+            "Half Sword"
+        ],
+        "images": false,
+        "audio": false
+    },
     {
-    "date": "23-09-25",
-    "text": "conquered my insomnia last night. it was harder than i was expecting but i managed to get a decent, dreamless sleep. it feels rough having to start over all my habit counts again, but i dont feel like it was my fault. thankful to have today off work. \n\ni live a very ordinary life right now, as my lifelogs suggest. i am thankful for this. not everyone gets the luxury to write 'calm', 'happy', 'healthy' in their daily mood logs. im not rich but im not struggling. i dont make a lot, but i make do with comfort. my job isnt stressful, maybe just a bit unfulfilling. my family is without problems, they are nearby if i need them, they love me and care for me and i feel that when i see them. my friends treat me with the love and respect i treat them with, and i am in a healthy steady relationship with my girlfriend. im thankful for this. and im thankful and for the people that shaped my life up to this point. im proud of who i am, what ive accomplished, and my ultimate insignificance bothers me quite little. ive read this over and over trying to figure out why im writing it, but i think future me (thats you, probably!) will appreciate these reminders, and admire this rare display of honesty. i engage in a a lot of performance in my life. with my friends, with my art, even with this site. i enjoy the many masks i get to don, but its rare for me to really present myself this plainly. i dont really journal. maybe i write down the odd thought here and there, but even that is a bit performative. even now, i fight the urge to delete this paragraph and return to my usual careless and carefree style. obviously if you're reading this, i managed to resist that feeling. i wont do this very often, maybe the exhaustion from yesterday has just cracked a bit of myself open today. good job reading this far, i know you'd probably rather not read entries like this, but they are important and you will appreciate them later in your life.\n\nlots of new eyes on my portfolio lately has me feeling very confident and inspired. if thats you and you're here reading this, thanks!",
-    "mood": ["calm", "sleepy"],
-    "weather": ["cloudy", "cold"],
-    "locations": false,
-    "habits": ["coding", "journaling", "made breakfast", "reading"],
-    "tv": ["Band of Brothers"],
-    "movie": "Catch Me If You Can",
-    "comic": false,
-    "book": "Titus Groan - Mervyn Peake",
-    "listened": ["Wild Onion - Twin Peaks", "Music from the Adventures of Pete & Pete - Polaris", "Integrated Tech Solutions - Aesop Rock"],
-    "played": false,
-    "images": false
-  },
-  {
-    "date": "22-09-25",
-    "text": "lost a fight with insomnia. not too happy to have that return, i havent really had to deal with that since high school. and like i used to back then i, stubbornly, laid there until it was time to get up. the world can be such a dreamy place if you let it. having a hard time focusing on anything. my stomach hurts and i feel dizzy. \n\nbetter days ahead.",
-    "mood": ["sleepy", "frustrated"],
-    "weather": ["cloudy", "cold"],
-    "locations": "Work",
-    "habits": false,
-    "tv": false,
-    "movie": false,
-    "listened": false,
-    "played": ["Mafia: Definitive Edition", "Mafia II: Definitive Edition"],
-    "images":     {
-        "src": "images/lifelog-photos/20-09-25.JPG",
-        "caption": "hard morning. 4:30am"
-      }
-  },
-   {
-    "date": "21-09-25",
-    "text": "had a delicious breakfast at the nearby diner with megan and her friend, also had an interesting and unexpected visitor arrive at my court this morning. they even played a little trick on me! \n\nim really itching to get back into making music so maybe ill find a place to upload it here?",
-    "mood": ["calm", "playful", "excited"],
-    "weather": ["sunny"],
-    "locations": "Ricky's Diner",
-    "habits": ["coding (9 day streak!)", "journaling (8 day streak!)", "wake up before 8am (3 day streak!)"],
-    "tv": ["Band of Brothers"],
-    "movie": ["1917"],
-    "listened": ["Loaded - Brotha Lynch Hung"],
-    "played": "Rimworld",
-    "images": [
-      {
-        "src": "images/lifelog-photos/21-09-25.jpg",
-        "caption": "another day, still no mouse outside :( she is going to be so sad in the winter"
-      },
-      {
-        "src": "images/lifelog-photos/21-09-25(1).jpg",
-        "caption": "how tf does she look like this"
-      }
-    ]
-  },
-   {
-    "date": "20-09-25",
-    "text": "step one: i want to play video game - step 2: i log onto my computer - step 3: i code for 5 hours - step 4: ...",
-    "time": "6:27pm",
-    "habits": ["coding (8 day streak!)", "journaling (7 day streak!)", "read comic book (2 day streak!", "wake up before 8am (2 day streak!)", "graphic design"],
-    "tv": false,
-    "listened": ["In Evening Air - Future Islands", "Loaded - Brotha Lynch Hung"],
-    "comic": "The Immortal Thor #25",
-    "played": false,
-    "locations":"Work",
-    "images": [
-      {
-        "src": "images/lifelog-photos/20-09-25.jpg",
-        "caption": "yeah this might be the worst thing you could order from me"
-      },
-        {
-        "src": "images/lifelog-photos/20-09-25(2).jpg",
-        "caption": "kiwi wants to be comic books!"
-      },
-      {
-        "src": "images/lifelog-photos/20-09-25(1).jpg",
-        "caption": "I LOVE MY EGG WIFE SHE GOT ME THESE PINS :D"
-      }
-    ]
-  },
-  {
-    "date": "19-09-25",
-    "text": "a happy 1 week birthday here at theprophat.com :D LONG day at work, as i had anticipated. it was shockingly busy and i was stuck making drinks for most of the day. we reorganized the backroom recently which i strongly dislike at the moment. i hate when my entire day is work and thats all i have to talk about. theprophat out.",
-    "time": "3:58pm",
-    "habits": ["coding (1 week streak!)", "journaling (6 day streak!)", "read comic book", "wake up before 8am"],
-    "tv": false,
-    "comic": "Imperial #3",
-    "listened": ["Psyence Fiction - UNKLE"],
-    "locations":"Work",
-    "played": "Mafia: Definitive Edition",
-    "images": false
-  },
-  {
-    "date": "18-09-25",
-    "text": "slow day today in anticipation for a long day at work tomorrow. got some really cool visual features tweaked and plenty more ideas. being at work, away from my computer, always helps me form new ideas, and hopefully tomorrow is no different. feeling cozy, happy, lazy.",
-    "time": ["4:22pm"," 6:26pm"],
-    "habits": ["coding (6 day streak!)", "journaling (5 day streak!)"],
-    "tv":  false,
-    "listened": ["Dark Times- Vince Staples"],
-    "played": "Mafia: Definitive Edition",
-    "images": false
-  },
-  {
-    "date": "17-09-25",
-    "text": "after waking up early, eating breakfast,and tidying up our kitchen, megan and i walked to the nearby library! i have lived here for 3 years, and lived in this area for almost 5, but have never come to this library before! im not a fan of the selection, so unfortunately i might not come too often. its a shame, because i was really looking forward to having a regular destination to walk, when i need. megan and i met at the nearby science center's park 5 years ago! i should add a reading log when i get home so that i can log what books i read here today",
-    "time": ["2:19pm", " 8:36pm"],
-    "habits": ["coding (5 day streak!)", "journaling (4 day streak!)", "walk (76 minutes),", "made breakfast", "dishes"],
-    "tv": "South Park",
-    "listened": ["Hail to the Thief - Radiohead", "Dark Times- Vince Staples"],
-    "played": false,
-    "locations":["Library", "McDonalds"],
-    "images": [
-      {
-        "src": "images/lifelog-photos/17-09-25.jpg",
-        "caption": "the corpse of our 20 piece mcnugget meal"
-      },
-       {
-        "src": "images/lifelog-photos/17-09-25(1).JPG",
-        "caption": "the weather begins to turn"
-      },
-       {
-        "src": "images/lifelog-photos/17-09-25(2).JPG",
-        "caption": "the one and only"
-      },
-       {
-        "src": "images/lifelog-photos/17-09-25(3).JPG",
-        "caption": "I LOVE YOU SUSANNA CLARKE"
-      },
-      {
-        "src": "images/made-by-me/hobbies-finished.png",
-        "caption": "this feels so close to what i wanted"
-      },
-      {
-        "src": "images/made-by-me/hobbies-design.png",
-        "caption": "original design w/approximation"
-      }
-    ]
-  },
-  {
-    "date": "16-09-25",
-    "text": "i feel SO stuck at work rn i want to quit so bad but i need $$$ for living. i want to plan a big vacation sometime soon,  but some major upcoming expenses makes that very hard. i miss my friends and i want to go somewhere cool with them. i REALLY need to redo the lifelog entries but i dread having to look at the javascript again LMAO",
-    "habits": ["coding (4 day streak!)", "journaling (3 day streak!)", "woke up early (2 day streak!)"],
-    "tv":false,
-    "listened": "Telicatessen - Rob Sonic",
-    "played": ["Mafia: Definitive Edition","OXTO","Ultimate Chicken Horse"],
-    "locations":"Work",
-    "images": [
-      {
-        "src": "images/lifelog-photos/16-09-25.jpg",
-        "caption": "my morning view at work"
-      }
-
-    ]
-  },
-  {
-    "date": "15-09-25",
-    "text": "should have gone for a long walk, but spent another day coding here. playing the end of Stick of Truth with Megan though and really enjoying coming back to it!",
-    "habits": ["coding (3 day streak!)", "journaling (2 day streak!)", "woke up early", "read comic book (2 day streak!"],
-    "tv": ["South Park"],
-    "comic": "Imperial #2",
-    "listened": "NO NOW - Clarence Clarity",
-    "played": "South Park: Stick of Truth",
-    "images": [
-      {
-        "src": "images/lifelog-photos/15-09-25.jpg",
-        "caption": "m'lady Kiwi enjoys a rare treat (it is chimken)"
-      }
-
-    ]
-
-  },
-  {
-    "date": "14-09-25",
-    "text": "day off, spent the entire time working on this website. played left 4 dead with my friend Nessa! we want to try playing with more people, we had a TON of fun playing infected versus mode",
-    "habits": ["coding (2 day streak!)", "reading (2 day streak!)", "read comic book"],
-    "tv": "South Park",
-    "listened": "NO NOW - Clarence Clarity",
-    "comic": "Imperial #1 (re-read)",
-    "played": "Left 4 Dead 2",
-    "images": [
-      {
-        "src": "images/lifelog-photos/14-09-25.jpg",
-        "caption": "m'lady Kiwi waits for her mouse friend to arrive"
-      },
-      {
-      "src": "images/lifelog-photos/14-09-25(1).jpg",
-        "caption": "he didnt show up :("
+        "date": "29-11-25",
+        "text": "i had this realization last night that megan is my sole source of my current social life, and that i put this on her too much. she fell asleep quite early last night, which frustrated me. but with some introspection i have determined this is of my own doing. today i'm going to make a vow to speak to someone else besides her. she has the whole day off, so this evening i'm going online and speaking with someboday. anybody. i will not allow myself to become isolation prone any longer, i'm willing and ready to become a social little butterfly again. i complained yesterday that no one gets back to me at a pace i prefer, yet i do the same myself. i am going to remedy this error also.\n\na quote from Seneca for you on this day\n'Ponder for a long time whether you shall admit a given person to your friendship; but when you have decided to admit him, welcome him with all your heart and soul.",
+        "mood": [
+            "restless"
+        ],
+        "weather": [
+            "cloudy",
+            "freezing"
+        ],
+        "locations": false,
+        "habits": [
+            "journaling"
+        ],
+        "tv": "For All Mankind",
+        "movie": false,
+        "comic": false,
+        "book": "Assassin's Apprentice - Robin Hobb",
+        "listened": "Dummy - Portishead",
+        "played": [
+            "Half Sword"
+        ],
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "28-11-25",
+        "text": "i FINALLY found out what clinic i was referred to . . . only to find out they are closed on friday (today) and weekends. i'm also pretty sure i wont be going to work next week, but i'm hoping i can get on the newest schedule. no one is getting back to me in any regard, from friends to clinics to work. i'm beginning to get frustrated.\n\nprogress on my arm, however, is significant! i watched a video by an orthopedic and apparently i should have been told to stretch my arm out as much as i could in the first few days. likely, i'll be losing as much as 10% mobility in my left arm. hoping my elbow licking days haven't come to an end, but i just tried and it isn't looking great. i am stretching now as much as i can tolerate, and i'm really impressed how much i can bully through the pain. still, it will take up to 6 months (!) before i can use it like i used to.\n\nit finally snowed last night! the snow has fallen lightly once or twice this season but i think winter is finally amogus. i really love the snow, there is something so distinct about the winter air that i cant quite pin down. like beyond the fact that its physically colder, it just makes me feel some kind of way. i have friends who have never seen a day of snow, and i pity them. how could you miss out on an entire weather? some people miss out on it their entire lives. i wonder if they think about it. i'll report back on that.\n\ni just discovered the 'end' button and what its actually good for. this! coding on one single line with no line breaks, trying to get allllllll the way back to where i was typing only to be kicked to the next line. with the 'end' key, i fight this battle no more! i'm working on being better at navigating my digital workstations with hotkeys. idk why i always put it off because it is immensely satisfying. this longer entry is a direct result of this discovery!! before, i would be a bit wary of writing for too long, lest i have to fight the line demon. but not i can write to my little heart's content.\n\ni love to teach and i really want to teach my friends this lovely little art of coding. while i'm by no means an expert, i've been thinking a lot about putting together a 1 day class curriculum, with a promise of a fully functional personal site by the end. i'm going to talk to the twig valley crew tonight and gauge their interest.\n\nspeaking of the twig valley crew, i feel as though i've been neglecting them lately. neglect isn't the correct word, i've been more active in their chats, at the expense of ignoring everyone else. but they call nightly, and i rarely participate these days. this is not so much a reflection of them, or even my opinion of them, but of my current mental state. i'm in a great mood, but i find myself prone to isolation more than ever. i haven't really spoken to anyone beside megan in several weeks. i didn't realize how much of my social needs were met by work, yet i feel no need still to satisfy them like i once might have. further investigation on this is necessary, though at the moment i don't feel any negative effects from this, besides that sense that i've been MIA to a fair few people.\n\nyou desire another quote, huh? well, okay. here is something from aurelius i've been thinking about.\n'The impediment to action advances action. What stands in the way becomes the way.'",
+        "mood": [
+            "stiff",
+            "reflective"
+        ],
+        "weather": [
+            "cloudy",
+            "cold",
+            "snowy"
+        ],
+        "locations": [
+            "Ricky's Diner",
+            "Grocery Store"
+        ],
+        "habits": [
+            "journaling"
+        ],
+        "tv": "The Sopranos",
+        "movie": false,
+        "comic": "Ultimate Spider-Man Vol. 1",
+        "book": "Assassin's Apprentice - Robin Hobb",
+        "listened": "Forever & Ever - Sales",
+        "played": [
+            "Minecraft",
+            "Grand Theft Auto IV: The Lost & Damned"
+        ],
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "26-11-25",
+        "text": "10 days later, im feeling pretty confident that a) doctors dont care about me rn and b) im going to heal from this much quicker than expected. im typing this with two hands (!) quite comfortably, as well as being out of my sling for longer and longer. im feeling the coding bug again, inspired by my good buddy donald's sudden interest in this silly hobby. if you read this my good pal, know that im inspired by you more often than you think\n\n im getting back into working on The Odin Project, as ive recommended to my friends do. this means picking back up where i left with javascript. for the 3rd time. i dont really WANT to start fresh again but its probably in my best interest if i want to continue writing javascript.\n\n its nice to write without introspection but i want settle this debt with a little bit of paraphrased wisdom from the great BDoubleO100.\n'Ignorance is hating something you don't yet understand'",
+        "mood": [
+            "calm",
+            "frustrated",
+            "in pain"
+        ],
+        "weather": [
+            "cloudy",
+            "cold"
+        ],
+        "locations": false,
+        "habits": [
+            "journaling",
+            "coding"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": "Assassin's Apprentice - Robin Hobb",
+        "listened": [
+            "Jinx - Crumb",
+            "Moon Safari - Air"
+        ],
+        "played": false,
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "16-11-25",
+        "text": "short entry because i broke my arm skateboarding. its been 4 days now, still pretty stiff and in pain. wish the doctors would see me already, but i get that its not in my control, and they wont likely do very much anyway. mostly concerned about wtf im going to do at work when i return.\n\nwish i could play minecraft",
+        "mood": [
+            "calm",
+            "frustrated",
+            "in pain"
+        ],
+        "weather": [
+            "cloudy",
+            "cold"
+        ],
+        "locations": false,
+        "habits": [
+            "journaling"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": [
+            "Hot Wet & Sassy - Tobacco"
+        ],
+        "played": false,
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "12-11-25",
+        "text": "farewell neocities, hello personal personal site! i actually feel as though ive broken a sort of chain, though i was losing my investment in the neocities community anyway. i dont believe that site is very sustainable and this site is better off without it. i was having trouble with the big picture on this site and now i totally feel like it has its own direction. id even consider taking it off the web totally, but i like the thought of being able to upload things to this site that i can share with my friends and family. i feel way less weird about posting about my personal life on here and i find it well to have a minor attachment like neocities gone from my life. as much as i loved making friends on there, the ship has sailed!\n\nfuck transphobia and long live theprophat.com \n\nbroke my arm skateboarding today too lmao",
+        "mood": [
+            "calm",
+            "content",
+            "reflective"
+        ],
+        "weather": [
+            "partly cloudy",
+            "cold"
+        ],
+        "locations": false,
+        "habits": [
+            "journaling",
+            "skateboarding"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": [
+            "Jinx - Crumb"
+        ],
+        "played": false,
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "11-11-25",
+        "text": "few holidays hold as much power over me as Remembrance Day. there is no greater sadness in this world than men killing other men en masse. i think frequently upon the blood watered fields of Flanders. of the great things we never can accomplish because we're so invested in each other's destruction.\n\n'We are the Dead. Short days ago\nWe lived, felt dawn, saw sunset glow,\nLoved and were loved, and now we lie,\nIn Flanders fields.'",
+        "mood": [
+            "calm",
+            "content",
+            "reflective"
+        ],
+        "weather": [
+            "mostly sunny",
+            "cold"
+        ],
+        "locations": false,
+        "habits": [
+            "journaling",
+            "reading",
+            "skateboarding"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": "Epistulae Morales ad Lucilium - Seneca",
+        "listened": [
+            "Portishead - Portishead",
+            "Spirit World Field Guide - Aesop Rock"
+        ],
+        "played": [
+            "skate.",
+            "Bloons TD 5",
+            "Mouthwashing"
+        ],
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "10-11-25",
+        "text": "through much self reflection, i have found myself in a much better head space these days. working out who i am is no easy chore, but it is one i value greatly. i have patience for anyone, yet this kindness i rarely afford to myself. i am learning to hold on to this patience with care.\n\ni always allow others to sway me and surprise me. i encourage it. i even seek it out. i want to understand people, even those i feel are unwise and irrational. i want to help everyone all the time, but i need to focus on doing this by leading by example. by keeping my own head straight and maintaining a life i deem virtuous, i can ensure my happiness comes from what i have within, and that my drive is purely internal. i learned this as a teenager, and it seems i was overdue for another lesson.\n\n anyway skateboarding",
+        "mood": [
+            "calm",
+            "content"
+        ],
+        "weather": [
+            "cloudy",
+            "warm"
+        ],
+        "locations": [
+            "Work",
+            "Grocery Store"
+        ],
+        "habits": [
+            "journaling",
+            "cold shower",
+            "reading",
+            "baking"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": "Epistulae Morales ad Lucilium - Seneca",
+        "listened": "Portishead - Portishead",
+        "played": false,
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "19-10-25",
+        "text": "i go through 2 week cycles, where i\u2019m hyper focused for 2 weeks, and then feel like i sit at my computer and do nothing for 2 weeks. i\u2019m in the latter 2 weeks right now. from 10am to 3:30pm i have been on my computer bouncing back between music, reddit, and youtube and haven\u2019t found a single stopping point. i\u2019m grinding my teeth and bouncing my legs in my chair. i did 11 squats and balanced on one foot on my office chair for 4 minutes. i feel pretty depressive in these two weeks. i just feel maybe a bit depressive lately, but i think it is directly tied to this crash. i feel lonely on top of all this, but i don\u2019t want to initiate conversation and idek if i WANT to be in conversation. it feels like a ball rolling down a hill that i can\u2019t stop. i do kinda want to talk to people but i don\u2019t want to come up with the words to type. i want something to talk about but i have nothing to say. i did a creative micro project already but i\u2019m still feeling in the loop. i did it as a gift to a friend to maybe alleviate that but they haven\u2019t seen it yet. i think i might need to see a specialist about an ADHD diagnosis.",
+        "mood": [
+            "restless",
+            "down"
+        ],
+        "weather": [
+            "cloudy",
+            "chill"
+        ],
+        "locations": false,
+        "habits": [
+            "journaling"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": "Sinner Get Ready - Lingua Ignota",
+        "played": "skate.",
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "05-10-25",
+        "text": "ITS MY BIRTHDAY SAY HAPPY BIRTHDAY TO ME SAY IT NOW.",
+        "mood": [
+            "calm",
+            "happy"
+        ],
+        "weather": [
+            "sunny",
+            "chill"
+        ],
+        "locations": false,
+        "habits": [
+            "journaling",
+            "coding"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": false,
+        "played": false,
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "04-10-25",
+        "text": "went on a little adventure with the egg, had a great time! got tons of new books AND comic books to read on my birthday vacation. played the first ever game of NeoCities Prop Hunt which despite low turnout, was a successful venture!",
+        "mood": [
+            "calm",
+            "happy"
+        ],
+        "weather": [
+            "sunny",
+            "chill"
+        ],
+        "locations": [
+            "Variant Edition",
+            "Value Village",
+            "A&W",
+            "Queen Mary's Market"
+        ],
+        "habits": [
+            "journaling",
+            "coding"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": false,
+        "played": [
+            "Red Dead Redemption 2",
+            "Garry's Mod"
+        ],
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "03-10-25",
+        "text": "today went by so quickly! and now im finally on a well deserved birthday break. cant wait to do nothing for awhile :o",
+        "mood": [
+            "calm",
+            "happy"
+        ],
+        "weather": [
+            "sunny",
+            "chill"
+        ],
+        "locations": [
+            "Work",
+            "Postbox",
+            "Grocery Store"
+        ],
+        "habits": [
+            "journaling",
+            "coding"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": "Malibu Ken - Malibu Ken",
+        "played": false,
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "02-10-25",
+        "text": "its always a good day when it rains",
+        "mood": [
+            "wet",
+            "happy"
+        ],
+        "weather": [
+            "cloudy",
+            "cold",
+            "rainy"
+        ],
+        "locations": [
+            "Work",
+            "Grocery Store"
+        ],
+        "habits": [
+            "journaling (2 day streak!)",
+            "coding (2 day streak!)"
+        ],
+        "tv": [
+            "Band of Brothers"
+        ],
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": "Achievement - pilotredsun",
+        "played": false,
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "01-10-25",
+        "text": "good little day off work today! went on a walk and found the strangest little pond in the middle of the city. ominous",
+        "mood": [
+            "happy"
+        ],
+        "weather": [
+            "cloudy",
+            "chill",
+            "smokey"
+        ],
+        "locations": [
+            "Strange pond",
+            "Grocery Store"
+        ],
+        "habits": [
+            "walk (64 minutes),"
+        ],
+        "tv": "The Wire",
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": "\u2020 - Justice",
+        "played": [
+            "Half Sword",
+            "Red Dead Redemption 2"
+        ],
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "30-09-25",
+        "text": "long day at work, but the contractors fucking up our tech systems actually made it totally manageable. turns out theprophat loves getting paid to do dishes slowly",
+        "mood": [
+            "restless",
+            "happy"
+        ],
+        "weather": [
+            "cloudy",
+            "warm",
+            "smokey"
+        ],
+        "locations": [
+            "Work",
+            "Postbox",
+            "Grocery Store"
+        ],
+        "habits": [
+            "journaling (2 day streak!)",
+            "coding (2 day streak!)"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": "Achievement - pilotredsun",
+        "played": "Clover Pit",
+        "images": {
+            "src": "images/lifelog-photos/30-09-25(3).JPG",
+            "caption": "the sun shines weakly here"
+        },
+        "audio": false
+    },
+    {
+        "date": "29-09-25",
+        "text": "felt really great today, even though im still in this weird lazy funk. trying to force myself to be productive and clean my house, but its not easy. megan feels the same way, maybe i just have to wait for us to both feel alright again. its not like anyone sees our house but us anyway.",
+        "mood": [
+            "restless",
+            "happy"
+        ],
+        "weather": [
+            "cloudy",
+            "warm",
+            "windy"
+        ],
+        "locations": [
+            "Work",
+            "Postbox",
+            "Grocery Store"
+        ],
+        "habits": [
+            "journaling",
+            "coding"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": false,
+        "played": "Red Dead Redemption 2",
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "28-09-25",
+        "text": "took the day to do nothing at all. enjoyed it. felt pretty low all day, not really sure why. no reason for it, just the way life goes i guess.",
+        "mood": [
+            "down",
+            "calm"
+        ],
+        "weather": [
+            "sunny",
+            "chill"
+        ],
+        "locations": false,
+        "habits": false,
+        "tv": false,
+        "movie": "The Founder",
+        "comic": false,
+        "book": false,
+        "listened": [
+            "By the Time I Get To Phoenix - Injury Reserve",
+            "Achievement - pilotredsun"
+        ],
+        "played": [
+            "Red Dead Redemption 2",
+            "Mafia II: Definitive Edition",
+            "Ages of Conflict: World War Simulator",
+            "skate.",
+            "Half Sword"
+        ],
+        "images": false,
+        "audio": false
+    },
+    {
+        "date": "27-09-25",
+        "text": "spent most of my day adding the new inventory and scoring system for trick or treat. im planning on adding way more candies but i think there are a good amount for day 2. \n\nfixed the plex server pc today, that was bothering me for a few days but its all better now. still need to find a replacement external hdd :/",
+        "mood": [
+            "productive",
+            "happy",
+            "playful"
+        ],
+        "weather": [
+            "sunny",
+            "chill"
+        ],
+        "locations": [
+            "Work"
+        ],
+        "habits": [
+            "coding (5 day streak!)",
+            "journaling (5 day streak!)",
+            "play instrument (3 day streak!)"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": false,
+        "listened": [
+            "Saturation - Arbee",
+            "Delaware - Drop Nineteens"
+        ],
+        "played": false,
+        "images": false,
+        "audio": "audio/27-09-25.mp3"
+    },
+    {
+        "date": "26-09-25",
+        "text": "no notes for today, just know it was a good one :)",
+        "mood": [
+            "productive",
+            "happy",
+            "playful"
+        ],
+        "weather": [
+            "sunny",
+            "chill"
+        ],
+        "locations": [
+            "Work"
+        ],
+        "habits": [
+            "coding (4 day streak!)",
+            "journaling (4 day streak!)",
+            "reading (4 day streak!)",
+            "play instrument (2 day streak!)"
+        ],
+        "tv": false,
+        "movie": false,
+        "comic": false,
+        "book": "Titus Groan - Mervyn Peake",
+        "listened": "By the Time I Get to Phoenix - Injury Reserve",
+        "played": [
+            "skate.",
+            "Mafia II: Definitive Edition",
+            "Vampire Survivors"
+        ],
+        "images": false,
+        "audio": "audio/26-09-25.mp3"
+    },
+    {
+        "date": "25-09-25",
+        "text": "spent an hour struggling to get my audio interface working, gave up and just played with my OP-1. even set up a little spot for me to log my recordings! this might actually be the most important log here, as i dont really archive my music anywhere else.",
+        "mood": [
+            "productive",
+            "happy",
+            "playful"
+        ],
+        "weather": [
+            "sunny",
+            "cold"
+        ],
+        "locations": [
+            "Work",
+            "Grocery Store"
+        ],
+        "habits": [
+            "coding (3 day streak!)",
+            "journaling (3 day streak!)",
+            "reading (3 day streak!)",
+            "play instrument"
+        ],
+        "tv": false,
+        "movie": "There Will Be Blood",
+        "comic": false,
+        "book": "Titus Groan - Mervyn Peake",
+        "listened": [
+            "By the Time I Get To Phoenix - Injury Reserve",
+            "\u2020 - Justice"
+        ],
+        "played": false,
+        "images": false,
+        "audio": "audio/25-09-25.mp3"
+    },
+    {
+        "date": "24-09-25",
+        "text": "NEW COMIC BOOK DAY NEW COMIC BOOK DAY NEW COMIC BOOK DAY too bad im not going! but maybe later in the week, or next ncbd....\n\nhad a fine day today, feeling the best ive felt all week, and the best ive felt since i got sick earlier this month too i think. easy day at work, easy day at home. no complaints. the music bug is starting to hit me again, always right before i go to bed. tomorrow for sure you will see 'guitar' on my habits list.",
+        "mood": [
+            "calm",
+            "happy",
+            "playful"
+        ],
+        "weather": [
+            "cloudy",
+            "cold"
+        ],
+        "locations": "Work",
+        "habits": [
+            "coding (2 day streak!)",
+            "journaling (2 day streak!)",
+            "reading (2 day streak!)"
+        ],
+        "tv": [
+            "The Wire"
+        ],
+        "movie": "Catch Me If You Can",
+        "comic": "Assorted Crisis Events #2",
+        "book": false,
+        "listened": [
+            "Wild Onion - Twin Peaks",
+            "\u2020 - Justice",
+            "Start a People - Black Moth Super Rainbow",
+            "By the Time I Get To Phoenix - Injury Reserve",
+            "Music from the Adventures of Pete & Pete - Polaris",
+            "Eating Us - Black Moth Super Rainbow",
+            "Big Fish Theory - Vince Staples"
+        ],
+        "played": "Mafia II: Definitive Edition",
+        "images": false
+    },
+    {
+        "date": "23-09-25",
+        "text": "conquered my insomnia last night. it was harder than i was expecting but i managed to get a decent, dreamless sleep. it feels rough having to start over all my habit counts again, but i dont feel like it was my fault. thankful to have today off work. \n\ni live a very ordinary life right now, as my lifelogs suggest. i am thankful for this. not everyone gets the luxury to write 'calm', 'happy', 'healthy' in their daily mood logs. im not rich but im not struggling. i dont make a lot, but i make do with comfort. my job isnt stressful, maybe just a bit unfulfilling. my family is without problems, they are nearby if i need them, they love me and care for me and i feel that when i see them. my friends treat me with the love and respect i treat them with, and i am in a healthy steady relationship with my girlfriend. im thankful for this. and im thankful and for the people that shaped my life up to this point. im proud of who i am, what ive accomplished, and my ultimate insignificance bothers me quite little. ive read this over and over trying to figure out why im writing it, but i think future me (thats you, probably!) will appreciate these reminders, and admire this rare display of honesty. i engage in a a lot of performance in my life. with my friends, with my art, even with this site. i enjoy the many masks i get to don, but its rare for me to really present myself this plainly. i dont really journal. maybe i write down the odd thought here and there, but even that is a bit performative. even now, i fight the urge to delete this paragraph and return to my usual careless and carefree style. obviously if you're reading this, i managed to resist that feeling. i wont do this very often, maybe the exhaustion from yesterday has just cracked a bit of myself open today. good job reading this far, i know you'd probably rather not read entries like this, but they are important and you will appreciate them later in your life.\n\nlots of new eyes on my portfolio lately has me feeling very confident and inspired. if thats you and you're here reading this, thanks!",
+        "mood": [
+            "calm",
+            "sleepy"
+        ],
+        "weather": [
+            "cloudy",
+            "cold"
+        ],
+        "locations": false,
+        "habits": [
+            "coding",
+            "journaling",
+            "made breakfast",
+            "reading"
+        ],
+        "tv": [
+            "Band of Brothers"
+        ],
+        "movie": "Catch Me If You Can",
+        "comic": false,
+        "book": "Titus Groan - Mervyn Peake",
+        "listened": [
+            "Wild Onion - Twin Peaks",
+            "Music from the Adventures of Pete & Pete - Polaris",
+            "Integrated Tech Solutions - Aesop Rock"
+        ],
+        "played": false,
+        "images": false
+    },
+    {
+        "date": "22-09-25",
+        "text": "lost a fight with insomnia. not too happy to have that return, i havent really had to deal with that since high school. and like i used to back then i, stubbornly, laid there until it was time to get up. the world can be such a dreamy place if you let it. having a hard time focusing on anything. my stomach hurts and i feel dizzy. \n\nbetter days ahead.",
+        "mood": [
+            "sleepy",
+            "frustrated"
+        ],
+        "weather": [
+            "cloudy",
+            "cold"
+        ],
+        "locations": "Work",
+        "habits": false,
+        "tv": false,
+        "movie": false,
+        "listened": false,
+        "played": [
+            "Mafia: Definitive Edition",
+            "Mafia II: Definitive Edition"
+        ],
+        "images": {
+            "src": "images/lifelog-photos/20-09-25.JPG",
+            "caption": "hard morning. 4:30am"
+        }
+    },
+    {
+        "date": "21-09-25",
+        "text": "had a delicious breakfast at the nearby diner with megan and her friend, also had an interesting and unexpected visitor arrive at my court this morning. they even played a little trick on me! \n\nim really itching to get back into making music so maybe ill find a place to upload it here?",
+        "mood": [
+            "calm",
+            "playful",
+            "excited"
+        ],
+        "weather": [
+            "sunny"
+        ],
+        "locations": "Ricky's Diner",
+        "habits": [
+            "coding (9 day streak!)",
+            "journaling (8 day streak!)",
+            "wake up before 8am (3 day streak!)"
+        ],
+        "tv": [
+            "Band of Brothers"
+        ],
+        "movie": [
+            "1917"
+        ],
+        "listened": [
+            "Loaded - Brotha Lynch Hung"
+        ],
+        "played": "Rimworld",
+        "images": [
+            {
+                "src": "images/lifelog-photos/21-09-25.jpg",
+                "caption": "another day, still no mouse outside :( she is going to be so sad in the winter"
+            },
+            {
+                "src": "images/lifelog-photos/21-09-25(1).jpg",
+                "caption": "how tf does she look like this"
+            }
+        ]
+    },
+    {
+        "date": "20-09-25",
+        "text": "step one: i want to play video game - step 2: i log onto my computer - step 3: i code for 5 hours - step 4: ...",
+        "time": "6:27pm",
+        "habits": [
+            "coding (8 day streak!)",
+            "journaling (7 day streak!)",
+            "read comic book (2 day streak!",
+            "wake up before 8am (2 day streak!)",
+            "graphic design"
+        ],
+        "tv": false,
+        "listened": [
+            "In Evening Air - Future Islands",
+            "Loaded - Brotha Lynch Hung"
+        ],
+        "comic": "The Immortal Thor #25",
+        "played": false,
+        "locations": "Work",
+        "images": [
+            {
+                "src": "images/lifelog-photos/20-09-25.jpg",
+                "caption": "yeah this might be the worst thing you could order from me"
+            },
+            {
+                "src": "images/lifelog-photos/20-09-25(2).jpg",
+                "caption": "kiwi wants to be comic books!"
+            },
+            {
+                "src": "images/lifelog-photos/20-09-25(1).jpg",
+                "caption": "I LOVE MY EGG WIFE SHE GOT ME THESE PINS :D"
+            }
+        ]
+    },
+    {
+        "date": "19-09-25",
+        "text": "a happy 1 week birthday here at theprophat.com :D LONG day at work, as i had anticipated. it was shockingly busy and i was stuck making drinks for most of the day. we reorganized the backroom recently which i strongly dislike at the moment. i hate when my entire day is work and thats all i have to talk about. theprophat out.",
+        "time": "3:58pm",
+        "habits": [
+            "coding (1 week streak!)",
+            "journaling (6 day streak!)",
+            "read comic book",
+            "wake up before 8am"
+        ],
+        "tv": false,
+        "comic": "Imperial #3",
+        "listened": [
+            "Psyence Fiction - UNKLE"
+        ],
+        "locations": "Work",
+        "played": "Mafia: Definitive Edition",
+        "images": false
+    },
+    {
+        "date": "18-09-25",
+        "text": "slow day today in anticipation for a long day at work tomorrow. got some really cool visual features tweaked and plenty more ideas. being at work, away from my computer, always helps me form new ideas, and hopefully tomorrow is no different. feeling cozy, happy, lazy.",
+        "time": [
+            "4:22pm",
+            " 6:26pm"
+        ],
+        "habits": [
+            "coding (6 day streak!)",
+            "journaling (5 day streak!)"
+        ],
+        "tv": false,
+        "listened": [
+            "Dark Times- Vince Staples"
+        ],
+        "played": "Mafia: Definitive Edition",
+        "images": false
+    },
+    {
+        "date": "17-09-25",
+        "text": "after waking up early, eating breakfast,and tidying up our kitchen, megan and i walked to the nearby library! i have lived here for 3 years, and lived in this area for almost 5, but have never come to this library before! im not a fan of the selection, so unfortunately i might not come too often. its a shame, because i was really looking forward to having a regular destination to walk, when i need. megan and i met at the nearby science center's park 5 years ago! i should add a reading log when i get home so that i can log what books i read here today",
+        "time": [
+            "2:19pm",
+            " 8:36pm"
+        ],
+        "habits": [
+            "coding (5 day streak!)",
+            "journaling (4 day streak!)",
+            "walk (76 minutes),",
+            "made breakfast",
+            "dishes"
+        ],
+        "tv": "South Park",
+        "listened": [
+            "Hail to the Thief - Radiohead",
+            "Dark Times- Vince Staples"
+        ],
+        "played": false,
+        "locations": [
+            "Library",
+            "McDonalds"
+        ],
+        "images": [
+            {
+                "src": "images/lifelog-photos/17-09-25.jpg",
+                "caption": "the corpse of our 20 piece mcnugget meal"
+            },
+            {
+                "src": "images/lifelog-photos/17-09-25(1).JPG",
+                "caption": "the weather begins to turn"
+            },
+            {
+                "src": "images/lifelog-photos/17-09-25(2).JPG",
+                "caption": "the one and only"
+            },
+            {
+                "src": "images/lifelog-photos/17-09-25(3).JPG",
+                "caption": "I LOVE YOU SUSANNA CLARKE"
+            },
+            {
+                "src": "images/made-by-me/hobbies-finished.png",
+                "caption": "this feels so close to what i wanted"
+            },
+            {
+                "src": "images/made-by-me/hobbies-design.png",
+                "caption": "original design w/approximation"
+            }
+        ]
+    },
+    {
+        "date": "16-09-25",
+        "text": "i feel SO stuck at work rn i want to quit so bad but i need $$$ for living. i want to plan a big vacation sometime soon,  but some major upcoming expenses makes that very hard. i miss my friends and i want to go somewhere cool with them. i REALLY need to redo the lifelog entries but i dread having to look at the javascript again LMAO",
+        "habits": [
+            "coding (4 day streak!)",
+            "journaling (3 day streak!)",
+            "woke up early (2 day streak!)"
+        ],
+        "tv": false,
+        "listened": "Telicatessen - Rob Sonic",
+        "played": [
+            "Mafia: Definitive Edition",
+            "OXTO",
+            "Ultimate Chicken Horse"
+        ],
+        "locations": "Work",
+        "images": [
+            {
+                "src": "images/lifelog-photos/16-09-25.jpg",
+                "caption": "my morning view at work"
+            }
+        ]
+    },
+    {
+        "date": "15-09-25",
+        "text": "should have gone for a long walk, but spent another day coding here. playing the end of Stick of Truth with Megan though and really enjoying coming back to it!",
+        "habits": [
+            "coding (3 day streak!)",
+            "journaling (2 day streak!)",
+            "woke up early",
+            "read comic book (2 day streak!"
+        ],
+        "tv": [
+            "South Park"
+        ],
+        "comic": "Imperial #2",
+        "listened": "NO NOW - Clarence Clarity",
+        "played": "South Park: Stick of Truth",
+        "images": [
+            {
+                "src": "images/lifelog-photos/15-09-25.jpg",
+                "caption": "m'lady Kiwi enjoys a rare treat (it is chimken)"
+            }
+        ]
+    },
+    {
+        "date": "14-09-25",
+        "text": "day off, spent the entire time working on this website. played left 4 dead with my friend Nessa! we want to try playing with more people, we had a TON of fun playing infected versus mode",
+        "habits": [
+            "coding (2 day streak!)",
+            "reading (2 day streak!)",
+            "read comic book"
+        ],
+        "tv": "South Park",
+        "listened": "NO NOW - Clarence Clarity",
+        "comic": "Imperial #1 (re-read)",
+        "played": "Left 4 Dead 2",
+        "images": [
+            {
+                "src": "images/lifelog-photos/14-09-25.jpg",
+                "caption": "m'lady Kiwi waits for her mouse friend to arrive"
+            },
+            {
+                "src": "images/lifelog-photos/14-09-25(1).jpg",
+                "caption": "he didnt show up :("
+            }
+        ]
+    },
+    {
+        "date": "13-09-25",
+        "text": "celebrated 5 years with my girlfriend megan :o we went to our favourite restaurant, an italian place we used to go all the time!",
+        "habits": [
+            "coding",
+            "reading",
+            "walk: 45 min"
+        ],
+        "tv": "South Park",
+        "listened": "NO NOW - Clarence Clarity",
+        "played": "Deadlock",
+        "locations": "Tiramisu",
+        "images": [
+            {
+                "src": "images/lifelog-photos/13-09-25.jpg",
+                "caption": "i know you're head over heels for her (i am)"
+            }
+        ]
     }
-
-    ]
-  },
- {
-    "date": "13-09-25",
-    "text": "celebrated 5 years with my girlfriend megan :o we went to our favourite restaurant, an italian place we used to go all the time!",
-    "habits": ["coding", "reading", "walk: 45 min"],
-    "tv": "South Park",
-    "listened": "NO NOW - Clarence Clarity",
-    "played": "Deadlock",
-    "locations":"Tiramisu",
-    "images": [
-      {
-        "src": "images/lifelog-photos/13-09-25.jpg",
-        "caption": "i know you're head over heels for her (i am)"
-      }
-    ]
-  }
 ]
