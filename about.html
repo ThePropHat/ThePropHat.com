@@ -34,6 +34,50 @@
         </ul><br>
         <p><i>send regards to the royal court: <br><br>thedayislong@proton.me</i></p><br><br>
         <img src="images/wizard.gif" width="100%">
+<div id="microblog-entry"></div>
+
+<script>
+  
+  function typeText(element, text, speed, callback) {
+    element.innerHTML = "";
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        element.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      } else if (callback) {
+        callback();
+      }
+    }
+    type();
+  }
+
+  fetch("/json/microblog-2025.json")
+    .then(res => res.json())
+    .then(entries => {
+      if (!entries || entries.length === 0) return;
+
+      let index = 0;
+      const entryBox = document.getElementById("microblog-entry");
+
+      function cycleEntries() {
+        const current = entries[index];
+        const displayText = `${current.date} | ${current.entry} (at ${current.time})`;
+
+        typeText(entryBox, displayText, 40, () => {
+          setTimeout(() => {
+            index = (index + 1) % entries.length;
+            cycleEntries();
+          }, 10000); 
+        });
+      }
+
+      cycleEntries();
+    }) 
+    .catch(err => console.error("Error loading JSON:", err));
+</script>
+
       </div>
     </div>
   </div>

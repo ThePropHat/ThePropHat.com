@@ -115,13 +115,11 @@
 
   ];
 
-  // pick random heading
+  // random heading
   const headerIndex = Math.floor(Math.random() * headings.length);
   const selectedHeading = headings[headerIndex];
   const headerElement = document.getElementById("random-heading");
 
-  // Type out the header text instead of instantly replacing it
-  // Using a slightly faster speed (75ms) for the header
   typeText(headerElement, selectedHeading, 75);
   
 </script>
@@ -153,7 +151,7 @@
 
 
 <script>
-// fetch and animate microblog entries like they're being typed
+// fetch and animate microblog
 fetch("/json/microblog-2025.json")
   .then(res => res.json())
   .then(entries => {
@@ -162,14 +160,13 @@ fetch("/json/microblog-2025.json")
     let index = 0;
     const entryBox = document.getElementById("microblog-entry");
 
-    // --- Reusable Type Text Function (Static Cursor) ---
-    // This is the function you asked for, without the flicker.
+    
     function typeText(element, text, speed, callback) {
       let i = 0;
       element.textContent = "";
 
       const interval = setInterval(() => {
-        // Only show the typed text (static cursor)
+  
         element.textContent = text.slice(0, i);
         i++;
         if (i > text.length) {
@@ -185,13 +182,12 @@ fetch("/json/microblog-2025.json")
       const current = entries[index];
       const displayText = `${current.date} | ${current.entry} (at ${current.time})`;
 
-      // show the typed text using the static function
-      typeText(entryBox, displayText, 40, () => { // 40ms speed for microblog
+      typeText(entryBox, displayText, 40, () => { 
 
-        // wait 10 seconds before next entry
+      
         setTimeout(() => {
           index = (index + 1) % entries.length;
-          // linkEl line removed to prevent ReferenceError and ensure cycling continues
+          
           cycleEntries();
         }, 10000);
       });
