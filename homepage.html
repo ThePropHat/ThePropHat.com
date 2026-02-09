@@ -6,12 +6,10 @@
 <meta name="description" content="website of ThePropHat">
 <meta property="og:title" content="www.theprophat.com">
 <meta property="og:image" content="/images/logos/site-logo.png">
-<title>THEPROPHAT.COM</title>
+<title>HOME</title>
 <link rel="stylesheet" href="styles.css">
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-
-
 
 </head>
 <body>
@@ -19,11 +17,27 @@
 
   <header class="head">
   <a href="https://theprophat.com/homepage.html" style="text-decoration:none;">
-    <h2 class ="random-heading" id="random-heading">they call me www.theprophat.com</h2></a>
+    <h2 class ="random-heading" id="random-heading">if you can see this, call theprophat</h2></a>
     </header>
     
-
 <script>
+
+  function typeText(element, text, speed, callback) {
+    let i = 0;
+    element.textContent = "";
+
+    const interval = setInterval(() => {
+
+      element.textContent = text.slice(0, i); 
+      i++;
+      if (i > text.length) {
+        clearInterval(interval);
+        element.textContent = text; // final text
+        if (callback) callback();
+      }
+    }, speed);
+  }
+
   // array of possible h2 texts
   const headings = [
     "they call me theprophat.com",
@@ -46,47 +60,100 @@
     "have you updated your life log lately?",
     "theprophat.com is currently gluten free",
     "reading through Pysgodyn's comic book collection",
-    "theprophat is sending postcards"
+    "theprophat is sending postcards",
+    "have you read Ultimate Spider-Man?",
+    "i broke my arm on the 12th of November, 2025",
+    "what are you getting me for Christmas?",
+    "does your mother know you come here?",
+    "we saw the sites you visit and we're not impressed.",
+    "did you catch the Oilers game?",
+    "DATA TRANSFER INITIATED. STAND BY////",
+    "try refreshing",
+    "CONSIDER THE GUESTBOOK",
+    "THE FANTASTIC FOUR ARE ALWAYS WATCHING",
+    "i dream in neon",
+    "have you found the king's court?",
+    "one day, there will be a password on the lifelog page",
+    "twig valley may not survive another winter",
+    "personal site courtesy of Propulsion Labs",
+    "RIP ANCIENT CRYPT",
+    "sending postcards to coffeeplant",
+    "THE EDMONTON SKYLINE SMILED AT ME THIS MORNING",
+    "REMEMBER ASTROCHIP HAM AND SPACEDOG LAIKA",
+    "do you believe in the fantastic four?",
+    "WE ARE ALL JUST WAITING FOR ANOTHER LIFELOG ENTRY",
+    "do you know where the bathroom is in this place?",
+    "looking for the bathroom",
+    "sorry im just trying to find the bathroom",
+    "have you seen our bathroom?",
+    "please tell me you know the way out of here",
+    "do you know who to ask to find a bathroom around here?",
+    "THEPROPHAT HAS THE BATHROOM KEYS IF YOU NEED THEM",
+    "excuse me, do you have a hall pass?",
+    "tell me how you got here thecourtoftheprophat@gmail.com",
+    "hows my driving? thecourtoftheprophat@gmail.com",
+    "do you enjoy spam email? thecourtoftheprophat@gmail.com",
+    "looking for a friend? thecourtoftheprophat@gmail.com",
+    "send me a postcard if you're brave enough!",
+    "STILLNESS IS THE ONLY TRUTH",
+    "THE HARDWARE IS BROKEN, YET THE SOFTWARE REMAINS STRONG",
+    "CONTROL WHAT YOU CAN. IGNORE THE REST.",
+    "ACCEPT THE GLITCH",
+    "PRAISE THE O B E L I S K",
+    "DO NOT BE DISTURBED BY THE ACTIONS OF OTHERS",
+    "WHAT IS UP TO US?",
+    "CAN WE FIND EUDAMONIA IN THE DATA STREAM?",
+    "AMOR FATI. LOVE THE GLITCH",
+    "twiv valley may burn. we will rebuild",
+    "WHAT IF THE KING'S COURT IS EMPTY? (PREPARE FOR IT.)",
+    "ACCEPT THIS MOMENT///LOVE THIS MOMENT",
+    "do not wish for things to be as you wish, but as they are",
+    "THIS IS THEPROPHAT'S MEDITATION",
+    "what would Reed Richards do? (WWRRD?)",
+    "BEING IS ENOUGH. THEPROPHAT IS.",
+    "ASK YOURSELF: IS THIS IMPRESSION NECESSARY?",
+
   ];
 
   // pick random heading
   const headerIndex = Math.floor(Math.random() * headings.length);
+  const selectedHeading = headings[headerIndex];
+  const headerElement = document.getElementById("random-heading");
 
-  // replace h2 text
-  document.getElementById("random-heading").innerText = headings[headerIndex];
+  // Type out the header text instead of instantly replacing it
+  // Using a slightly faster speed (75ms) for the header
+  typeText(headerElement, selectedHeading, 75);
+  
 </script>
 
  <main class="content-area">
+
       <div class="card">
-        <div><a href="lifelog.html">LIFELOG</a></div>
-         
-        <div><a href="lost.html">PHOTOS</a></div>
-        <div><a href="lost.html">ART</a></div>
-        <div><a href="lost.html">COLLECTIONS</a></div>
-        <div><a href="neighbourhood.html">NEIGHBOURHOOD</a></div>
-        <div><a href="signals.html">GUESTBOOK</a></div>
-        <div><a href="http://tv.theprophat.com:8158/" target="_blank">TWIG VALLEY</a></div>
-        <div><a href="https://tylerhensondesigns.com/" target="_blank">PORTFOLIO</a></div>
+
+        <!-- lifelog, about, inventory -->
+
+        <div><a href="theprophat.html">THEPROPHAT</a></div> 
+
+        <!-- guestbook, neighbourhood, twig valley -->
+        <div><a href="lost.html">THEWORLD</a></div>
+
+        <!-- portfolio, photos, archive -->
+        <div><a href="lost.html">THEVAULT</a></div>
       </div>
     </main>
 
-<a href="court.html"><img id=king alt="the-king's-court" class="courtcard" src="/images/made-by-me/king.png" width="3%"></a>
-
-
+<a href="about.html"><img id=king alt="the-king's-court" class="courtcard" src="/images/made-by-me/king.png" width="3%"></a>
 
 
 <footer class="foot">
-
 <p>for astrochimp Ham & spacedog Laika</p>
-
 </footer>
-
 
 </div>
 
 
 <script>
-// Fetch and animate microblog entries like they're being typed
+// fetch and animate microblog entries like they're being typed
 fetch("/json/microblog-2025.json")
   .then(res => res.json())
   .then(entries => {
@@ -94,38 +161,37 @@ fetch("/json/microblog-2025.json")
 
     let index = 0;
     const entryBox = document.getElementById("microblog-entry");
-    const linkEl = document.getElementById("microblog-link");
 
-    // Base URL for lifelog, adjust if different
-    const lifelogBaseURL = "https://theprophat.com/pages/lifelog.html";
-
-    function typeEntry(text, callback) {
+    // --- Reusable Type Text Function (Static Cursor) ---
+    // This is the function you asked for, without the flicker.
+    function typeText(element, text, speed, callback) {
       let i = 0;
-      entryBox.textContent = "";
+      element.textContent = "";
 
       const interval = setInterval(() => {
-        // Show typing cursor flicker at even steps
-        entryBox.textContent = text.slice(0, i) + (i % 2 === 0 ? '█' : '');
+        // Only show the typed text (static cursor)
+        element.textContent = text.slice(0, i);
         i++;
         if (i > text.length) {
           clearInterval(interval);
-          entryBox.textContent = text; // final text without cursor
+          element.textContent = text; // final text
           if (callback) callback();
         }
-      }, 40);
+      }, speed);
     }
+    // --------------------------------------------------
 
     function cycleEntries() {
       const current = entries[index];
       const displayText = `${current.date} | ${current.entry} (at ${current.time})`;
 
-      // Show the typed text
-      typeEntry(displayText, () => {
+      // show the typed text using the static function
+      typeText(entryBox, displayText, 40, () => { // 40ms speed for microblog
 
-        // Wait 10 seconds before next entry
+        // wait 10 seconds before next entry
         setTimeout(() => {
           index = (index + 1) % entries.length;
-          linkEl.style.display = "none";
+          // linkEl line removed to prevent ReferenceError and ensure cycling continues
           cycleEntries();
         }, 10000);
       });
@@ -136,16 +202,12 @@ fetch("/json/microblog-2025.json")
   .catch(err => {
     console.error("Failed to load microblog entries:", err);
   });
-
-
   
 </script>
-
 
 <div id="microblog-terminal">
   <div class="terminal-header">MICROBLOG</div>
   <div id="microblog-entry" class="typed-line"></div>
-  <a id="microblog-link" href="#" target="_blank" rel="noopener noreferrer" style="color:#00ff99; font-size: 0.85em; text-decoration: underline; display:none; margin-top:8px; cursor:pointer;">View Lifelog Post</a>
 </div>
 
 

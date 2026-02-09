@@ -26,34 +26,36 @@ body, html {
 .card{
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  font-size: 40px;
+  gap: 70px;
+  font-size: 50px;
   font-weight: bold;
   background: rgba(0, 0, 0, 0);
 }
 
 .card a{
   color: white;
-  text-shadow: 2px 2px 0px #5a5a5a;
+  text-shadow: 2px 2px 0px red;
   text-decoration: none;
 
 }
 
 .card a:hover{
   color: rgb(255, 0, 0);
-  text-shadow: 2px 2px 0px #490000;
+  text-shadow: 2px 2px 0px white;
   font-family: ARGENTPIXEL-ITAL;
 }
 
 .foot {
- font-size: 0.9rem;
+  font-size: 0.9rem;
+  color: #ffff;
+  text-shadow: 1px 1px 0px #1adb81;
   text-align: center;
   font-family: ARGENTPIXEL-ITAL;
   padding-bottom: 20px;
 }
 
 .background {
-    background: url('/images/made-by-me/home-background.png') no-repeat center center;
+  background: url('/images/made-by-me/home-background.png') no-repeat center center;
   background-size: cover;
   height: 100vh;
   display: flex;
@@ -107,20 +109,14 @@ body, html {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background: rgba(0, 0, 0, 0.507);
-  color: #1adb81;
-  border: 2px solid #1adb81;
+  color: #ffff;
+  text-shadow: 1px 1px 0px #1adb81;
   font-family: monospace;
   padding: 12px 15px;
-  max-width: 350px;
+  width: 350px;
   z-index: 9999;
   pointer-events: none; /* disable interaction */
   user-select: none;
-}
-
-#microblog-terminal a {
-  pointer-events: auto; /* enable clicking link */
-  user-select: text;
 }
 
 .terminal-header {
@@ -137,16 +133,7 @@ body, html {
   font-family: monospace;
   white-space: pre-wrap;
   overflow: hidden;
-  border-right: 2px solid #1adb81;
-  animation: blink 1s step-end infinite;
+  animation: blink step-end infinite;
   min-height: 2em;
   text-align: left;
 }
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-
