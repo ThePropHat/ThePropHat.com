@@ -31,17 +31,51 @@ a{
   background: url('/images/made-by-me/court-background.png');
     background-size: cover;
     position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;  
-    align-items: center;
-    justify-content: center;
-    padding-top: 10vh;
-    box-sizing: border-box;
-    overflow: hidden;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;  
+		align-items: center;
+		justify-content: center;
+		padding-top: 10vh;
+		box-sizing: border-box;
+		overflow: hidden;
 }
 
+#bookmarks ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+#bookmarks a {
+  display: block;
+  width:150px;
+  box-sizing: border-box;
+  background-color: #c0c0c0;
+  color: black;
+  text-decoration: none;
+  padding: 4px 10px;
+  font-family: "MS Sans Serif", Tahoma, sans-serif;
+  font-size: 10px;
+  padding: 3px 10px 5px 10px;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  
+}
+
+#bookmarks a:active {
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  padding: 5px 9px 3px 11px; 
+}
 
 ul{
   padding: 0;
