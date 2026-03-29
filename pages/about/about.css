@@ -87,12 +87,12 @@ ul{
  
   @font-face {
     font-family: "ARGENTPIXEL";
-    src: url("../images/ArgentPixelCF-Regular.woff") format("woff");
+    src: url("../../images/ArgentPixelCF-Regular.woff") format("woff");
   }
 
   @font-face {
     font-family: "ARGENTPIXEL-ITAL"; /* set name */
-    src: url("../images/ArgentPixelCF-Italic.woff"); /* url of the font */
+    src: url("../../images/ArgentPixelCF-Italic.woff"); /* url of the font */
   }
 
 .flip-card {
