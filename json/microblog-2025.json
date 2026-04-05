@@ -1,5 +1,10 @@
 [
   {
+"date": "05-04-26",
+"time":"6:51am",
+"entry":"i am updating this microblog via ssh for the first time! neat!"
+  },
+  {
   "date":"20-03-26",
   "time":"7:05pm",
   "entry":"15 minutes to download github-cli, auth, and push the repo is a TOUGH reality check for this KIP chromebook........."
